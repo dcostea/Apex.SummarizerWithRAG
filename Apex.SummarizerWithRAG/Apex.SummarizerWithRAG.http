@@ -1,0 +1,6 @@
+@Apex.SummarizerWithRAG_HostAddress = http://localhost:5206
+
+GET {{Apex.SummarizerWithRAG_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
