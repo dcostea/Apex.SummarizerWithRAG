@@ -1,0 +1,102 @@
+ the reading taken after exposure;
+3. reading the KFM after its exposure;
+Instructions on how to use a KFM are given after those detailing how to make and
+charge this fallout meter.
+S. using this table to find what the dose rate was during the exposure -- as will be
+described later.
+~
+..
+~::>..
+...\
+SCALE
+CHAJIlGEDKFM
+j
+ELECTROSTATICALLY
+CHARGED PLASTIC
+OR TAPE
+.,- SPARIl; GAP ~ CAN (COVER IS
+NOT SHOWN)
+A KFM isa simple electroscope-ionizationchamber
+fallout meter with which fallout radiation can be mea-
+sured accurately. To use a KFM, an electrostatic charge
+must first be placed on its two separate aluminum-foil
+leaves. These leaves are insulated by being suspended
+separately on clean, dry insulating threads.
+To take accurate readings. the air inside a KFM must
+be kept very dry by means of drying agents such as
+dehydrated gypsum (easily made by heating gypsum
+wallboard. "sheetrock") or silica gel. (Do not use
+calcium chloride or other saIt.) Pieces of drying agent
+are placed on the bottom of the ionization chamber
+(the housing can) of a KFM.
+When the two KFM leavesare charged electrostatically, their likecharges (both positive
+or both negative) cause them to be forced apart. When fallout gamma radiation (that is
+similar to X rays but more energetic) strikes the air inside the ionization chamber of a
+KFM. itproduces charged ions inthisenclosed air. Thesecharged ionscause part or allof
+the electrostatic charge on the aluminum-foil leavesto bedischarged. Asa result of losing
+charge. the two KFM leaves move closer together.
+A KFM-maker who wants visual proof that his instrument can be partially or wholly
+discharged by ionizing radiation should persuade his dentist to place the charged KFM
+about 20 inches directly below a typical dental X-ray
+machine. For example, when a typical 90 kvp machine was
+set at 15 milliamps and for a 1/20th second pulse. its
+columnated X-ray beam partially discharged the KFM's
+separated aluminum-foil leaves. promptly reducing the
+initial reading of 15mm to 9 mm. Other types of machines
+willrequire different settings. Many dental X-ray machines
+are not accurately calibrated, nor do they produce gamma
+rays.sosuch tests should not beused inan attempt to check
+the accuracy of a KFM.
+CLEAR
+I PL.ASTIC
+To read the separation of the lower edges of the two ~.COVER
+KFM leaves with one eye. look straight down on the SEAT
+leaves and the scale on the clear plastic cover. Keep - ~c _::".
+the reading eye 12 inches above the SEAT. The KFM ~,.- ..,.---c'
+should be resting on a horizontal surface. To be sure the reading eye is always at
+this exact distance. place the lower end of a 12·inch ruler on the SEAT, while the
+upper end of the ruler touches the eyebrow above the reading eye. It is best to
+hold the KFM can with one hand and the ruler with the other. Using a flashlight
+makes the reading more accurate.C>o,
+C>o,To get a clearer idea of the construction and use of a KFM, look carefully at the
+following photos and read their captions.
+IV
+0-,
+z
+~::0
+c::
+Bozen
+1
+(ll
+.,..
+For accurate radiation
+measurements, a KFM
+should be placed on an
+approximately horizontal
+surface, but the charges
+on its two leaves and
+their displacements do
+not have to be equal.
+NOTE: In these photos, the paper scale is taped to the top of the
+transparentplastic-filmcover. Itisbettertotapethe scaleto
+the under side of the cover, where it is less likely to be
+damaged.
+D. Reading a KFM. A 12-
+inch ruler rests on the
+SEAT and is held vert-
+ical, while the reader's
+eyebrow touches the
+upper end of the ruler.
+The lower edge of the
+right leaf is under 8 on
+the scale and the lower
+edge of the left leaf is
+under 6 on the scale,
+giving a KFM reading of
+14.
+Also note the SEAT, a
+piece of pencil taped to
+the right side of the can,
+opposite the charging
+wire. .
+C. A Charged KFM. 

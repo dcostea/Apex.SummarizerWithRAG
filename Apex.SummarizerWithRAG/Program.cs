@@ -8,7 +8,8 @@ using Microsoft.OpenApi.Models;
 using Microsoft.SemanticKernel;
 using Serilog;
 using Apex.SummarizerWithRAG.Models;
-using Microsoft.Extensions.Options;
+using Microsoft.KernelMemory.DocumentStorage.DevTools;
+using Microsoft.KernelMemory.FileSystem.DevTools;
 
 var configuration = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json").Build();
@@ -52,25 +53,36 @@ catch (Exception ex)
 }
 
 builder.Services.AddKernel()
-    .AddOllamaChatCompletion(
-        configuration["Ollama:TextModel"]!,
-        ollamaHttpClient
-    );
+    .AddOllamaChatCompletion(configuration["Ollama:TextModel"]!, ollamaHttpClient);
 
-// Kernel Memory for retrieval
-builder.Services.AddKernelMemory<MemoryServerless>(km =>
+builder.Services.AddKernelMemory(km =>
 {
-    km.WithSimpleFileStorage();
+    km.WithElasticsearch(op =>
+    {
+        op.WithUserNameAndPassword(configuration["Elastic:ElasticUser"]!, configuration["Elastic:ElasticPassword"]!);
+        op.WithCertificateFingerPrint(configuration["Elastic:ElasticCertFingerprint"]!);
+        op.WithEndpoint(configuration["Elastic:ElasticHost"]!);
+        op.WithIndexPrefix("km");
+    });
+
+    km.WithSimpleFileStorage(new SimpleFileStorageConfig
+    {
+        StorageType = FileSystemTypes.Disk,
+        Directory = Path.Combine(builder.Environment.ContentRootPath, "kmdata", "docs")
+    });
+
     km.WithOllamaTextGeneration(new OllamaConfig
     {
         Endpoint = ollamaEndpoint!,
         TextModel = new OllamaModelConfig { ModelName = configuration["Ollama:TextModel"]! }
     });
+
     km.WithOllamaTextEmbeddingGeneration(new OllamaConfig
     {
         Endpoint = ollamaEndpoint!,
         EmbeddingModel = new OllamaModelConfig { ModelName = configuration["Ollama:EmbeddingModel"]! }
     });
+
     km.WithCustomTextPartitioningOptions(new TextPartitioningOptions
     {
         MaxTokensPerParagraph = int.Parse(configuration["TextPartitioning:MaxTokensPerParagraph"]!),

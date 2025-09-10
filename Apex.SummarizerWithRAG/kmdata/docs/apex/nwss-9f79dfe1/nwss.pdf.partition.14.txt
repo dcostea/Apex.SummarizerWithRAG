@@ -1,0 +1,90 @@
+ meters, or dose-rate meters, measure the dose
+rate by recording the number of R being received per
+hour at the time of measurement. Notice that it takes
+about seven times as long for the dose rate to decay
+ORNL·DWG 78-6265
+48
+HOURS AFTER THE EXPLOSION
+Fig. 1.2. Decay of the dose rate of radiation from fallout, from the time
+of the explosion, not from the time of fallout deposition.from 1000roentgens per hour (1000 R/ hr) to 10R/hr
+(48 hours) as to decay from 1000 Rj hr to 100R/hr(7
+hours). (Only in high-fallout areas would the dose
+rate I hour after the explosion be as high as 1000
+roentgens per hour.)
+If the dose rate I hour after an explosion is 1000
+R hr, it would take about 2weeks for the dose rate to
+be reduced to I R/ hr solely as a result of radioactive
+decay. Weathering effects will reduce the dose rate
+further; for example, rain can wash fallout particles
+from plants and houses to lower positions on or
+closer to the ground. Surrounding objects would
+reduce the radiation dose from these low-lying
+particles.
+Figure 1.2 also illustrates the fact that at a
+typical location where agiven amount offalloutfrom
+an explosion is deposited later than I hour after the
+explosion, the highest dose rate and the total dose
+received at that location are less than at a location
+where the same amount of fallout isdeposited I hour
+after the explosion. The longer fallout particles have
+been airborne before reaching the ground, the less
+dangerous is their radiation.
+Within two weeks after an attack the occupants
+of most shelters could safely stop using them, or
+could work outside the shelters for an increasing
+number of hours each day. Exceptions would be in
+areas of extremely heavy fallout such as might occur
+downwind from important targets attacked with
+many weapons, especially missile sites and very large
+cities. To know when to come out safely, occupants
+either would need a reliable fallout meter to measure
+the changing radiation dangers, or must receive
+information based on measurements made nearby
+with a reliable instrument.
+The radiation dose that will kill a person varies
+considerably with different people. A dose of 450 R
+resulting from exposure of the whole body to fallout
+radiation is often said to be the dose that will kill
+about half the persons receiving it, although most
+studies indicate that it would take somewhat less.'
+(Note: A number written after a statement refers the
+reader to a source listed in the Selected References
+that follow Appendix D.) Almost all persons
+confined to expedient shelters after a nuclear attack
+would be under stress and without clean surround-
+ings or antibiotics to fight infections. Many also
+would lack adequate water and food. Under these
+unprecedented conditions, perhaps half the persons
+who received a whole-body dose of 350 R within a few
+days would die.'
+Fortunately, the human body can repair most
+radiation damage if the daily radiation doses are not
+too large. As will be explained in Appendix B, a
+person who is healthy and has not been exposed in
+the past two weeks to a total radiation dose of more
+than 100 R can receive a dose of 6 R each day for at
+least two months without being incapacitated.
+Only a very small fraction of Hiroshima and
+Nagasaki citizens who survived radiation doses-
+some of which were nearly fatal-have suffered
+serious delayed effects. The reader should realize that
+to do essential work after a massive nuclear attack,
+many survivors must be willing to receive much
+larger radiation doses than are normally permissible.
+Otherwise, too many workers would stay inside
+shelter too much of the time, and work that would be
+vital to national recovery could not be done. For
+example, if the great majority of truckers were so
+fearful of receiving even non-incapacitating radiation
+doses that they would refuse to transport food,
+additional millions would die from starvation alone.
+• Myth: Fallout radiation penetrates everything;
+there is no escaping its deadly effects.
+• Facts: Some gamma radiation from fallout will
+penetrate the shielding materials of even an excellent
+shelter and reach its occupants. However, the
+radiation dose' that the occupants of an excellent
+shelter would receive while inside this shelter can be
+reduced to a dose smaller than the average American
+receives during his lifetime from X rays and other
+radiation exposures normal in America today. 

@@ -1,0 +1,95 @@
+am how to measure radiation dose rates (roentgens
+per hour =R/hr), how to calculate doses [R] received in different time
+intervals, and how to determine time Interval. (hours and/or minutes) in
+which specified doses would be received. Then this section lists the sizes
+ofdoses (numberofR) that the average person can tolerate without being
+sickened, that he is likely to survive, and that he is likely to be killed by.
+zVl
+-l::cc:q
+SzVl
+;.p
+()Q
+(1)
+N
+o
+tvwtvC)
+a..
+C)
+a..tv
+W
+W
+z
+Vl....,
+:;0
+c:(j....,
+oz
+Vl
+-es:o
+\JQ
+('l
+N.....
+h
+6
+8
+o
+3
+5
+8
+TABLE USED TO FIND DOSE RATES IR/HR
+FROM KFM READINGS
+'DiffERENCE BETWEEN rHE REAOI"lG BEfORE EXPQSuR/
+AND THE READING AF rER EXPOSuRE 'BPt Y srAfV[JARp
+FOIL LEAVESI
+01FF.' IN TIME INTERVAL OF AN EXPOSUR
+READ· 15 SEC. 1 MIN. 4MIN. 16MIN. 1 HF
+INGS R/HR R/HR R/HR R/HR R/HI
+2mm 6.2 1.6 0.4 0.1 00
+4mm 12. 3.1 0.8 0.2 0.0
+6mm 19. 4.6 1.2 0.3 0.0
+8mm 25. 62 16 0.4 0.1
+10 mm 31. 7.7 2.0 05 0.1
+12 mm 37. 9.2 2.3 0.6 0.1
+14 mm 43. 11. 2.7 0.7 01
+Ifan exposure results inthe readingafter the exposure being lessthan5
+mm, recharge the KFM and expose itagainfor one ofthe shortertime
+intervals listed.
+4. Expose the KFM to fallout radiation for one of the time intervals
+shown inthe vertical columns of the table attached to the KFM. (Study
+the following table.) Ifthe dose rate isnot known even approximately.
+first expose the fully charged KFM for one minute. For dependable
+measurements outdoors. expose the charged KFM about 3feet above
+the ground. The longer outdoor exposures usually are best made by
+attaching the KFM with 2strong rubber bands to a stick or pole. being
+careful never to tilt the KFM too much.
+5. Read the KFM after the exposure. while the KFM rests on an
+approximately horizontal surface.
+6. Find the time interval that givesa dependable reading - by exposing
+the fullycharged KFM for one or more ofthe listed time intervals until
+the reading after the exposure is;
+(ajNot lessthan 5 mm.
+(b) At least 2 mm lessthan the reading before the exposure.
+7. Calculate by simple subtraction the difference in the apparent
+separation of the lower edges of the leaves before the exposure and
+after the exposure. Anexample: Ifthe reading before the exposure is18
+mm and the reading after the exposure is 6 mm, the difference in
+readings is 18mm - 6 mm = 12mm.
+8. If an exposure results in a difference in readings of less than 2 mm,
+recharge the KFM and expose it again for one of the longer time
+intervals listed. (If there appears to be no difference in the readings
+taken before and afteran exposurefor one minute. this does not prove
+there is absolutely no fallout danger. Take a longer reading.)
+10. Use the table attached to the
+KFM to find the dose rate
+(RI hr) during the time of ex-
+posure. The dose rate (Rjhr) is
+found at the intersection of the
+vertical column of numbers
+under the time interval used
+and of the horizontal line of
+numbers that lists the calcu-
+lated difference in readings at
+its left end.
+An example: Ifthe time interval of the exposure was 1 MIN. and the
+difference inthe readings was 12mm, the table shows that the dose rate
+during the time interval of the exposure was 9.2 R/HR (9.2 roentgens
+per hour).

@@ -1,0 +1,105 @@
+ weeksofcontinuous use.
+3. Can be built at low cost in home workshops by many Americans,
+using only materials available in most towns.
+4. Could be made by the millions in thousands of shops allover the
+V.S..for mass production during a recognized prolonged crisis, using
+only plywood and other widely available materials.
+To produce such a shelter ventilating pump, during the past 20
+years I have worked intermittently designing and building several
+types of homemade air pumps. However, until I was traveling in
+China as an official guest in October 1982and saw a wooden double-
+action piston pump being used, I did not conceive or come across a
+design that I was able to develop into a shelter-ventilating pump that
+meets all of the requirements outlined above. Now I have made and
+tested a simple homemade Plywood Double-Action Piston Pump,
+described below, that satisfies these requirements. Three other
+persons have used successively improved versionsofthese instructions
+tomake this model.and several others have contributed improvements.
+HOW A PLYWOOD DOUBLE-ACTION PISTON PUMP
+WORKS
+Fig. 1picturesthe box-liketest model described inthese instructions.
+Fig. I. Plywood Double-Action Piston Pump, with manometer
+attached for tests.
+Fig, 2 illustrates a vertical section through a slightly improved
+model, and shows the 12x12-in. plywood piston being pushed from
+right to left, causing air from the outdoors to be "sucked" down.the
+open air-supply duct in the top of the pump, then down to the right
+through the open valve in the airtight frame (that is above and near
+the right end of the PARTITION), and on down into the lower-
+pressure area behind the leftward-moving piston,
+Because the air to the right of the leftward-moving piston is at a
+lower pressure than the air in the shelter room, the exhaust valves in
+the front end (the handle endtof the pump are held closed,
+Duringthis halfofthe pumpingcycle, the higher-pressureair inthe
+partofthe pump'ssquare"cylinder"tothe leftoftheleftward-moving
+piston opens the air-exhaust valves in the back end of the pump, and
+fresh air isforced out into the shelterroom. The higher-pressureairto
+the left of the valve in the airtight frame (that is above the left end of
+the PARTITION) keeps this valve closed, while the lower-pressure
+air to the right of this valve helps keep it closed.
+When the piston is pulled tothe right, all ofthe valvesshownclosed
+are quicklyopened, and all shown open are quicklyclosed. Then fresh
+air is forced into the shelter room through the opened exhaust valves
+in the front end of the pump.
+w-Jo
+Z
+<t
+J:
+0:0:WwIDa.
+ID~
+::J::)
+O:ID
+6x6-IN. DUCT, INSIDE
+-------~~~ ~
+....r- ----' ---- ----- -----
+~ 4- 1-1t.f-3 -1 .---.---.,
+~
+0:0: .-------.. Ww
+-------
+ID a.
+~
+ID ~
+-----
+::J ::J
+O:ID ~
+3~ 1~..t----------32.IN.
+Fig. 2. Vertical Section of the Double-Action Piston Pump showing its square piston being pushed to the left.Table 2. Volumetric Efficiencies of Double-Action Piston Pump
+Operated by One Man. .
+Table 1. Comparison of Plywood Double-Action Piston Pump with
+Temet OyCentrifugal Blower.'
+PRES. STROKES
+DIFF, PER
+(in. w.g.) MINUTE cfm EFFICIENCY
+4.0 36 122 84.0%
+2.6 45 160 89.0%
+0.7 51 188 92.0%
+0.4 54 202 94.0%
+0.2 55 208 94.5%
+0.18
+0.15
+HORSE-
+POWER
+90
+172
+208
+134
+182
+300
+CUBIC
+FEET
+PER
+MINUTE
+2.0
+4.3
+2.3
+2.3
+4.9
+4.3
+PRES.
+D1FF.
+(in. w.g.)
+TYPE OF
+PUMP
+used (as compared to the cfm pumped by this very good centrifugal
+blower) is typical of the reduced effectiveness of even the best
+centrifugal blowers at high pressure differences.

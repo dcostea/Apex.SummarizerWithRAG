@@ -16,7 +16,7 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
     IConfiguration configuration, IOptionsSnapshot<RagSettings> ragSettings) : ControllerBase
 {
     private readonly RagSettings _rag = ragSettings.Value;
-    private readonly string _ingestionIndex = ragSettings.Value?.IngestionIndex ?? "my_files";
+    private readonly string _ingestionIndex = ragSettings.Value?.IngestionIndex!;
 
     private static readonly ConcurrentDictionary<string, (string DocumentId, string Index)> IngestedByFileName = new(StringComparer.OrdinalIgnoreCase);
 
@@ -48,7 +48,7 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
                 {
                     var name = Path.GetFileNameWithoutExtension(safeName);
                     var ext = Path.GetExtension(safeName);
-                    destination = Path.Combine(importPath, $"{name}_{Guid.NewGuid():N}{ext}");
+                    destination = Path.Combine(importPath, $"{name}{ext}");
                 }
 
                 using var stream = new FileStream(destination, FileMode.Create, FileAccess.Write, FileShare.None);

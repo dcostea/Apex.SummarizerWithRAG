@@ -1,0 +1,131 @@
+{
+  "index": "b1",
+  "document_id": "esocc-08e0321d",
+  "execution_id": "154ee7f6b6b745b792b557ea04228041",
+  "steps": [
+    "extract",
+    "partition",
+    "gen_embeddings",
+    "save_records"
+  ],
+  "remaining_steps": [
+    "save_records"
+  ],
+  "completed_steps": [
+    "extract",
+    "partition",
+    "gen_embeddings"
+  ],
+  "tags": {
+    "country": [
+      "Netherlands"
+    ]
+  },
+  "creation": "2025-09-10T14:56:07.8800091+00:00",
+  "last_update": "2025-09-10T14:56:10.3869971+00:00",
+  "files": [
+    {
+      "id": "d316ac09b25b4dab8a4e896f41b5898d",
+      "name": "ESOCC.pdf",
+      "size": 129813,
+      "mime_type": "application/pdf",
+      "artifact_type": "Undefined",
+      "partition_number": 0,
+      "section_number": 0,
+      "tags": {
+        "country": [
+          "Netherlands"
+        ]
+      },
+      "processed_by": [
+        "extract"
+      ],
+      "generated_files": {
+        "ESOCC.pdf.extract.txt": {
+          "id": "8b385f6292c84cc6b353620ef5c05e8c",
+          "name": "ESOCC.pdf.extract.txt",
+          "size": 1042,
+          "mime_type": "text/plain",
+          "artifact_type": "ExtractedText",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {
+            "country": [
+              "Netherlands"
+            ]
+          },
+          "parent_id": "d316ac09b25b4dab8a4e896f41b5898d",
+          "source_partition_id": "",
+          "content_sha256": "",
+          "processed_by": [
+            "extract",
+            "partition"
+          ]
+        },
+        "ESOCC.pdf.extract.json": {
+          "id": "6e206938d31f4d4b802106c91dd4cdac",
+          "name": "ESOCC.pdf.extract.json",
+          "size": 1042,
+          "mime_type": "text/plain",
+          "artifact_type": "ExtractedContent",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {
+            "country": [
+              "Netherlands"
+            ]
+          },
+          "parent_id": "d316ac09b25b4dab8a4e896f41b5898d",
+          "source_partition_id": "",
+          "content_sha256": "",
+          "processed_by": [
+            "extract"
+          ]
+        },
+        "ESOCC.pdf.partition.0.txt": {
+          "id": "4c31ba95cf394265ada58dd08a312c45",
+          "name": "ESOCC.pdf.partition.0.txt",
+          "size": 1042,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {
+            "country": [
+              "Netherlands"
+            ]
+          },
+          "parent_id": "d316ac09b25b4dab8a4e896f41b5898d",
+          "source_partition_id": "",
+          "content_sha256": "7d93effd99659f80ff88806ab22774150b8ce217e6a199f8f76505f6c8b3ec75",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/AI.Ollama.OllamaTextEmbeddingGenerator/__"
+          ]
+        },
+        "ESOCC.pdf.partition.0.txt.AI.Ollama.OllamaTextEmbeddingGenerator.__.text_embedding": {
+          "id": "17c94ecc756e4971b584ba4ccfe1d4bd",
+          "name": "ESOCC.pdf.partition.0.txt.AI.Ollama.OllamaTextEmbeddingGenerator.__.text_embedding",
+          "size": 9698,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {
+            "country": [
+              "Netherlands"
+            ]
+          },
+          "parent_id": "d316ac09b25b4dab8a4e896f41b5898d",
+          "source_partition_id": "4c31ba95cf394265ada58dd08a312c45",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings"
+          ]
+        }
+      }
+    }
+  ],
+  "args": {},
+  "previous_executions_to_purge": []
+}

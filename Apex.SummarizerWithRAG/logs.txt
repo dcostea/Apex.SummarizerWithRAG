@@ -1284,3 +1284,279 @@ Planned …
 2025-09-10 12:11:15.876 +02:00 [INF] Apex.Summarizer application started successfully
 2025-09-10 12:15:09.611 +02:00 [DBG] MEMORY indexed: Data\ESOCC_b3f3dd64d2ce4d128e373c91a0d268c2.pdf into index: my_files with documentId: Data_ESOCC_b3f3dd64d2ce4d128e373c91a0d268c2.pdf
 2025-09-10 12:15:32.088 +02:00 [DBG] MEMORY Deleted document: 'ESOCC_b3f3dd64d2ce4d128e373c91a0d268c2.pdf' (docId=Data_ESOCC_b3f3dd64d2ce4d128e373c91a0d268c2.pdf, index=my_files)
+2025-09-10 14:32:16.673 +02:00 [INF] Ollama connection successful!
+2025-09-10 14:32:16.872 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 14:33:24.489 +02:00 [INF] Ollama connection successful!
+2025-09-10 14:33:24.738 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 14:33:40.981 +02:00 [INF] CHUNKS index=my_files count=0 minRel=0.1 limit=100 country=Netherlands
+2025-09-10 15:25:44.603 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:27:32.130 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:27:48.987 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:28:14.361 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:30:45.077 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:32:54.582 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:33:13.668 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:34:36.718 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:37:41.577 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:37:41.823 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 15:37:56.575 +02:00 [ERR] MEMORY Failed to process Data\ESOCC_fb57039eb3a24db8ac1442080a509a64.pdf: Exception of type 'Microsoft.KernelMemory.MemoryDb.Elasticsearch.InvalidIndexNameException' was thrown.
+2025-09-10 15:40:33.717 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:40:33.972 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 15:40:50.258 +02:00 [ERR] MEMORY Failed to process Data\ESOCC_c2e313936ebc4c588fb4a1e98394840d.pdf: Exception of type 'Microsoft.KernelMemory.MemoryDb.Elasticsearch.InvalidIndexNameException' was thrown.
+2025-09-10 15:41:20.183 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:41:20.415 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 15:41:30.858 +02:00 [ERR] MEMORY Failed to process Data\ESOCC_635d761291f145b59480328f90bf4a0d.pdf: Exception of type 'Microsoft.KernelMemory.MemoryDb.Elasticsearch.InvalidIndexNameException' was thrown.
+2025-09-10 15:43:20.344 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:43:20.572 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 15:43:32.786 +02:00 [ERR] MEMORY Failed to process Data\ESOCC_a67be9a9a96148f9bfc861393e36910c.pdf: Exception of type 'Microsoft.KernelMemory.MemoryDb.Elasticsearch.InvalidIndexNameException' was thrown.
+2025-09-10 15:45:15.564 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:45:15.840 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 15:45:32.587 +02:00 [ERR] MEMORY Failed to process Data\ESOCC_5b437c354d1a4bbb9a12413af973f231.pdf: Exception of type 'Microsoft.KernelMemory.MemoryDb.Elasticsearch.InvalidIndexNameException' was thrown.
+2025-09-10 15:48:29.887 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:48:30.142 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 15:49:20.855 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:49:21.079 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 15:50:34.392 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:50:34.620 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 15:52:22.048 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:52:22.302 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 15:53:26.465 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:53:26.737 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 15:54:26.426 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:54:26.649 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 15:55:19.751 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:55:20.010 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 15:56:07.112 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:56:07.343 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 15:56:53.380 +02:00 [ERR] MEMORY Failed to process Data\ESOCC_26877692a3474f2b9eefb5101b4cf5b8.pdf: Exception of type 'Microsoft.KernelMemory.MemoryDb.Elasticsearch.InvalidIndexNameException' was thrown.
+2025-09-10 15:59:10.148 +02:00 [INF] Ollama connection successful!
+2025-09-10 15:59:10.371 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 15:59:36.827 +02:00 [ERR] MEMORY Index name base: Exception of type 'Microsoft.KernelMemory.MemoryDb.Elasticsearch.InvalidIndexNameException' was thrown. An index name can only contain letters, digits, and hyphens (-).
+2025-09-10 16:03:53.978 +02:00 [INF] Ollama connection successful!
+2025-09-10 16:03:54.231 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 16:04:27.275 +02:00 [ERR] MEMORY Index name : Exception of type 'Microsoft.KernelMemory.MemoryDb.Elasticsearch.InvalidIndexNameException' was thrown. An index name can only contain letters, digits, and hyphens (-).
+2025-09-10 16:05:31.749 +02:00 [INF] Ollama connection successful!
+2025-09-10 16:05:31.985 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 16:06:09.202 +02:00 [INF] Ollama connection successful!
+2025-09-10 16:06:09.434 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 16:07:09.183 +02:00 [INF] Ollama connection successful!
+2025-09-10 16:07:09.491 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 16:07:24.027 +02:00 [ERR] MEMORY Index name '': Exception of type 'Microsoft.KernelMemory.MemoryDb.Elasticsearch.InvalidIndexNameException' was thrown. An index name can only contain letters, digits, and hyphens (-).
+2025-09-10 16:11:28.461 +02:00 [INF] Ollama connection successful!
+2025-09-10 16:11:28.689 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 16:11:33.013 +02:00 [INF] ImportingService configured ingestion index='base' length=4
+2025-09-10 16:11:33.013 +02:00 [INF] ImportingService configured ingestion index='base' length=4
+2025-09-10 16:11:38.246 +02:00 [INF] ImportingService configured ingestion index='base' length=4
+2025-09-10 16:12:18.824 +02:00 [ERR] MEMORY invalid index during ingest requested='base' failingIndex='' errors=An index name can only contain letters, digits, and hyphens (-).
+2025-09-10 16:16:18.989 +02:00 [INF] Ollama connection successful!
+2025-09-10 16:16:19.226 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 16:16:22.962 +02:00 [INF] ImportingService configured ingestion index='base' length=4
+2025-09-10 16:16:22.962 +02:00 [INF] ImportingService configured ingestion index='base' length=4
+2025-09-10 16:16:27.853 +02:00 [INF] ImportingService configured ingestion index='base' length=4
+2025-09-10 16:16:27.958 +02:00 [DBG] MEMORY ingest starting file='Data\ESOCC_38ea430d33de4a3d8b9d7fbd9799bbca.pdf' docId='esocc_38ea430d33de4a3d8b9d7fbd9799bbca.pdf-a60c78d41abb45d19f0b23cfee7e4f58' baseId='esocc_38ea430d33de4a3d8b9d7fbd9799bbca.pdf' index='base'
+2025-09-10 16:16:30.488 +02:00 [ERR] MEMORY invalid index during ingest requested='base' failingIndex='' errors=An index name can only contain letters, digits, and hyphens (-).
+2025-09-10 16:30:01.177 +02:00 [INF] Ollama connection successful!
+2025-09-10 16:30:01.460 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 16:30:05.913 +02:00 [INF] ImportingService configured ingestion index='km-default' length=10
+2025-09-10 16:30:05.913 +02:00 [INF] ImportingService configured ingestion index='km-default' length=10
+2025-09-10 16:30:12.955 +02:00 [INF] ImportingService configured ingestion index='km-default' length=10
+2025-09-10 16:30:44.729 +02:00 [INF] Final Elasticsearch index for ingest: 'km-default'
+2025-09-10 16:33:56.852 +02:00 [INF] Ollama connection successful!
+2025-09-10 16:33:57.068 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 16:34:10.422 +02:00 [INF] ImportingService configured ingestion index='km-default' length=10
+2025-09-10 16:34:10.422 +02:00 [INF] ImportingService configured ingestion index='km-default' length=10
+2025-09-10 16:34:17.371 +02:00 [INF] ImportingService configured ingestion index='km-default' length=10
+2025-09-10 16:34:17.403 +02:00 [INF] Final Elasticsearch index for ingest: 'km-default'
+2025-09-10 16:34:20.115 +02:00 [ERR] MEMORY invalid index during ingest requested='km-default' failingIndex='' errors=An index name can only contain letters, digits, and hyphens (-).
+2025-09-10 16:34:20.185 +02:00 [INF] ImportingService configured ingestion index='km-default' length=10
+2025-09-10 16:37:01.859 +02:00 [INF] Ollama connection successful!
+2025-09-10 16:37:33.521 +02:00 [INF] Ollama connection successful!
+2025-09-10 16:37:33.752 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 16:37:38.020 +02:00 [INF] ImportingService configured ingestion index='b1' length=2
+2025-09-10 16:37:38.020 +02:00 [INF] ImportingService configured ingestion index='b1' length=2
+2025-09-10 16:37:43.242 +02:00 [INF] ImportingService configured ingestion index='b1' length=2
+2025-09-10 16:37:43.272 +02:00 [INF] Final Elasticsearch index for ingest: 'b1'
+2025-09-10 16:37:45.883 +02:00 [ERR] MEMORY invalid index during ingest requested='b1' failingIndex='' errors=An index name can only contain letters, digits, and hyphens (-).
+2025-09-10 16:37:45.937 +02:00 [INF] ImportingService configured ingestion index='b1' length=2
+2025-09-10 16:43:48.561 +02:00 [INF] Ollama connection successful!
+2025-09-10 16:43:48.790 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 16:44:01.398 +02:00 [ERR] MEMORY failingIndex='' errors=An index name can only contain letters, digits, and hyphens (-).
+2025-09-10 16:45:52.860 +02:00 [INF] Ollama connection successful!
+2025-09-10 16:45:53.085 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 16:46:03.628 +02:00 [ERR] MEMORY failingIndex='' errors=An index name can only contain letters, digits, and hyphens (-).
+2025-09-10 16:48:33.741 +02:00 [INF] Ollama connection successful!
+2025-09-10 16:48:33.972 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 16:50:18.331 +02:00 [INF] Ollama connection successful!
+2025-09-10 16:50:18.571 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 16:51:09.713 +02:00 [INF] Ollama connection successful!
+2025-09-10 16:51:09.967 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 16:51:44.758 +02:00 [INF] Ollama connection successful!
+2025-09-10 16:51:45.018 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 16:55:57.544 +02:00 [INF] Ollama connection successful!
+2025-09-10 16:55:57.778 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 16:56:10.429 +02:00 [ERR] MEMORY failingIndex='' errors=An index name can only contain letters, digits, and hyphens (-).
+2025-09-10 16:56:50.119 +02:00 [INF] Ollama connection successful!
+2025-09-10 16:56:50.358 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 16:59:53.733 +02:00 [INF] Ollama connection successful!
+2025-09-10 16:59:53.987 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 17:00:23.130 +02:00 [ERR] MEMORY failingIndex='' errors=An index name can only contain letters, digits, and hyphens (-).
+2025-09-10 17:02:20.865 +02:00 [INF] Ollama connection successful!
+2025-09-10 17:02:21.109 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 17:02:34.803 +02:00 [ERR] MEMORY failingIndex='' errors=An index name can only contain letters, digits, and hyphens (-).
+2025-09-10 17:04:17.094 +02:00 [ERR] MEMORY failingIndex='' errors=An index name can only contain letters, digits, and hyphens (-).
+2025-09-10 17:07:59.993 +02:00 [INF] Ollama connection successful!
+2025-09-10 17:08:00.231 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 17:08:08.136 +02:00 [DBG] MEMORY attempting ingest with index='apex' docId='esocc-0b04326f'
+2025-09-10 17:08:10.663 +02:00 [ERR] MEMORY failingIndex='' passedIndex='apex' errors=An index name can only contain letters, digits, and hyphens (-).
+2025-09-10 17:10:34.633 +02:00 [INF] Ollama connection successful!
+2025-09-10 17:10:34.872 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 17:10:43.325 +02:00 [DBG] MEMORY existing indexes: 
+2025-09-10 17:10:43.333 +02:00 [DBG] MEMORY attempting ingest with index='apex' docId='esocc-ae101584'
+2025-09-10 17:10:45.869 +02:00 [ERR] MEMORY failingIndex='' passedIndex='apex' errors=An index name can only contain letters, digits, and hyphens (-).
+2025-09-10 17:12:28.889 +02:00 [INF] Ollama connection successful!
+2025-09-10 17:12:29.163 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 17:12:37.113 +02:00 [DBG] MEMORY ensuring index 'apex' exists
+2025-09-10 17:12:39.472 +02:00 [ERR] MEMORY failingIndex='' passedIndex='apex' errors=An index name can only contain letters, digits, and hyphens (-).
+2025-09-10 17:14:09.406 +02:00 [INF] Ollama connection successful!
+2025-09-10 17:14:09.631 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 17:14:18.895 +02:00 [DBG] MEMORY ensuring index 'apex' exists
+2025-09-10 17:14:21.200 +02:00 [ERR] MEMORY failingIndex='' passedIndex='apex' errors=An index name can only contain letters, digits, and hyphens (-).
+2025-09-10 17:20:18.448 +02:00 [INF] Ollama connection successful!
+2025-09-10 17:20:18.711 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 17:20:27.004 +02:00 [DBG] MEMORY ensuring index 'apex' exists
+2025-09-10 17:20:29.886 +02:00 [ERR] MEMORY failingIndex='' passedIndex='apex' errors=An index name can only contain letters, digits, and hyphens (-).
+2025-09-10 17:23:31.236 +02:00 [INF] Ollama connection successful!
+2025-09-10 17:23:31.478 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 17:23:40.095 +02:00 [DBG] MEMORY ensuring index 'apex' exists
+2025-09-10 17:23:44.690 +02:00 [DBG] MEMORY index 'apex' initialized
+2025-09-10 17:23:44.691 +02:00 [DBG] MEMORY attempting ingest with index='apex' docId='esocc-c2e29765'
+2025-09-10 17:23:45.730 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-c2e29765'
+2025-09-10 17:24:02.493 +02:00 [DBG] MEMORY ensuring index 'apex' exists
+2025-09-10 17:24:03.953 +02:00 [DBG] MEMORY index 'apex' initialized
+2025-09-10 17:24:03.954 +02:00 [DBG] MEMORY attempting ingest with index='apex' docId='nwss-9f79dfe1'
+2025-09-10 17:24:39.014 +02:00 [INF] QUERY: what is the cocaine and heroine team doing? in which countries?
+2025-09-10 17:24:41.183 +02:00 [DBG] MEMORY index=apex source=ESOCC.pdf country=["Netherlands"] rel=0.79551625 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-10 17:24:41.188 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.74332523 part#8 text=published in 1979.
+The average American has far too little informa-
+tion that would help him and his family and our
+country survive a nuclear attack, and many of his
+beliefsabout nuclearwar are bothfa…
+2025-09-10 17:24:41.190 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7212157 part#20 text=in the 1986 summerissueof Foreign Affairs,the
+prestigiousquarterlyof the CouncilonForeign
+Relations. The authors, Starley L. Thompson
+and Stephen H. Schneider, are atmospheric
+scientists with the Nati…
+2025-09-10 17:24:41.191 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.71857333 part#17 text=modern H-bombs are over
+1000times as powerful as the A-bomb that destroyed
+most of Hiroshima, these H-bombs are 1000times as
+deadly and destructive.
+• Facts: A nuclear weapon 1000times as powerful
+as …
+2025-09-10 17:24:41.193 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7069464 part#21 text=Parade, the Sundaytabloidread
+by millions. The most influential article was
+featured intheDecember23, 1983issueofScience
+(theweekly magazineofthe AmericanAssocia-
+tion for the Advancement ofScience): …
+2025-09-10 17:24:41.194 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7064122 part#7 text=occupants against ex-
+cessive exposure to initial nuclear radiation.
+Edward Teller, Ph.D., nuclear physicist,
+leading inventor of offensive and defensive
+weapons, a strong supporter of civil defense
+a…
+2025-09-10 17:24:41.196 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.70576984 part#23 text=.Chapter 3
+Warnings and Communications
+IMPORTANCE OF ADEQUATE WARNING
+When Hiroshima and Nagasaki were blasted by
+the first nuclear weapons ever to be used in war, very
+few of the tens of thousands of…
+2025-09-10 17:24:41.197 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.70468163 part#22 text=that would be impossible
+otherwise. Trembling hands, weak legs, and cold
+sweat do not mean that a person has become
+ineffective. Doing hard, necessary work isone of the
+best ways to keep one's fears u…
+2025-09-10 17:24:41.198 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.6993501 part#9 text=stored outside target areas.
+About 100,000 civil defense troops are main-
+tained for control, rescue, and post-attack re-
+covery duties. The annual per capita cost of
+Russian civil defense preparation…
+2025-09-10 17:24:41.200 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.6970457 part#5 text=at Oak Ridge National Laboratory, one of the
+first researchers I recruited was Cresson H. Kearny.
+Most of his life has been preparation, unplanned and
+planned, for writing this guide to help people un…
+2025-09-10 17:25:23.105 +02:00 [INF] ANSWER model=gemma3:12b index=apex limit=100 minRelevance=0.1 text=Here's the answer based on the provided information:
+
+**What is the cocaine and heroin team doing?**
+
+The team ("O2-1 COCAINE AND HEROIN") is holding an operational meeting to prepare for an action da…
+2025-09-10 17:26:00.679 +02:00 [INF] QUERY: what is the cocaine and heroine team doing? in which countries?
+2025-09-10 17:26:03.316 +02:00 [DBG] MEMORY index=apex source=ESOCC.pdf country=["Netherlands"] rel=0.79551625 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-10 17:26:03.318 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.74332523 part#8 text=published in 1979.
+The average American has far too little informa-
+tion that would help him and his family and our
+country survive a nuclear attack, and many of his
+beliefsabout nuclearwar are bothfa…
+2025-09-10 17:26:03.320 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7310827 part#84 text=longer available,
+yellow corn, carrots, and green, leafy vegetables
+(including dandelion greens) would be the best
+sources. If these foods were not obtainable, the next
+best source would be sprouted w…
+2025-09-10 17:26:03.321 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7212157 part#20 text=in the 1986 summerissueof Foreign Affairs,the
+prestigiousquarterlyof the CouncilonForeign
+Relations. The authors, Starley L. Thompson
+and Stephen H. Schneider, are atmospheric
+scientists with the Nati…
+2025-09-10 17:26:03.323 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.71857333 part#17 text=modern H-bombs are over
+1000times as powerful as the A-bomb that destroyed
+most of Hiroshima, these H-bombs are 1000times as
+deadly and destructive.
+• Facts: A nuclear weapon 1000times as powerful
+as …
+2025-09-10 17:26:03.325 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.71588206 part#34 text=of about l-pint
+size, cooking oil, cotton string for
+wicks(seeChapter II, Light), kitchen
+matches, and a moisture-proof jar
+for storing matches.
+Category 7. Clothing: Cold-weatherboots, over-
+shoes, a…
+2025-09-10 17:26:03.327 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7111845 part#64 text=, firefighters from undamaged, nearby com-
+munities were unable to reach most of the burning
+areas because of blast debris blocking the roads.
+Later they were kept from burning areas by the
+intense he…
+2025-09-10 17:26:03.329 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.707322 part#57 text=alFanning
+is that almost anyone who is given the field-
+tested instructions can quickly make and use
+one of these simple fans. Only very widely
+available materials are needed. The main dis-
+advantage …
+2025-09-10 17:26:03.331 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7069464 part#21 text=Parade, the Sundaytabloidread
+by millions. The most influential article was
+featured intheDecember23, 1983issueofScience
+(theweekly magazineofthe AmericanAssocia-
+tion for the Advancement ofScience): …
+2025-09-10 17:26:03.332 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7064122 part#7 text=occupants against ex-
+cessive exposure to initial nuclear radiation.
+Edward Teller, Ph.D., nuclear physicist,
+leading inventor of offensive and defensive
+weapons, a strong supporter of civil defense
+a…
+2025-09-10 17:26:41.842 +02:00 [INF] ANSWER model=gemma3:12b index=apex limit=100 minRelevance=0.1 text=According to the provided information, the cocaine and heroin team (O2-1) is **preparing an action day targeting a criminal network**.
+
+They are involved in this activity in **Slovakia, Australia, and…
+2025-09-10 17:30:03.744 +02:00 [INF] Ollama connection successful!
+2025-09-10 17:30:40.090 +02:00 [INF] Ollama connection successful!
+2025-09-10 18:07:46.572 +02:00 [INF] Ollama connection successful!
+2025-09-10 18:07:46.800 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 18:07:59.988 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-6c12464a'

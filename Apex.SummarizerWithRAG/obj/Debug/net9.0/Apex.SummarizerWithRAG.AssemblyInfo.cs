@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Apex.SummarizerWithRAG")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26cea6b586550fab65abc07f0dc05794fdde707c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af4aa8e23d058ead8b305abc155bfbb39d68a3c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Apex.SummarizerWithRAG")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Apex.SummarizerWithRAG")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

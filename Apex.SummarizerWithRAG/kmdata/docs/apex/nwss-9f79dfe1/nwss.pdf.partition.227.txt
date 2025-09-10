@@ -1,0 +1,74 @@
+ or other tape. Be
+sure tofirst remove the roll from
+its dispenser. Some of the other
+kinds of tape will not produce a
+high enough voltage.
+c. QUICKLY unroll 10to 12inches
+of tape by pulling its end with
+the left hand. while the right
+hand allows the roll to unwind
+while remaining in about the
+same "GET SET" position only
+.an inch or two away from the
+KFM.
+d. While holding the unwound tape tight, about perpendicular to the
+charging-wire, and about I j 4inch away from the end of the charging-wire,
+promptly move both hands and the tapeto the right ratherslowly - taking
+about 2 seconds to move about 8 inches. The electrostatic charge on the
+unwound tape "jumps"the spark gaps from the tape to the upperend of the
+charging-wireand from the lower end of the charging-wireto the aluminum
+leaves, and charges the aluminum leaves.
+Be sure neither leaf is touching a stop-thread.
+Try to charge the leaves enough to spread them far enough apart to give a
+reading ofat least 15mm, but no more than 20 mm afterthe KFM has
+been gentlybumpedorshaken to remove anyunstable partofthe
+charge.
+e. Pull down on an insulating adjustment-thread to raise the lower end of the
+charging-wire. lfthe charging-wire has been held in charging position by
+its sticky-ended adjustment-thread being stuck to the top of the clear
+plastic cover, it is best first to
+pull down a little on the ~bare-ended adjustment-thread,
+and then to move, p~1I down on~ . 'I. ,no SPARK GAP
+and secure the sticky-ended 4
+adjustment-thread tn the side nf ~ ~/ ~.~.;'\the can so that the lower part of y :",,
+the charging-wire is close to the' .
+underside of the clear plastic •
+cover.
+TRANSFERRING CHARGE
+Do not touch the charging-wire.
+f. Rewind the tape dght on its roll, for future use when other tape may not
+be available.
+Testing Your KFM to Learn if it Can
+Accurately Measure Low Dose Rates
+Putfresh drying agentin your KFM and then charge and testthe KFM
+in a location where it is not exposed to abnormal radiation. Take an
+initial reading. If after 3 hours its reading has decreased by 1mm, or
+less. this means that its leaf-suspending threads are good insulators
+and that your KFM can reliably measure dose rates as low as 0.03
+roentgens per hour (30 milliroentgens per hour). By post-attack
+standards, 30 mRlhr is a low dose rate. In a whole month of
+continuous exposure (an impossibility, because fallout decays), 30
+mRlhr would result in a dose of 21.9 roentgens - not enough to
+incapacitate. Warning: In.heavy fallout areas, for the first few days
+after fallout deposition the dose rates inside even most good shelters
+will be higher than 0.03 R/hr.
+Trouble Shooting
+If charging does not separate the two leaves sufficiently, take these corrective
+actions:
+I. Besure the pieces ofanhydrite in the bottom of the ionizationchamber(the
+can) are in a single layer, with no piece on top of another and the top of no
+piece more than Ij2 inch above the bottom of the can.
+2. Check to besure thatthe threads suspendingthe leavesare not crossed; then
+try to charge the KFM again.
+3. If the KFM still cannot be charged, replace the used anhydrite with fresh
+anhydrite.
+4. Ifyou cannotchargea KFM when the air isvery humid, charge it inside its
+dry-bucket.
+5. If you cannot charge the KFM while in an area of heavy fallout, take it to
+the place affordingthe best protectionagainst radiation, and try to charge it
+there. (A dose rate of several hundred Rj hr will neutralize the charges on
+both the chargingdevice and the instrument so rapidly that a KFM cannot
+be charged.)
+If a KFM or other radiation measuring instrument gives unexpectedly high
+readings inside a good shelter, wipeall dust off the outside ofthe instrumentand
+repeat the radiation-measurements. 

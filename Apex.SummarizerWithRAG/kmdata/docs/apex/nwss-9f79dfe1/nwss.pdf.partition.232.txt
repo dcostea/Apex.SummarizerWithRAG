@@ -1,0 +1,63 @@
+ 1-min exposure results in a
+difference in readings of2 mm, the table shows the dose rate
+was 1.6 R/hr; then if the KFM is exposed for 4 minutes at
+this same dose rate of 1.6 R/hr, the table shows that the
+resultant difference in readings is 8 mm.
+The longer exposure results in a more accurate
+determination ofthe dose rate.
+Ifthe dose rate isfound to be greater than 0.2 R/hr and time
+is available, recharge the KFM and repeat the dose-rate
+measurement --to avoid possible mistakes.
+Another example: Assume that three days after an attack the occupants
+of a dry, hot cave giving almost complete protection against fallout are in
+desperate need ofwater. The dose rate outside is found to be 20 R/hr. To
+backpack water from a source 3 miles away is estimated to take 2-112
+hours. The cave occupants estimate that the water backpackers will
+receive a dose in 2-112 hours ofSO R (2.5 hr x 20 R/hr = SO R). A dose of
+SO R will cause only mild symptoms (nausea in about 10% of persons
+receiving a SO R dose) for persons who previously have received only very
+small doses. Therefore, one ofthe cave occupants makes a rapid radiation
+surveyfor about 1-112 miles along the proposed route, stopping to charge
+and read a KFM about every quarter of a mile. He finds no dose rates
+much higher than 20 R/hr.
+So, the cave occupants decide the risk is small enough to justify some of
+them leaving shelterfor about 2-112 hours to get water.
+Fortunately, the human body -- if given enough time -- can repair most of
+the damage caused by radiation. An historic example: A healthy man
+accidently received a daily dose of 9.3 R (or somewhat more) of
+fallout-type radiation each day for a period of 106 days. His total
+accumulated dose was at least 1000R. A dose of one thousand roentgens,
+if received in a few days, is almost three times the dose likely to kill the
+average man if he receives the whole dose in a few days and after a
+nuclear attack cannot get medical treatment, adequate rest, etc.
+However, the only symptomthis man noted was seriousfatigue.
+The occupants ofa high-protection-factor shelter (such as a trench shelter
+covered with 2 or 3 feet of earth and having crawlway entrances) would
+receive less than 11200 ofthe radiation dose theywould receive outside.
+Even in most areas of very heavy fal1out, persons who remain continously
+in such a shelter would receive a total accumulated dose of less than 2S R
+in the first day after the attack, and less than 100R in the first two weeks.
+At the end of the first two weeks, such shelter occupants could start
+working outside for an increasing length of time each day, receiving a
+daily dose of no more than 6 R for up to two months without being
+sickened.
+C.. Calculating the Dose Received
+The dose of fallout radiation -- that is, the amount of fallout radiation
+received -- determines the harmful effects on men and animals. Being
+exposed to a high dose rate is not always dangerous -- provided the
+exposure is shortenough to result in only a small dose being received. For
+example, if the dose rate outside an excellent fallout shelter is 1200 R/hr
+and a shelter occupant goes outside for 30 seconds; he would be exposed
+for 112of 1 minute, or 112 of 1160of an hour, which equals 11120 hour.
+Therefore, since the dose he would receive ifhe stayed outside for 1 hour
+would be 1200 R, in 30 seconds he would receive 11120 of 1200, which
+equals 10R(1200Rdivided by 120 = 10 R). Atotal daily dose of 10 R (10
+roentgens) will not cause any symptoms if it is not repeated day after day
+for a week or more.
+In contrast, if the average dose rate of an area were found to be 12 R/hr
+and if a person remained exposed in that particular area for 24 hours, he
+would receive a dose of 288 R(12 R/hr x 24 hr =288 R). Even assuming
+that this person had beenexposed previously to very little radiation, there
+would stilI be a serious risk that this 288 Rclosewould be fatal under the
+difficult conditions thatwould fol1ow a heavy nuclear attack.
+D. 

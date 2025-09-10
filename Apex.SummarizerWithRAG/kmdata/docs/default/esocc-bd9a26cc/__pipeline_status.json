@@ -1,0 +1,45 @@
+{
+  "index": "default",
+  "document_id": "esocc-bd9a26cc",
+  "execution_id": "49c3600df4f14390b97e56e871eda1db",
+  "steps": [
+    "extract",
+    "partition",
+    "gen_embeddings",
+    "save_records"
+  ],
+  "remaining_steps": [
+    "extract",
+    "partition",
+    "gen_embeddings",
+    "save_records"
+  ],
+  "completed_steps": [],
+  "tags": {
+    "country": [
+      "Netherlands"
+    ]
+  },
+  "creation": "2025-09-10T14:50:35.1808311+00:00",
+  "last_update": "2025-09-10T14:50:35.1894+00:00",
+  "files": [
+    {
+      "id": "67fdad14ef6e4fdfbf36dab0f44cc7cd",
+      "name": "ESOCC",
+      "size": 129813,
+      "mime_type": "",
+      "artifact_type": "Undefined",
+      "partition_number": 0,
+      "section_number": 0,
+      "tags": {
+        "country": [
+          "Netherlands"
+        ]
+      },
+      "processed_by": [],
+      "generated_files": {}
+    }
+  ],
+  "args": {},
+  "previous_executions_to_purge": []
+}

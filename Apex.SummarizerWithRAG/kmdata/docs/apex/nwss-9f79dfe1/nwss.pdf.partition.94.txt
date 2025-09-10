@@ -1,0 +1,88 @@
+ instruments
+include approximately 600,000 dose rate meters
+and about 3,300,000 dosimeters, all suitable for
+wartime use. In 1986 almost all of these old
+instruments-thatcanbe found-reportedlystill
+are in good working condition. Because ofcon-
+tinuing inadequate funding for civil defense, in
+. recent years most of FEMA's instruments have
+been serviced, calibrated, and, if necessary,
+repaired only once every four years. In a few
+localitiestheseinstrumentsareno longerbeing
+serviced.
+Most of these critically important instru-
+ments are keptin cities,in buildings likelyto be
+destroyed by blast or fire in the event of a
+massive Soviet attack. If there were a suffi-
+ciently long, officially recognized period of
+warning before an attack, it might be possible
+during such a worsening crisis to move a large
+fraction of thesefallout metersoutsidethe areas
+of probable blast or fire damage, and to place
+them in officially designated fallout shelters.
+However, this unlikely development would not
+provide private family shelters with instru-
+ments.
+Mostfamilies needtheirownfallout meters.
+This need is greatest for families living inlocalitiesnotlikelytobedamagedbyblastorfire,
+and for those planning to evacuate to such less
+hazardous localities during a worsening crisis.
+COMMERCIALLY AVAILABLE
+FALLOUT METERS
+In 1987 an American does not have many
+choices if he wants to buy an off-the-shelf dose
+rate meter suitable for measuring the high
+levelsoffallout radiationthat wouldresultfrom
+a nuclear attack. Although inexpensive dose
+rate meters and dosimeters have been under
+development by the military services and civil
+defense researchers for the past 15 years, they
+have not been produced commercially for sale
+to the public. Field tests of factory-produced
+modelshav.e not been completedatthis writing.
+Dose Rate Meters
+The best radiation-measuring instrument
+for wartimeuse availableinthe United Statesin
+1987 is the Universal Survey Meter RD-l0,
+manufactured in Finland by Alnor Oy. It is sold
+in the United States by a subsidiary, Alnor
+Nuclear,2585 WashingtonRoad, Suite 120, Pitts-
+burg, Pennsylvania 15241. In 1988 the FOB-
+price, pre-paid, is$1,100.00. TheRD-l0accurate-
+ly measures gamma and X raysfrom veryclose
+to natural background radiation up to 300 R/hr,
+in two ranges (0.03 - 300 mR/hr, and 0.03 - 300
+R/hr). It meets Finnish Army standards for
+ruggedness and accurate operation in sub-zero
+cold (down to -25°C, or -13°F); it has an illumi-
+nated scale for night use and an audible pulse
+rate signal, and is built to withstand electro-
+magnetic pulse (EMP) effects. (A few of my
+friends and I for years have owned Finnish
+instruments of an earlier model, the RD-8; they
+still are in excellent working condition.)
+A less expensive dose rate meter designed
+for ruggedwartimeuseisthe Portable Radiolog-
+icalDoseRate MeterPDRM82, manufacturedin
+England by Plessey Controls Limited, Sopers
+Lane, Poole, Dorset BH17 7ER, England. This
+instrument is the current standard issue of the
+British armed forces and civil defense, is de-
+signed for a storage life of at least 20 years, is
+microcomputer controlled, EMP-proof, and dis-
+plays "FAIL" if a fault exists. (Like all instru-
+ments, occasionally a PDRM 82 does fail. One
+bought by a friend in 1987 and tested by a radia-
+tion laboratory in Utah read 86 centigrays per
+hour when it should have read 300, and failed to
+display"FAIL." Mailedbackto England,Plessey
+Controls finally replaced it with another new
+PDRM82.)Theonlyconsequentialdisadvantages
+of the PDRM 82, compared to more expensive
+dose rate meters, are that it reads in centigrays
+per hour (cGy/hr is equivalent to Rads/hr, or
+R/hr)anddoes notmeasuredose rateslowerthan
+0.1 cGy/hr (100 mR/hr). In 1987 this portable,
+four-digit-liquid-display dose rate meteris sold
+by Plessey Controls for 250 Brrtish pounds plus
+air shipment charges - all pre-paid. 

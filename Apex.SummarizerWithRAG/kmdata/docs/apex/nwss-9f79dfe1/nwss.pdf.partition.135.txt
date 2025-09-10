@@ -1,0 +1,89 @@
+elter. For example, if 200 cfm of air is being
+pumped into a shelt~r through a gooseneck of
+5-inch-diameter pipe with its mouth also 5
+inchesindiameter,the velocityofthe air up into
+the mouth of the gooseneck is about 1,440 feet
+per minute, and sand-like spherical particles
+smaller than approximately 500 microns in
+diameteralso are "sucked" Up.6Butifthe5-inch
+gooseneck's mouth is 10 inches across, then the
+upward air velocity is reduced to about 360 feet
+per minute, and only particles smaller than
+approximately 180microns across are "sucked"
+up. Particles in the 180 to 500 micron-diameter
+range are relatively large and fall to earth in
+about 40 to 70 minutes from 35,000 feet, the base
+of the mushroomcloudofa 1-megatonexplosion.
+(SeeFig.6.4.)Theseparticlesareverydangerous
+because theirradioactivityhashadlittletimeto
+decay, and should be kept out of a shelter's
+ventilationsystem. Furthermore, largeparticles
+retained in a shelter's filter restrict airflow
+sooner than do small ones. (If an appropriately
+curved piece of5-inch steelpipecannotbefound
+in a salvage yard or elsewhere, a good welder
+can use 5-inch steel pipe to make a substitute
+gooseneck with two 90-degree turns.)
+• Do not use air intake hoods on a permanent
+shelter's pipes, because hoods are not as effec-
+tive as goosenecks in 'preventing fallout par-
+ticles from entering ventilation pipes. Also,pumping a given volume of air through a hood
+is more work than pumping the same volume
+through a gooseneckwithequalcross-sectional
+areas.
+• Never install any screen inside a gooseneck
+or air intake hood, because spider webs and the
+debris that sticks to webs will greatly reduce
+airflow. The author saw a gooseneck with a
+blast valve built inside it; spider webs and
+attached trash on this blast valve had conse-
+quentially reduced the volume of air that this
+shelter's pump coulddeliver. Of course a screen
+is much more easily obstructed than a blast
+valve.YetFEMA'swidelydistributed pamphlets
+on a permanent Horne Fallout Shelter (H-12-1)
+and on a Home Blast Shelter (H-12-3) continue
+in successive editions to give detailed instruc-
+tions for making an air intake hood with a
+screen soldered inside it. Butthese sheltersthat
+never have been built have much more serious
+weaknesses, including the likelihood that the
+aboveground parts of the ventilation pipes of
+the blast shelter would be bent over or broken
+off by blast-wind-hurled parts of buildings and
+trees, even in suburbia. (350 mph is the maxi-
+mum velocity of the blast wind where the blast
+overpressure is 15 psi from a 1-megaton air
+burst.s The ventilation openings of the blast-
+tested expedient blast shelters described in
+Appendix D are much more likely to remain
+serviceableafter beingsubjectedto severeblast
+effects, because blast-protector logs are placed
+around their openings, that are only a few
+inches above ground level.)
+PREVENTION AND CONTROL
+OF CONDENSATION
+A shelter can be watertight, yet at certain
+seasons of the year its walls, ceiling, and floor
+can be dripping wet withwater condensed from
+enteringoutdoor air. (This is a seriousproblem,
+except in arid parts of the West.) During the
+winter months a shelter and its surrounding
+earth get cold; then especially on some spring
+days the dew point of entering outdoor air is
+higher than the temperature of the shelter's
+interior surfaces. As a result, condensation
+occurs onthose surfaces that are coolerthan the
+dew point of the pumped-through air.
+The most dramatic example that I have
+observed of the seriousness ofthis condensation
+problem was the drippingceilingand wetwalls
+of a reinforced-concrete, family-sized shelter
+that I inspected on an early spring day at the
+Civil Defence College in Yorkshire, England.
+Suchcondensation also can occur in above-
+ground structures. Before World War II I had a
+600-year-oldbedroominQueen's College, Oxford
+University. My bedroom's outer wall was made
+of solid limestone blocks about 15 inches thick,
+simply plastered and painted on the inside. 

@@ -1,0 +1,113 @@
+ table.) A KFM is more accurate
+than most civil defense instruments, and its
+accuracy is permanently established by the
+laws of physics applicable to the specified
+dimensionsandothercharacteristicsofitsparts,
+and to their positioning relative to each other-
+providedthatitismadeand maintainedaccord-
+ingto the instructions. Unlike all factory-made
+radiation measuring civil defense instruments
+that are reliable and available today, a KFM is
+charged electrostatically. No battery is needed.
+• Additional Advantages of KFMs
+* A KFM combines the provenly practical
+radiation measuring functions of an electro-
+scope and of an ionization chamber having a
+specified volume. Electroscopes were the basic
+radiationmeasuringinstruments used by scien-
+tists' includingNobelLaureateLord Rutherford,
+who pioneered studies of atomic nuclei and
+radiations. The author is indebted to another
+Nobel Laureate physicist, Dr. Luis W. Alvarez,
+forthe ideaofmakinga homemadeelectroscope
+with two thread-suspended, aluminum-foil
+leaves, to measure fallout radiation. Many ex-
+cellent and unavoidably expensive dose rate
+meters, includingcivildefense instruments, are
+ionization chamber devices.
+* A KFM, used in conjunction with a
+watch, does not have to be charged to any
+specified initial reading, or discharged by ex-
+posureto radiationtoanyspecifiedfinal reading,
+to accurately measure the dose rate during a
+time intervalspecified on its attachedtable. Fig.
+10.2 illustrates this operational advantage of
+KFMs.
+ORNL-DWG 76-6548
+o
+o 20016080 120
+GAMMA DOSE (mR)
+40
+ADJUSTED CALIBRATION CURVES OF KFM 20 G AND KFM 20 1
+(BOTH HAVE 8-PLY LEAVES OF STANDARD ALUMINUM FOIL)
+THE CALIBRATION READINGS HAVE ALL BEEN ADJUSTED
+GRAPHICALLY TO SIMULATE ALL INITIAL LEAF SEPARATIONS
+*
+BEING EQUAL
+A 0= KFM 201 AT 2.5 R/hr, 60 sec EXPOSURES
+0 A = KFM 201 AT 2.0 R/hr, 60 sec EXPOSURES
+x= KFM 20 GAT 2.5 R/hr, 60 sec EXPOSURES
+A 0= KFM 20G AT 2.0 R/hr, 60 sec EXPOSURES
+*= KFM 20 G AT 10.0 R/hr, 30 sec EXPOSURES
+0 0
+A X
+0
+0 A
+10
+* 0 A
+2
+6
+8
+4
+EE
+(f)
+w
+;:; 20
+w
+-.J
+l.L.. 18
+o
+~ 16oo
+w 14a::w
+3: 12o-.J
+~ 10
+zo
+i=<:[
+Q::
+Ci:
+W
+(f)
+ow
+>Q::
+W
+(f)
+lD
+o
+Fig. 10.2 Normalized Calibration Points for Two KFMs, Showing the Straight-Line
+Relationship Between Milliroentgen Radiation DOSES and Resultant Readings. The
+complete instructions for making and using a KFM (see Appendix C) explain how an
+operator with a watch can use this instrument to accurately measure DOSE RATES.• Additional Information on Accuracy
+and Dependability
+* Readers who want additional technical
+information on the KFM are advised to buy a
+copyof theoriginalOakRidge National Labora-
+tory report on this instrument, The KFM, A
+Homemade Yet Accurate and Dependable Fallout
+Meter (ORNL-5040, CORRECTED), by Cresson
+H. Kearny, Paul R. Barnes, Conrad V. Chester,
+andMargaretW.Cortner. Date published: Janu-
+ary 1978.Copiesaresoldbythe NationalTechni-
+cal Information Service, U.S. Department of
+Commerce, 5285 Port Royal Road, Springfield,
+Virginia 22161. Since the price continues to
+increase, it is best to write first, to learn the
+postage-paid cost.
+* Civil defense professionals of foreign
+countries also have concluded that KFMs have
+lifesavingpotential.TheJune 1978SpecialIssue
+of The Journal of the Institute of Civil Defence
+("The Premier Society of Disaster Studies",
+with headquarters in London) was entirely
+devoted to the KFM, and gave international
+distribution to the original complete instruc-
+tions and cut-outpaperpatterns. 

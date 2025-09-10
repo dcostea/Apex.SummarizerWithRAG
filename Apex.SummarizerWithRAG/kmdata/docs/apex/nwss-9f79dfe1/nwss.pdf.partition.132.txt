@@ -1,0 +1,94 @@
+. If
+specialfiredoorgasketsarenotavailable,rubber
+weatherstripping will serve. To lessen the risk
+of carbon monoxide being pumped into the
+shelter if the house burns and air must be
+pumped into the shelter while the fire still is
+smoldering, the air-intake and pump should be
+at the far end ofthe shelter, and the air-exhaust
+.pipe and emergency exit should be near the
+passageway from the house.
+Be sure to seal electrical conduits leading
+from a basementto a connectedshelter,sothatif
+the house burns carbon monoxide can not flow
+throughtheconduits intotheshelterwhenfresh
+outdoorairisnotbeingpumpedintothe shelter.
+The author, while conducting ventilation and
+habitability tests of an earth-covered blast
+shelterconnected through a tunnel to a house's
+basement,observedairflowingoutthrough un-
+sealed conduits, the reverse of such a possible
+life-endangeringflowof carbonmonoxide.When
+the shelter was being maintained at a slight
+overpressurebycrankingitsblowerto pumpin
+outdoor air, a little air flowed through the un-
+sealed conduit into the basement.
+For ways to minimize carbon monoxide
+dangersarisingfromcooking,heating,lighting,
+and smoking, see following sections in this
+chapter.
+Rememberthat air contaminated with only
+0.16% carbon monoxide can kill you in 2 to 3
+hours, and 0.04% carbon monoxide causes
+frontal headaches and nausea in 2 to 3 hours.
+The Navy sets its safe allowable carbon mon-
+oxide concentration in air at 0.01%. (Shelter
+HabitabilityStudies- TheEffectofOxygen Depletion
+and Fire Gasses on Occupants of Shelters, by J. S.
+Muraoka, Report NCEL-TR-144, July 1961.)
+PREVENTION OF CRACKS AND
+WET SHELTER PROBLEMS
+If wet basements are a problem in your
+locality, below ground shelters are likely to be
+wet and unsatisfactory unless appropriate pre-
+ventative measures are taken during their
+design and construction. When making plans,
+youshouldconsultlocalbuildersofsatisfactory
+basements. You also should question persons
+who at various times ofthe year have observed
+excavations, holes, and/or basements in your
+immediate vicinity, or have noted seasonal
+swampy places or springs.
+Themostdifficulttypeofsheltertokeepdry
+for decades is one that is wholly or partially
+below the water table for part or all ofthe year.
+Concrete is not completely watertight. Water-
+proofcoatingsandcoveringsoftenaredamaged
+during construction, or deteriorate with age.Shelter walls sometimes crack due to settling
+and earth movements. Metal shelters usually
+develop small leaks long before they become
+dangerously weakened.
+A l00-occupant, below ground shelter, built
+in 1984 near Dallas, Texas as a prototype blast
+shelterfor industrial workers, wasflooded when
+the water table rose. The poorly sealed opening
+of this shelter's emergency exit was below
+ground level, and after heavy rains was below
+the water table. A prudently designed shelter
+has the top of its emergency exit slightly above
+the surface of the surrounding earth, as illus-
+trated in Fig. 17.2. All underground electric
+conduits leading down into a shelter must be
+well sealed to prevent entry of water.
+To prevent a wholly or partially below-
+water-table shelter from becoming wet inside
+sooner or later, it should have a sump and an
+automatic sump pump todischarge waterto the
+ground outside. If at any time you find that the
+sump pump is discharging an appreciable
+amount of water, you may have a serious wet-
+shelter problem if electric power fails after an
+attack.
+A manually operated bilge pump and a
+sufficiently long discharge hose can be bought
+for about $20.00 from marine supply mail order
+firms, including West Marine Products, Box
+5189, SantaCruz, California95063, and Defender
+Industries, Inc., P.O. Box 820, New Rochelle,
+NewYork 10802-0820. (Longestablished marine
+supply companies also are good sources ofuse-
+proven chemical toilets, first aid kits, lights,
+rope, etc.)
+Shelter roof surfaces should be gently
+sloped, no matterhowgood a waterproofcoating
+is to be applied. 

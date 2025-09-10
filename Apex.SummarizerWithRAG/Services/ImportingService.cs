@@ -1,58 +1,60 @@
 ﻿using Apex.SummarizerWithRAG.Interfaces;
 using Microsoft.KernelMemory;
 using Serilog;
-using System.Text.RegularExpressions;
 using Apex.SummarizerWithRAG.Models;
 using Microsoft.Extensions.Options;
+using Microsoft.KernelMemory.MemoryDb.Elasticsearch;
 
 namespace Apex.SummarizerWithRAG.Services;
 
 public class ImportingService(IKernelMemory memory, IOptions<RagSettings> ragSettings) : IImportingService
 {
-    private readonly string _indexName = ragSettings.Value.IngestionIndex!;
+    private readonly RagSettings _ragSettings = ragSettings.Value;
 
     public async Task<string> ImportAsync(string filePath, string country)
     {
-        string documentId;
-
-        var document = ToValidDocumentId(filePath);
+        var documentId = ToValidDocumentId(filePath);
 
         try
         {
-            documentId = await memory.ImportDocumentAsync(
-                new Document(document).AddFile(filePath).AddTag("country", country),
-                index: _indexName,
-                steps: ["extract", "partition", "gen_embeddings", "save_records"]);
+            var kmDocument = new Document(documentId)
+                .AddFile(filePath)
+                .AddTag("country", country);
 
-            Log.Debug($"MEMORY indexed: {filePath} into index: {_indexName} with documentId: {documentId}");
+            var returnedId = await memory.ImportDocumentAsync(kmDocument, _ragSettings.IngestionIndex);
 
-            return documentId;
+            Log.Debug("MEMORY ingest success file='{File}' docId='{DocId}'", filePath, returnedId);
+            return returnedId;
+        }
+        catch (InvalidIndexNameException iex)
+        {
+            Log.Error("MEMORY failingIndex='{Failing}' passedIndex='{Passed}' errors={Errors}",
+                iex.IndexName,
+                _ragSettings.IngestionIndex,
+                string.Join(" | ", iex.Errors));
+            throw;
         }
         catch (Exception ex)
         {
-            Log.Error($"MEMORY Failed to process {filePath}: {ex.Message}");
+            Log.Error(ex, "MEMORY ingest failure file='{File}' docId='{DocId}'", filePath, documentId);
             throw;
         }
     }
 
     public async Task ImportDirectoryAsync(string directoryPath, string country)
     {
-        var files = Directory.GetFiles(directoryPath);
-
-        foreach (var file in files)
+        foreach (var file in Directory.GetFiles(directoryPath))
         {
             await ImportAsync(file, country);
         }
     }
 
-    private static string ToValidDocumentId(string id)
+    private static string ToValidDocumentId(string filePath)
     {
-        var cleaned = Regex.Replace(id, @"[^A-Za-z0-9._-]", "_");
-        cleaned = cleaned.Trim('.', '_');
-        if (string.IsNullOrWhiteSpace(cleaned))
-        {
-            cleaned = "doc_" + Guid.NewGuid().ToString("N");
-        }
-        return cleaned;
+        var fileBaseName = Path.GetFileNameWithoutExtension(filePath);
+        var guid = Guid.NewGuid().ToString("N")[..8];
+        var documentId = $"{Document.ReplaceInvalidChars(fileBaseName)}-{guid}".ToLowerInvariant();
+        
+        return documentId;
     }
 }

@@ -1,0 +1,99 @@
+ air can be "sucked" back into the room.ORNL DWG 72-8203
+///
+/
+\PULL-CORD PULLING
+\
+~ \. "'~ ~ /,/-----
+.Ie--...-- r" '"~ r": Jt"-./------
+~ ~ K J? /
+f 8-ft "DIVIDER" IN DOORWAY
+Fig. 27. Use of a "divider" to ventilate a shelter with only one opening.
+F. Installing a KAP in a Steel-Framed Doorway
+If you need to install a KAP in a steel-framed
+doorway and it is not feasible to screw or otherwise
+permanently connect it to the doorway, you can
+attach the KAP by using a fewboards and some cord,
+as illustrated by Figs. 28 and 29. The two horizontal
+boards shown extending across the doorway are
+squeezed tightly against the two sides of the wall in
+which the doorway is located by tighteningtwo loops
+of cord, one near each side of the doorway. One loop
+is illustrated. A cord is first tightened around the two
+horizontal boards. Then the looped cord is further
+tightened by binding it in the center with another
+cord. as illustrated.
+Two large "C"clamps serve even better than two
+looped cords. However, secure support for a
+swinging KAP still requires the use of a vertical
+support board on each side of the doorway, as
+illustrated. .
+STEEL DOOR
+FRAME
+CONCRETE
+WALL
+;~, -:
+DRNL DWG72·6364
+Fig. 28.ORNL DWG 72-66'7
+• You have enough low-resistance filters (such as
+fiberglass dust filters used in furnaces and air-
+conditioners) and other materials for building the
+necessary large, supported filter in front of your
+KAP.
+• Your KAP can pump an adequate volume ofair
+through the filter and shelter.
+• The filter is installed so that it can be easily
+removed if shelter temperatures rise too high.
+H. Using Air Filters
+To supply shelter occupants with filtered air
+usually would be of much less importance to their
+survival and health than to provide them with
+adequate volumes of outdoor air to maintain
+tolerable temperatures. However, filtering the
+entering air could prove worthwhile, provided:
+• Your shelter is not in an area likely to be
+subjected to blast, or it is a blast shelter with blast
+doors and blast valves protecting everything inside.
+• Work on filters is started after you have
+completed more essential work, including the
+building of a high-protection-factor shelter, making,
+installing,and testing the necessary numberof KAPs,
+storing. adequate water, making a homemade fallout
+meter, etc.
+VERTICAL SUPPORT BOARD
+EXTENDING DOWN TO FLOOR
+--------- BOARD THE SAME THICKNESS
+AS THE "FIXED" SUPPORT
+BOARD OF THE KAP
+Fig. 29.
+"lI'""--r----- BOARD FORMING A 2-in-DEEP
+BRACKET, WITH AN APPROX.
+\!32'm. SHIM UNDER ITQUICKLY REMOVABLE
+"FIXED" SUPPORT
+FOR KAP
+LOOPED CORD, TIGHTENED IN CENTER,
+HOLDING BOARDS TIGHT AGAINST STEEL
+DOOR FRAME.
+Figure 29 shows a quick-removal bracket
+supported by two horizontal boards tightened across
+the upper part of a doorway by looped cords, as
+described above. Also, study Fig. 19 and its
+accompanying instructions.
+G. Building More Durable KAPs
+If you are building KAPs in normal times, you
+may want to use materialsthat will makeyourpumps
+last longer, even though these materials are more
+.difficult to obtain and are more expensive.
+Durability tests have shown that the KAP parts
+that wear out first are the flaps and the pulleys. In6-ft
+KAPs, the lower flaps are subject to hard use. Lower
+flaps made of 6-oz (per sq.. yd), clear, nylon-
+reinforced, plied vinyl have lasted undamaged for
+over 1000 hours of full-stroke pumping, without
+having their edges reinforced. Lowerflaps made of6-
+mil nylon-reinforced polyethylene, without edge
+reinforcements, have lasted for 1000hours with only
+minor damage.
+To prevent a filter used with a KAP from
+causing too greata reduction in the volume ofair that
+the KAP can pump through your shelter, you must
+use large areas of low-resistance filter material. 
