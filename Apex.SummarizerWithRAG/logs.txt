@@ -1162,3 +1162,121 @@ IMPORTANT OPERATIONAL ACTIVITIES
 WEEK 35 (25-31 AUGUST 2025)
 Planned …
 2025-09-09 16:13:20.486 +02:00 [INF] ANSWER model=gemma3:12b index=my_files limit=1000 minRelevance=0 text=According to the provided information, the Cocaine and Heroine (O2-1) team is responsible for an **operational meeting to prepare an action day targeting a criminal network**. They are involved in act…
+2025-09-09 16:39:12.516 +02:00 [INF] Ollama connection successful!
+2025-09-09 16:39:12.720 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 10:16:55.664 +02:00 [INF] Ollama connection successful!
+2025-09-10 10:16:55.879 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 10:50:30.107 +02:00 [DBG] MEMORY indexed: Data\Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf into index: my_files with documentId: Data_Senior_Specialist___Application_Engineering___Development_-_.NET__Solution_Delivery_Unit___AD7_.pdf
+2025-09-10 10:50:59.148 +02:00 [INF] CHUNKS index=my_files count=5 minRel=0 limit=1000 country=Netherlands
+2025-09-10 10:55:08.472 +02:00 [INF] QUERY: what is the position name?
+2025-09-10 10:55:10.572 +02:00 [DBG] MEMORY index=my_files source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.4564173 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-10 10:55:10.577 +02:00 [DBG] MEMORY index=my_files source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.43785775 part#3 text=, TERMS AND CONDITIONS
+Scale: AD7
+The gross basic monthly salary is EUR 7,646.86 (step 1) or EUR 7,968.2 (step 2).
+The step-in grade is determined on the basis of professional experience gained after …
+2025-09-10 10:55:10.578 +02:00 [DBG] MEMORY index=my_files source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.43058777 part#2 text=and secure
+coding practices;
+• Knowledge of container-based deployment strategies and orchestration platforms, such as Docker and Kubernetes;
+• Ability to draft statements of work for 3rd party softwa…
+2025-09-10 10:55:10.580 +02:00 [DBG] MEMORY index=my_files source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.41297197 part#4 text=at the time of submission to Europol. Europol reserves the right
+not to proceed with the signature of the contract based on the content of the certificate or if the candidate fails to provide the
+cert…
+2025-09-10 10:55:10.581 +02:00 [DBG] MEMORY index=my_files source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.32814702 part#1 text=and mentorship to other developers, participate in code reviews and offer feedback and guidance to
+ensure clean, maintainable code that adheres to best practices and contributes to the team's success;…
+2025-09-10 10:56:10.848 +02:00 [INF] ANSWER model=gemma3:12b index=my_files limit=1000 minRelevance=0 text=The position name is "Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)". It is also referred to as "Senior Specialist - Head of Team - Solution Delivery."…
+2025-09-10 10:56:20.280 +02:00 [DBG] MEMORY Deleted document: 'Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf' (docId=Data_Senior_Specialist___Application_Engineering___Development_-_.NET__Solution_Delivery_Unit___AD7_.pdf, index=my_files)
+2025-09-10 10:56:25.819 +02:00 [INF] QUERY: what is the position name?
+2025-09-10 10:56:29.247 +02:00 [INF] ANSWER model=gemma3:12b index=my_files limit=1000 minRelevance=0 text=Unfortunately, the provided information is missing ("INFO NOT FOUND"). Therefore, I cannot answer the question "What is the position name?".
+
+
+
+Please provide the information so I can help you.
+2025-09-10 10:57:09.371 +02:00 [DBG] MEMORY indexed: Data\ESOCC.pdf into index: my_files with documentId: Data_ESOCC.pdf
+2025-09-10 10:57:45.725 +02:00 [INF] QUERY: give me the countries for Cocaine and Heroin team
+2025-09-10 10:57:47.803 +02:00 [DBG] MEMORY index=my_files source=ESOCC.pdf country=["Netherlands"] rel=0.5907204 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-10 10:58:09.590 +02:00 [INF] ANSWER model=gemma3:12b index=my_files limit=1000 minRelevance=0 text=According to the provided information, the countries involved with the Cocaine and Heroin team (O2-1) are **Slovakia, Australia, and Belgium**.
+2025-09-10 10:58:41.399 +02:00 [INF] QUERY: give me the APs that Slovakia was involved in August
+2025-09-10 10:58:41.974 +02:00 [DBG] MEMORY index=my_files source=ESOCC.pdf country=["Netherlands"] rel=0.65879804 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-10 10:59:04.867 +02:00 [INF] ANSWER model=gemma3:12b index=my_files limit=1000 minRelevance=0 text=According to the provided information, Slovakia was involved in the following APs (Operational Projects) in August 2025:
+
+*   **Op IMPROVEMENT/1234567**
+*   **Op EFFICIENCY/1111222**
+2025-09-10 10:59:59.434 +02:00 [INF] QUERY: give me the APs that Slovakia was involved in September
+2025-09-10 11:00:02.027 +02:00 [DBG] MEMORY index=my_files source=ESOCC.pdf country=["Netherlands"] rel=0.6643192 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-10 11:00:20.104 +02:00 [INF] ANSWER model=gemma3:12b index=my_files limit=1000 minRelevance=0 text=According to the provided information, there is **no information** regarding Slovakia's involvement in any APs for September.
+
+
+
+
+2025-09-10 11:01:30.667 +02:00 [INF] QUERY: provide the operational projects for Belgium in August and a brief description of the activities
+2025-09-10 11:01:33.296 +02:00 [DBG] MEMORY index=my_files source=ESOCC.pdf country=["Netherlands"] rel=0.6889761 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-10 11:01:58.732 +02:00 [INF] ANSWER model=gemma3:12b index=my_files limit=1000 minRelevance=0 text=Here's the operational project for Belgium in August 2025, based on the provided information:
+
+**Operation IMPROVEMENT/1234567**
+
+*   **Date:** 15 August 2025
+*   **Description:** An operational meeti…
+2025-09-10 11:02:30.396 +02:00 [INF] QUERY: provide the operational projects for Slovakia in August and a brief description of the activities
+2025-09-10 11:02:30.992 +02:00 [DBG] MEMORY index=my_files source=ESOCC.pdf country=["Netherlands"] rel=0.7066342 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-10 11:02:55.226 +02:00 [INF] ANSWER model=gemma3:12b index=my_files limit=1000 minRelevance=0 text=Based on the provided information, here's the operational project for Slovakia in August 2025:
+
+*   **Op EFFICIENCY (16-17/08/2025)**: An action day organized by Slovakia involving Europol staff with …
+2025-09-10 11:03:15.341 +02:00 [INF] QUERY: provide the operational projects for Slovakia in August and a brief description of the activities
+2025-09-10 11:03:15.923 +02:00 [DBG] MEMORY index=my_files source=ESOCC.pdf country=["Netherlands"] rel=0.7066342 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-10 11:03:49.715 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=my_files limit=1000 minRelevance=0 text=In August 2025, Slovakia is involved in the following operational projects:
+
+1. **Op EFFICIENCY/1111222 (CANNABIS and SYNTHETICS)**
+   - **Dates:** 16-17 August 2025
+   - **Description:** Slovakia is …
+2025-09-10 11:09:22.920 +02:00 [DBG] MEMORY indexed: Data\nwss.pdf into index: my_files with documentId: Data_nwss.pdf
+2025-09-10 11:10:21.476 +02:00 [DBG] MEMORY Deleted document: 'nwss.pdf' (docId=Data_nwss.pdf, index=my_files)
+2025-09-10 11:13:07.661 +02:00 [DBG] MEMORY indexed: Data\privacy_notice_ta_ca_interns.pdf into index: my_files with documentId: Data_privacy_notice_ta_ca_interns.pdf
+2025-09-10 11:13:25.204 +02:00 [INF] CHUNKS index=my_files count=5 minRel=0 limit=1000 country=Netherlands
+2025-09-10 11:52:01.597 +02:00 [INF] Ollama connection successful!
+2025-09-10 11:52:01.822 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 11:52:15.908 +02:00 [DBG] MEMORY indexed: Data\ESOCC_aff4289b0d6945ab9ebd825c890eb0e9.pdf into index: my_files with documentId: Data_ESOCC_aff4289b0d6945ab9ebd825c890eb0e9.pdf
+2025-09-10 11:52:19.388 +02:00 [DBG] MEMORY Deleted document: 'ESOCC_aff4289b0d6945ab9ebd825c890eb0e9.pdf' (docId=Data_ESOCC_aff4289b0d6945ab9ebd825c890eb0e9.pdf, index=my_files)
+2025-09-10 11:58:25.926 +02:00 [INF] Ollama connection successful!
+2025-09-10 11:58:26.131 +02:00 [INF] Apex.Summarizer application started successfully

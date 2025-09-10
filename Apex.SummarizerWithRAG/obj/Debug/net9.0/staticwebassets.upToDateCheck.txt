@@ -1,6 +1,6 @@
 wwwroot\app.js
-wwwroot\index.html
 wwwroot\style.css
-C:\Users\danie\source\repos\Apex.SummarizerWithRAG\Apex.SummarizerWithRAG\wwwroot\index.html
-C:\Users\danie\source\repos\Apex.SummarizerWithRAG\Apex.SummarizerWithRAG\wwwroot\app.js
-C:\Users\danie\source\repos\Apex.SummarizerWithRAG\Apex.SummarizerWithRAG\wwwroot\style.css
+wwwroot\index.html
+C:\Users\danie\source\repos\Apex.SummarizerWithKM\Apex.SummarizerWithRAG\wwwroot\app.js
+C:\Users\danie\source\repos\Apex.SummarizerWithKM\Apex.SummarizerWithRAG\wwwroot\style.css
+C:\Users\danie\source\repos\Apex.SummarizerWithKM\Apex.SummarizerWithRAG\wwwroot\index.html

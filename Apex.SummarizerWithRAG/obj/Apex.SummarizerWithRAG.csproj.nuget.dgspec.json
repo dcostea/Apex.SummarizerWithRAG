@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danie\\source\\repos\\Apex.SummarizerWithRAG\\Apex.SummarizerWithRAG\\Apex.SummarizerWithRAG.csproj": {}
+    "C:\\Users\\danie\\source\\repos\\Apex.SummarizerWithKM\\Apex.SummarizerWithRAG\\Apex.SummarizerWithRAG.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danie\\source\\repos\\Apex.SummarizerWithRAG\\Apex.SummarizerWithRAG\\Apex.SummarizerWithRAG.csproj": {
+    "C:\\Users\\danie\\source\\repos\\Apex.SummarizerWithKM\\Apex.SummarizerWithRAG\\Apex.SummarizerWithRAG.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danie\\source\\repos\\Apex.SummarizerWithRAG\\Apex.SummarizerWithRAG\\Apex.SummarizerWithRAG.csproj",
+        "projectUniqueName": "C:\\Users\\danie\\source\\repos\\Apex.SummarizerWithKM\\Apex.SummarizerWithRAG\\Apex.SummarizerWithRAG.csproj",
         "projectName": "Apex.SummarizerWithRAG",
-        "projectPath": "C:\\Users\\danie\\source\\repos\\Apex.SummarizerWithRAG\\Apex.SummarizerWithRAG\\Apex.SummarizerWithRAG.csproj",
+        "projectPath": "C:\\Users\\danie\\source\\repos\\Apex.SummarizerWithKM\\Apex.SummarizerWithRAG\\Apex.SummarizerWithRAG.csproj",
         "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danie\\source\\repos\\Apex.SummarizerWithRAG\\Apex.SummarizerWithRAG\\obj\\",
+        "outputPath": "C:\\Users\\danie\\source\\repos\\Apex.SummarizerWithKM\\Apex.SummarizerWithRAG\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

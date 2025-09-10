@@ -8,6 +8,7 @@ using Microsoft.OpenApi.Models;
 using Microsoft.SemanticKernel;
 using Serilog;
 using Apex.SummarizerWithRAG.Models;
+using Microsoft.Extensions.Options;
 
 var configuration = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json").Build();
@@ -19,6 +20,7 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 
 builder.Services.Configure<RagSettings>(builder.Configuration.GetSection("Rag"));
+builder.Services.Configure<TextPartitioningSettings>(builder.Configuration.GetSection("TextPartitioning"));
 
 var ollamaEndpoint = builder.Configuration["Ollama:Endpoint"];
 var timeoutSeconds = builder.Configuration.GetValue<int>("Ollama:TimeoutSeconds");
@@ -71,8 +73,8 @@ builder.Services.AddKernelMemory<MemoryServerless>(km =>
     });
     km.WithCustomTextPartitioningOptions(new TextPartitioningOptions
     {
-        MaxTokensPerParagraph = 1000,
-        OverlappingTokens = 100,
+        MaxTokensPerParagraph = int.Parse(configuration["TextPartitioning:MaxTokensPerParagraph"]!),
+        OverlappingTokens = int.Parse(configuration["TextPartitioning:OverlappingTokens"]!)
     });
 });
 

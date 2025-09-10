@@ -16,19 +16,9 @@
                     <select id="model" class="form-control">
                     </select>
                 </div>
-                <div class="settings-actions">
-                    <button id="clearChat" class="btn btn--secondary btn--sm">Clear Chat</button>
-                    <button id="clearLocalFiles"
-                            class="btn btn--secondary btn--sm"
-                            title="Remove all locally stored indexed file entries (does not delete from server)">
-                        Clear Local Files
-                    </button>
-                </div>
 
-                <!-- Indexed Files (Settings sub-container) -->
                 <div id="indexedFiles" class="uploaded-files hidden"></div>
 
-                <!-- Pending Uploads (Settings sub-container) -->
                 <div id="uploadedFiles" class="uploaded-files hidden"></div>
             </div>
         </div>
@@ -39,11 +29,16 @@
             <div class="chat-container">
                 <div class="chat-header">
                     <h1>Domain-Based AI Summarizer</h1>
+
                     <div class="connection-status">
                         <div id="connectionStatus" class="status status--success">
                             <div class="status-dot"></div>
                             Ready
                         </div>
+                    </div>
+
+                    <div class="settings-actions">
+                        <button id="clearChat" class="btn btn--secondary">Clear Chat</button>
                     </div>
                 </div>
 
@@ -56,7 +51,7 @@
                             </svg>
                         </div>
                         <ul>
-                            <li>Upload files (.pdf,.doc,.docx,.txt,.md,.csv,.xlsx,.json)</li>
+                            <li>Upload files (.pdf,.doc,.docx,.txt,.md,.csv,.xlsx,.json,.xml)</li>
                             <li>Ask questions</li>
                         </ul>
                     </div>
@@ -91,9 +86,9 @@
                             </svg>
                         </div>
                         <p>Drag files here or <button type="button" class="upload-trigger">browse</button></p>
-                        <p class="file-upload-hint">Supports .pdf,.doc,.docx,.txt,.md,.csv,.xlsx,.json (max 100MB)</p>
+                        <p class="file-upload-hint">Supports .pdf,.doc,.docx,.txt,.md,.csv,.xlsx,.json,.xml (max 100MB)</p>
                     </div>
-                    <input type="file" id="fileInput" multiple accept=".pdf,.doc,.docx,.txt,.md,.csv,.xlsx,.json" hidden>
+                    <input type="file" id="fileInput" multiple accept=".pdf,.doc,.docx,.txt,.md,.csv,.xlsx,.json,.xml" hidden>
                 </div>
 
                 <!-- Message Input -->
