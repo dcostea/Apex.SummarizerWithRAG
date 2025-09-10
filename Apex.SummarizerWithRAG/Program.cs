@@ -12,7 +12,9 @@ using Microsoft.KernelMemory.DocumentStorage.DevTools;
 using Microsoft.KernelMemory.FileSystem.DevTools;
 
 var configuration = new ConfigurationBuilder()
-    .AddJsonFile("appsettings.json").Build();
+    .AddJsonFile("appsettings.json")
+    .AddUserSecrets<Program>()
+    .Build();
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Logging.ClearProviders();
@@ -123,7 +125,6 @@ builder.WebHost.ConfigureKestrel(o =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

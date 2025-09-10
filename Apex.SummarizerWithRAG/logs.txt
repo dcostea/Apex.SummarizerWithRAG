@@ -1560,3 +1560,9 @@ They are involved in this activity in **Slovakia, Australia, and…
 2025-09-10 18:07:46.572 +02:00 [INF] Ollama connection successful!
 2025-09-10 18:07:46.800 +02:00 [INF] Apex.Summarizer application started successfully
 2025-09-10 18:07:59.988 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-6c12464a'
+2025-09-10 18:11:55.465 +02:00 [INF] Ollama connection successful!
+2025-09-10 18:13:13.441 +02:00 [INF] Ollama connection successful!
+2025-09-10 18:13:58.770 +02:00 [INF] Ollama connection successful!
+2025-09-10 18:15:41.384 +02:00 [INF] Ollama connection successful!
+2025-09-10 18:15:41.618 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 18:15:53.774 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-e421411d'
