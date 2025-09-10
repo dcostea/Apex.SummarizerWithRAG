@@ -1280,3 +1280,7 @@ Planned …
 2025-09-10 11:52:19.388 +02:00 [DBG] MEMORY Deleted document: 'ESOCC_aff4289b0d6945ab9ebd825c890eb0e9.pdf' (docId=Data_ESOCC_aff4289b0d6945ab9ebd825c890eb0e9.pdf, index=my_files)
 2025-09-10 11:58:25.926 +02:00 [INF] Ollama connection successful!
 2025-09-10 11:58:26.131 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 12:11:15.678 +02:00 [INF] Ollama connection successful!
+2025-09-10 12:11:15.876 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-10 12:15:09.611 +02:00 [DBG] MEMORY indexed: Data\ESOCC_b3f3dd64d2ce4d128e373c91a0d268c2.pdf into index: my_files with documentId: Data_ESOCC_b3f3dd64d2ce4d128e373c91a0d268c2.pdf
+2025-09-10 12:15:32.088 +02:00 [DBG] MEMORY Deleted document: 'ESOCC_b3f3dd64d2ce4d128e373c91a0d268c2.pdf' (docId=Data_ESOCC_b3f3dd64d2ce4d128e373c91a0d268c2.pdf, index=my_files)
