@@ -132,3 +132,65 @@ mosphere by scavenging takes place. Very
 small particles in the stratosphere do not reach
 thegroun…
 2025-09-11 14:11:31.608 +02:00 [INF] ANSWER model=gemma3:12b index=apex limit=100 minRelevance=0.1 text=The project for Slovakia involves **Operation EFFICIENCY/1111222**, a participation in an action day focused on cannabis and synthetics. Europol will be involved, deploying staff with a mobile office …
+2025-09-11 14:16:29.298 +02:00 [INF] Ollama connection successful!
+2025-09-11 14:16:30.073 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 14:16:49.858 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-83a85c8b'
+2025-09-11 14:22:28.846 +02:00 [INF] Ollama connection successful!
+2025-09-11 14:22:29.638 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 14:23:09.648 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-f5e005c4'
+2025-09-11 14:23:22.845 +02:00 [INF] Ollama connection successful!
+2025-09-11 14:23:23.631 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 14:23:56.709 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-c948bff2'
+2025-09-11 14:24:11.308 +02:00 [INF] Ollama connection successful!
+2025-09-11 14:24:12.092 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 14:30:34.402 +02:00 [INF] Ollama connection successful!
+2025-09-11 14:30:35.180 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 14:44:16.980 +02:00 [INF] Ollama connection successful!
+2025-09-11 14:44:17.833 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 14:44:23.944 +02:00 [INF] DEBUG: Starting GetIndexedDocumentsAsync, _ingestionIndex = 'apex'
+2025-09-11 14:44:24.029 +02:00 [WRN] Failed to retrieve documents from Elasticsearch: The SSL connection could not be established, see inner exception.
+2025-09-11 14:44:24.030 +02:00 [INF] DEBUG: TryListFromElasticAsync returned 0 items
+2025-09-11 14:44:24.032 +02:00 [INF] DEBUG: Final result has 0 items
+2025-09-11 14:44:50.402 +02:00 [INF] DEBUG: Starting GetIndexedDocumentsAsync, _ingestionIndex = 'apex'
+2025-09-11 14:44:50.445 +02:00 [WRN] Failed to retrieve documents from Elasticsearch: The SSL connection could not be established, see inner exception.
+2025-09-11 14:44:50.446 +02:00 [INF] DEBUG: TryListFromElasticAsync returned 0 items
+2025-09-11 14:44:50.447 +02:00 [INF] DEBUG: Final result has 0 items
+2025-09-11 14:44:59.663 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-cc2e933b'
+2025-09-11 14:44:59.671 +02:00 [INF] DEBUG: Starting GetIndexedDocumentsAsync, _ingestionIndex = 'apex'
+2025-09-11 14:44:59.717 +02:00 [WRN] Failed to retrieve documents from Elasticsearch: The SSL connection could not be established, see inner exception.
+2025-09-11 14:44:59.718 +02:00 [INF] DEBUG: TryListFromElasticAsync returned 0 items
+2025-09-11 14:44:59.719 +02:00 [INF] DEBUG: Final result has 0 items
+2025-09-11 14:44:59.724 +02:00 [INF] DEBUG: Starting GetIndexedDocumentsAsync, _ingestionIndex = 'apex'
+2025-09-11 14:44:59.767 +02:00 [WRN] Failed to retrieve documents from Elasticsearch: The SSL connection could not be established, see inner exception.
+2025-09-11 14:44:59.767 +02:00 [INF] DEBUG: TryListFromElasticAsync returned 0 items
+2025-09-11 14:44:59.768 +02:00 [INF] DEBUG: Final result has 0 items
+2025-09-11 14:45:14.397 +02:00 [INF] DEBUG: Starting GetIndexedDocumentsAsync, _ingestionIndex = 'apex'
+2025-09-11 14:45:14.443 +02:00 [WRN] Failed to retrieve documents from Elasticsearch: The SSL connection could not be established, see inner exception.
+2025-09-11 14:45:14.444 +02:00 [INF] DEBUG: TryListFromElasticAsync returned 0 items
+2025-09-11 14:45:14.445 +02:00 [INF] DEBUG: Final result has 0 items
+2025-09-11 14:52:07.040 +02:00 [INF] Ollama connection successful!
+2025-09-11 14:52:07.833 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 14:52:14.557 +02:00 [INF] DEBUG: Starting GetIndexedDocumentsAsync, _ingestionIndex = 'apex'
+2025-09-11 14:52:14.633 +02:00 [WRN] Failed to retrieve documents from Elasticsearch: The SSL connection could not be established, see inner exception.
+2025-09-11 14:52:14.634 +02:00 [INF] DEBUG: TryListFromElasticAsync returned 0 items
+2025-09-11 14:52:14.637 +02:00 [INF] DEBUG: Final result has 0 items
+2025-09-11 14:57:50.867 +02:00 [INF] Ollama connection successful!
+2025-09-11 14:57:51.668 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 14:58:15.210 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-22609029'
+2025-09-11 15:01:55.378 +02:00 [INF] Ollama connection successful!
+2025-09-11 15:01:56.162 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 15:02:14.027 +02:00 [DBG] MEMORY Delete skipped (not found or not ready): docId=nwss-9f79dfe1, index=apex
+2025-09-11 15:02:21.186 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=esocc-f5e005c4, index=apex)
+2025-09-11 15:08:50.175 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=esocc-c948bff2, index=apex)
+2025-09-11 15:09:01.304 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=esocc-cc2e933b, index=apex)
+2025-09-11 15:09:10.409 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=esocc-83a85c8b, index=apex)
+2025-09-11 15:11:19.401 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=esocc-22609029, index=apex)
+2025-09-11 15:11:39.754 +02:00 [INF] Ollama connection successful!
+2025-09-11 15:11:40.536 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 15:11:54.008 +02:00 [DBG] MEMORY Delete skipped (not found or not ready): docId=nwss-9f79dfe1, index=apex
+2025-09-11 15:12:06.142 +02:00 [DBG] MEMORY Delete skipped (not found or not ready): docId=esocc-54ebe08f, index=apex
+2025-09-11 15:12:19.906 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-cc374725'
+2025-09-11 15:12:26.980 +02:00 [DBG] MEMORY Deleted document: 'ESOCC.pdf' (docId=esocc-cc374725, index=apex)
+2025-09-11 15:12:30.437 +02:00 [DBG] MEMORY Delete skipped (not found or not ready): docId=esocc-54ebe08f, index=apex
+2025-09-11 15:12:38.247 +02:00 [DBG] MEMORY Delete skipped (not found or not ready): docId=esocc-54ebe08f, index=apex
+2025-09-11 15:12:52.192 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-43648be0'

@@ -4,10 +4,15 @@ class ChatbotApp {
             apiEndpoint: '/search'
         };
         this.uploadedFiles = []; // pending files (not yet uploaded)
-        // Server-driven: no localStorage persistence
+
+        // New: server-driven documents keyed by documentId
+        this.indexedDocs = new Map();        // docId -> { name, index }
+
+        // Legacy structures (kept for citations and minimal impact)
         this.indexedFiles = new Set();
-        this.indexedFileIds = new Map();    // name -> documentId
+        this.indexedFileIds = new Map();     // name -> documentId (last one wins if duplicates)
         this.indexedFileIndexes = new Map(); // name -> index
+
         this.chatHistory = [];
         this.isTyping = false;
         this.isSending = false; // prevent double send
@@ -27,28 +32,38 @@ class ChatbotApp {
         try {
             const resp = await fetch('/indexed', { headers: { 'Accept': 'application/json' } });
             if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-            const items = await resp.json();
+            const payload = await resp.json();
 
-            const list = Array.isArray(items) ? items : [];
+            // Accept both legacy (array) and new (object with items/Items) shapes
+            const list =
+                Array.isArray(payload) ? payload
+                : Array.isArray(payload.items) ? payload.items
+                : Array.isArray(payload.Items) ? payload.Items
+                : [];
 
-            // Only overwrite local state if the server returns something.
-            // This preserves optimistic entries when the server is temporarily empty.
             if (list.length === 0) {
                 return;
             }
 
+            // Clear
+            this.indexedDocs.clear();
             this.indexedFiles.clear();
             this.indexedFileIds.clear();
             this.indexedFileIndexes.clear();
 
+            // Populate
             for (const it of list) {
-                const name = it.FileName || it.fileName || '';
+                const name = it.FileName || it.fileName || it.SourceName || it.sourceName || '';
                 const docId = it.DocumentId || it.documentId || '';
                 const index = it.Index || it.index || '';
-                if (!name) continue;
+                if (!name || !docId) continue;
 
+                // New canonical structure
+                this.indexedDocs.set(docId, { name, index });
+
+                // Legacy structures for minimal changes elsewhere
                 this.indexedFiles.add(name);
-                if (docId) this.indexedFileIds.set(name, docId);
+                this.indexedFileIds.set(name, docId);      // note: duplicates by name overwrite
                 if (index) this.indexedFileIndexes.set(name, index);
             }
         } catch (e) {
@@ -307,9 +322,9 @@ class ChatbotApp {
         this.renderPendingFiles();
     }
 
-    // Render indexed (server-fetched) files
+    // Render indexed (server-fetched) files; list each document by documentId
     renderIndexedFiles() {
-        const hasIndexed = this.indexedFiles.size > 0;
+        const hasIndexed = this.indexedDocs.size > 0;
         if (!this.indexedFilesContainer) return;
 
         if (!hasIndexed) {
@@ -320,46 +335,127 @@ class ChatbotApp {
 
         this.indexedFilesContainer.classList.remove('hidden');
 
+        const rows = Array.from(this.indexedDocs.entries()).map(([docId, { name, index }]) => {
+            const shortId = (docId && docId.length > 14) ? docId.slice(0, 6) + '…' + docId.slice(-6) : (docId || '');
+            return `
+                <div class="uploaded-file">
+                    <div class="uploaded-file-info">
+                        <div class="uploaded-file-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                            </svg>
+                        </div>
+                        <div class="uploaded-file-details">
+                            <div class="uploaded-file-name" title="${name}">${name}</div>
+                            <div class="uploaded-file-size">${index || ''} ${shortId ? '• ' + shortId : ''}</div>
+                        </div>
+                    </div>
+                    <button class="remove-file-btn" title="Delete from memory"
+                            data-id="${encodeURIComponent(docId)}"
+                            onclick="app.handleDeleteButtonClick(event)">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <line x1="18" y1="6" x2="6" y2="18"/>
+                            <line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                    </button>
+                </div>`;
+        }).join('');
+
         this.indexedFilesContainer.innerHTML = `
             <div class="uploaded-files-section">
-                <div class="uploaded-files-title">Indexed files (${this.indexedFiles.size})</div>
+                <div class="uploaded-files-title">Indexed files (${this.indexedDocs.size})</div>
                 <div class="uploaded-files-list">
-                    ${Array.from(this.indexedFiles).map(name => {
-                        const docId = this.indexedFileIds.get(name) || '';
-                        const hasDeletable = !!docId;
-                        return `
-                        <div class="uploaded-file">
-                            <div class="uploaded-file-info">
-                                <div class="uploaded-file-icon">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                                        <polyline points="14,2 14,8 20,8"/>
-                                    </svg>
-                                </div>
-                                <div class="uploaded-file-details">
-                                    <div class="uploaded-file-name" title="${name}">${name}</div>
-                                </div>
-                            </div>
-                            ${hasDeletable ? `
-                            <button class="remove-file-btn" title="Delete from memory"
-                                    data-name="${encodeURIComponent(name)}"
-                                    onclick="app.handleDeleteButtonClick(event)">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                                    <line x1="18" y1="6" x2="6" y2="18"/>
-                                    <line x1="6" y1="6" x2="18" y2="18"/>
-                                </svg>
-                            </button>` : ``}
-                        </div>`;
-                    }).join('')}
+                    ${rows}
                 </div>
             </div>
         `;
     }
 
-    // Click handler used by inline button HTML to avoid quoting issues
+    // Click handler used by inline button HTML
     handleDeleteButtonClick(e) {
+        const docId = decodeURIComponent(e.currentTarget.dataset.id || '');
+        if (docId) {
+            this.deleteIndexedDocumentById(docId);
+            return;
+        }
+        // Fallback: legacy path by name (ambiguous if duplicates)
         const name = decodeURIComponent(e.currentTarget.dataset.name || '');
         if (name) this.deleteIndexedDocument(name);
+    }
+
+    // New: delete by documentId (unambiguous)
+    async deleteIndexedDocumentById(docId) {
+        const entry = this.indexedDocs.get(docId);
+        if (!entry) {
+            this.showToast('Delete unavailable for this entry', 'error');
+            console.warn(`[KM] Delete unavailable (missing entry) for docId="${docId}"`);
+            return;
+        }
+        const { name, index } = entry;
+
+        if (!confirm(`Remove "${name}" from memory?\n\nDocumentId: ${docId}`)) return;
+
+        const short = (id) => (id && id.length > 14) ? id.slice(0, 6) + '…' + id.slice(-6) : (id || '');
+
+        try {
+            const url = `/memory/${encodeURIComponent(docId)}${index ? `?index=${encodeURIComponent(index)}` : ''}`;
+            const resp = await fetch(url, { method: 'DELETE' });
+
+            if (resp.status === 204 || resp.status === 200 || resp.status === 404) {
+                // Remove locally
+                this.indexedDocs.delete(docId);
+
+                // Update legacy structures for consistency
+                // If multiple docs share the same name, we must rebuild maps safely
+                this.rebuildLegacyIndexMapsFromIndexedDocs();
+
+                this.renderFileLists();
+
+                if (resp.status === 404) {
+                    console.info(`[KM] "${name}" (docId=${short(docId)}, index=${index || '(auto)'}) was already removed on server; cleaned up locally.`);
+                    this.showToast(`"${name}" was already removed on the server; UI updated.`, 'info');
+                } else {
+                    console.info(`[KM] Successfully deleted "${name}" (docId=${short(docId)}, index=${index || '(auto)'}), status=${resp.status}.`);
+                    this.showToast(`Removed "${name}" from memory`, 'success');
+                }
+
+                await this.refreshIndexedFromServer();
+                this.renderFileLists();
+                return;
+            }
+
+            const msg = await resp.text().catch(() => '');
+            throw new Error(msg || `HTTP ${resp.status}`);
+        } catch (err) {
+            console.error(`[KM] Failed to delete "${name}" (docId=${short(docId)}, index=${entry.index || '(auto)'}):`, err);
+            this.showToast(`Failed to delete: ${err.message}`, 'error');
+        }
+    }
+
+    // Legacy: delete by name (kept for backward compatibility). If multiple docIds share the same name, deletes the first match.
+    async deleteIndexedDocument(fileName) {
+        // Find a docId by name from the canonical map
+        const docId = [...this.indexedDocs.entries()].find(([_, v]) => v.name === fileName)?.[0]
+            || this.indexedFileIds.get(fileName);
+        if (!docId) {
+            this.showToast('Delete unavailable for this entry', 'error');
+            console.warn(`[KM] Delete unavailable (missing docId) for "${fileName}"`);
+            return;
+        }
+        await this.deleteIndexedDocumentById(docId);
+    }
+
+    // Rebuild legacy structures from canonical indexedDocs
+    rebuildLegacyIndexMapsFromIndexedDocs() {
+        this.indexedFiles.clear();
+        this.indexedFileIds.clear();
+        this.indexedFileIndexes.clear();
+        for (const [docId, { name, index }] of this.indexedDocs.entries()) {
+            this.indexedFiles.add(name);
+            this.indexedFileIds.set(name, docId);
+            if (index) this.indexedFileIndexes.set(name, index);
+        }
     }
 
     // Render pending (pre-upload) files
@@ -412,157 +508,53 @@ class ChatbotApp {
         this.showToast('File removed', 'info');
     }
 
-    async deleteIndexedDocument(fileName) {
-        const docId = this.indexedFileIds.get(fileName);
-        const index = this.indexedFileIndexes.get(fileName) || '';
-        if (!docId) {
-            this.showToast('Delete unavailable for this entry', 'error');
-            console.warn(`[KM] Delete unavailable (missing docId) for "${fileName}"`);
-            return;
-        }
+    // Upload files to /extract/upload as multipart/form-data for indexing
+    async uploadFiles(files) {
+        if (!files || files.length === 0) return { success: true };
 
-        if (!confirm(`Remove "${fileName}" from memory?`)) return;
-
-        const short = (id) => (id && id.length > 14) ? id.slice(0, 6) + '…' + id.slice(-6) : (id || '');
+        const formData = new FormData();
+        files.forEach(fd => formData.append('files', fd.file, fd.name));
 
         try {
-            const url = `/memory/${encodeURIComponent(docId)}${index ? `?index=${encodeURIComponent(index)}` : ''}`;
-            const resp = await fetch(url, { method: 'DELETE' });
-
-            // Treat 204 (deleted) and 404 (already gone/not found) as success to keep UI in sync
-            if (resp.status === 204 || resp.status === 200 || resp.status === 404) {
-                // Remove locally from all structures immediately
-                this.indexedFiles.delete(fileName);
-                this.indexedFileIds.delete(fileName);
-                this.indexedFileIndexes.delete(fileName);
-                this.uploadedFiles = this.uploadedFiles.filter(f => f.name !== fileName);
-
-                // Render immediately
-                this.renderFileLists();
-
-                // Log to console
-                if (resp.status === 404) {
-                    console.info(`[KM] "${fileName}" (docId=${short(docId)}, index=${index || '(auto)'}) was already removed on server; cleaned up locally.`);
-                    this.showToast(`"${fileName}" was already removed on the server; UI updated.`, 'info');
-                } else {
-                    console.info(`[KM] Successfully deleted "${fileName}" (docId=${short(docId)}, index=${index || '(auto)'}), status=${resp.status}.`);
-                    this.showToast(`Removed "${fileName}" from memory`, 'success');
-                }
-
-                // Optionally reconcile with server state (will not wipe local if server returns empty)
-                await this.refreshIndexedFromServer();
-                this.renderFileLists();
-                return;
+            const resp = await fetch('/extract/upload', { method: 'POST', body: formData });
+            if (!resp.ok) {
+                const txt = await resp.text();
+                throw new Error(txt || `HTTP ${resp.status}`);
             }
 
-            const msg = await resp.text().catch(() => '');
-            throw new Error(msg || `HTTP ${resp.status}`);
+            // Parse server response and inject items immediately, so they show while transitioning
+            const body = await resp.json().catch(() => null);
+            const items = (body && (body.Files || body.files)) || [];
+            if (Array.isArray(items)) {
+                for (const it of items) {
+                    const name = it.FileName || it.fileName || '';
+                    const docId = it.DocumentId || it.documentId || '';
+                    const index = it.Index || it.index || '';
+                    if (!name || !docId) continue;
+
+                    // Canonical
+                    this.indexedDocs.set(docId, { name, index });
+
+                    // Legacy
+                    this.indexedFiles.add(name);
+                    this.indexedFileIds.set(name, docId);
+                    if (index) this.indexedFileIndexes.set(name, index);
+                }
+                // Render immediately so users can retract/delete pending docs
+                this.renderFileLists();
+            }
+
+            // Then fetch authoritative state from the server to reconcile
+            await this.refreshIndexedFromServer();
+
+            this.showToast(`Indexed ${files.length} file(s) started`, 'success');
+            return { success: true };
         } catch (err) {
-            console.error(`[KM] Failed to delete "${fileName}" (docId=${short(docId)}, index=${index || '(auto)'}):`, err);
-            this.showToast(`Failed to delete: ${err.message}`, 'error');
+            this.showToast(`Indexation failed: ${err.message}`, 'error');
+            return { success: false, error: err };
+        } finally {
+            this.renderFileLists();
         }
-    }
-
-    // No-op: local files clearing is disabled (no local persistence)
-    clearLocalFiles() {
-        this.showToast('Local file storage is not used anymore.', 'info');
-    }
-
-    // Append a chat message (unchanged)
-    addMessage(content, role = 'assistant', citations = null) {
-        if (!this.chatMessages) return;
-
-        const isUser = role === 'user';
-        const wrapper = document.createElement('div');
-        wrapper.className = `message message--${isUser ? 'user' : 'assistant'}`;
-
-        const contentDiv = document.createElement('div');
-        contentDiv.className = 'message-content';
-
-        try {
-            if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
-                const html = DOMPurify.sanitize(marked.parse(content ?? ''), { USE_PROFILES: { html: true } });
-                contentDiv.innerHTML = html;
-            } else {
-                contentDiv.textContent = content ?? '';
-            }
-        } catch {
-            contentDiv.textContent = content ?? '';
-        }
-
-        wrapper.appendChild(contentDiv);
-
-        // Render references/citations under assistant messages
-        const refs = Array.isArray(citations) ? citations : [];
-        if (!isUser && refs.length > 0) {
-            const idToName = new Map();
-            for (const [name, id] of this.indexedFileIds.entries()) {
-                idToName.set(id, name);
-            }
-
-            const refsDiv = document.createElement('div');
-            refsDiv.className = 'message-citations';
-
-            const list = document.createElement('div');
-            list.className = 'message-citations__list';
-
-            const truncate = (t, len = 220) => {
-                if (!t) return '';
-                const s = t.trim().replace(/\s+/g, ' ');
-                return s.length > len ? s.slice(0, len) + '…' : s;
-            };
-
-            refs.forEach((r) => {
-                const item = document.createElement('div');
-                item.className = 'message-citation';
-
-                const resolvedName = r.SourceName || idToName.get(r.DocumentId || '') || '';
-                const shortId = (r.DocumentId && r.DocumentId.length > 14)
-                    ? r.DocumentId.slice(0, 6) + '…' + r.DocumentId.slice(-6)
-                    : (r.DocumentId || '');
-                const titleText = resolvedName || shortId || r.Link || '';
-
-                if (titleText) {
-                    const title = document.createElement('div');
-                    title.className = 'message-citation__title';
-                    title.textContent = titleText;
-                    item.appendChild(title);
-                }
-
-                const meta = document.createElement('div');
-                meta.className = 'message-citation__meta';
-                const metaBits = [];
-                if (r.Index) metaBits.push(r.Index);
-                if (!resolvedName && shortId) metaBits.push(shortId);
-                if (r.SourceContentType) metaBits.push(r.SourceContentType.toUpperCase());
-                if (metaBits.length > 0) {
-                    meta.textContent = metaBits.join(' • ');
-                    item.appendChild(meta);
-                }
-
-                const parts = Array.isArray(r.Partitions) ? r.Partitions : [];
-                if (parts.length > 0) {
-                    parts.forEach((p) => {
-                        const pDiv = document.createElement('div');
-                        pDiv.className = 'message-citation__snippet';
-                        const page = Number.isFinite(p.SectionNumber) && p.SectionNumber > 0 ? `p.${p.SectionNumber} ` : '';
-                        const rel = (p.Relevance ?? 0).toFixed ? ` (${(p.Relevance).toFixed(3)})` : '';
-                        pDiv.textContent = `${page}${truncate(p.Text || '')}${rel}`;
-                        item.appendChild(pDiv);
-                    });
-                }
-                if (item.childNodes.length > 0) {
-                    list.appendChild(item);
-                }
-            });
-
-            refsDiv.appendChild(list);
-            wrapper.appendChild(refsDiv);
-        }
-
-        this.chatMessages.appendChild(wrapper);
-        this.chatHistory.push({ role, content, citations: refs, timestamp: new Date().toISOString() });
-        this.scrollToBottom();
     }
 
     showTypingIndicator() {
@@ -640,49 +632,102 @@ class ChatbotApp {
         }
     }
 
-    // Upload files to /extract/upload as multipart/form-data for indexing
-    async uploadFiles(files) {
-        if (!files || files.length === 0) return { success: true };
+    // Append a chat message (unchanged, except id->name mapping uses indexedDocs)
+    addMessage(content, role = 'assistant', citations = null) {
+        if (!this.chatMessages) return;
 
-        const formData = new FormData();
-        files.forEach(fd => formData.append('files', fd.file, fd.name));
+        const isUser = role === 'user';
+        const wrapper = document.createElement('div');
+        wrapper.className = `message message--${isUser ? 'user' : 'assistant'}`;
+
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'message-content';
 
         try {
-            const resp = await fetch('/extract/upload', { method: 'POST', body: formData });
-            if (!resp.ok) {
-                const txt = await resp.text();
-                throw new Error(txt || `HTTP ${resp.status}`);
+            if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
+                const html = DOMPurify.sanitize(marked.parse(content ?? ''), { USE_PROFILES: { html: true } });
+                contentDiv.innerHTML = html;
+            } else {
+                contentDiv.textContent = content ?? '';
             }
-
-            // Parse server response and inject items immediately, so they show while transitioning
-            const body = await resp.json().catch(() => null);
-            const items = (body && (body.Files || body.files)) || [];
-            if (Array.isArray(items)) {
-                for (const it of items) {
-                    const name = it.FileName || it.fileName || '';
-                    const docId = it.DocumentId || it.documentId || '';
-                    const index = it.Index || it.index || '';
-                    if (!name) continue;
-
-                    this.indexedFiles.add(name);
-                    if (docId) this.indexedFileIds.set(name, docId);
-                    if (index) this.indexedFileIndexes.set(name, index);
-                }
-                // Render immediately so users can retract/delete pending docs
-                this.renderFileLists();
-            }
-
-            // Then fetch authoritative state from the server to reconcile
-            await this.refreshIndexedFromServer();
-
-            this.showToast(`Indexed ${files.length} file(s) started`, 'success');
-            return { success: true };
-        } catch (err) {
-            this.showToast(`Indexation failed: ${err.message}`, 'error');
-            return { success: false, error: err };
-        } finally {
-            this.renderFileLists();
+        } catch {
+            contentDiv.textContent = content ?? '';
         }
+
+        wrapper.appendChild(contentDiv);
+
+        // Render references/citations under assistant messages
+        const refs = Array.isArray(citations) ? citations : [];
+        if (!isUser && refs.length > 0) {
+            // Build id->name map from canonical store
+            const idToName = new Map();
+            for (const [docId, { name }] of this.indexedDocs.entries()) {
+                idToName.set(docId, name);
+            }
+
+            const refsDiv = document.createElement('div');
+            refsDiv.className = 'message-citations';
+
+            const list = document.createElement('div');
+            list.className = 'message-citations__list';
+
+            const truncate = (t, len = 220) => {
+                if (!t) return '';
+                const s = t.trim().replace(/\s+/g, ' ');
+                return s.length > len ? s.slice(0, len) + '…' : s;
+            };
+
+            refs.forEach((r) => {
+                const item = document.createElement('div');
+                item.className = 'message-citation';
+
+                const resolvedName = r.SourceName || idToName.get(r.DocumentId || '') || '';
+                const shortId = (r.DocumentId && r.DocumentId.length > 14)
+                    ? r.DocumentId.slice(0, 6) + '…' + r.DocumentId.slice(-6)
+                    : (r.DocumentId || '');
+                const titleText = resolvedName || shortId || r.Link || '';
+
+                if (titleText) {
+                    const title = document.createElement('div');
+                    title.className = 'message-citation__title';
+                    title.textContent = titleText;
+                    item.appendChild(title);
+                }
+
+                const meta = document.createElement('div');
+                meta.className = 'message-citation__meta';
+                const metaBits = [];
+                if (r.Index) metaBits.push(r.Index);
+                if (!resolvedName && shortId) metaBits.push(shortId);
+                if (r.SourceContentType) metaBits.push(r.SourceContentType.toUpperCase());
+                if (metaBits.length > 0) {
+                    meta.textContent = metaBits.join(' • ');
+                    item.appendChild(meta);
+                }
+
+                const parts = Array.isArray(r.Partitions) ? r.Partitions : [];
+                if (parts.length > 0) {
+                    parts.forEach((p) => {
+                        const pDiv = document.createElement('div');
+                        pDiv.className = 'message-citation__snippet';
+                        const page = Number.isFinite(p.SectionNumber) && p.SectionNumber > 0 ? `p.${p.SectionNumber} ` : '';
+                        const rel = (p.Relevance ?? 0).toFixed ? ` (${(p.Relevance).toFixed(3)})` : '';
+                        pDiv.textContent = `${page}${truncate(p.Text || '')}${rel}`;
+                        item.appendChild(pDiv);
+                    });
+                }
+                if (item.childNodes.length > 0) {
+                    list.appendChild(item);
+                }
+            });
+
+            refsDiv.appendChild(list);
+            wrapper.appendChild(refsDiv);
+        }
+
+        this.chatMessages.appendChild(wrapper);
+        this.chatHistory.push({ role, content, citations: refs, timestamp: new Date().toISOString() });
+        this.scrollToBottom();
     }
 
     showToast(message, type = 'info') {

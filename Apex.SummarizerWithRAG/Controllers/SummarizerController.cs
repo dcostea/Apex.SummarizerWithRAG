@@ -8,6 +8,9 @@ using Serilog;
 using System.Collections.Concurrent;
 using System.Text.Json;
 using Apex.SummarizerWithRAG.Models;
+using System.Net.Http.Headers;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace Apex.SummarizerWithRAG.Controllers;
 
@@ -99,96 +102,119 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
         }
     }
 
-    /// <summary>
-    /// Enumerates currently indexed files from Kernel Memory, best-effort.
-    /// Falls back to runtime registry (current process) if KM cannot enumerate all documents.
-    /// </summary>
     [HttpGet("/indexed")]
-    public async Task<IActionResult> GetIndexedDocumentsAsync()
+    public async Task<IActionResult> GetIndexedDocumentsAsync([FromQuery] string? country = null, [FromQuery] int? limit = null)
     {
         try
         {
-            var items = new List<object>();
-            var seen = new HashSet<string>(StringComparer.Ordinal);
+            // Default country tag if not provided
+            country ??= "Netherlands";
 
-            // Helper to add KM results
-            async Task AddFromKmAsync(string idx)
+            // Build an optional filter (by country)
+            MemoryFilter? filter = null;
+            if (!string.IsNullOrWhiteSpace(country))
             {
-                try
-                {
-                    var sr = await memory.SearchAsync(" ", index: idx, minRelevance: _rag.MinRelevance, limit: _rag.Limit);
-                    foreach (var r in sr?.Results ?? [])
+                filter = MemoryFilters.ByTag("country", country);
+            }
+
+            // Broad search to retrieve citations and their partitions
+            // - query: blank to match broadly
+            // - minRelevance: 0 to include everything
+            // - limit: allow override via query arg, otherwise use configured limit
+            var sr = await memory.SearchAsync(
+                query: " ",
+                index: _ingestionIndex,
+                filter: filter,
+                minRelevance: 0,
+                limit: limit ?? _rag.Limit
+            );
+
+            var results = sr?.Results ?? [];
+
+            // Group by document to present a document-centric view
+            var items =
+                results
+                    .GroupBy(r => new
                     {
-                        if (string.IsNullOrWhiteSpace(r.DocumentId)) continue;
-                        if (!seen.Add(r.DocumentId)) continue;
+                        r.Index,
+                        r.DocumentId,
+                        r.SourceName,
+                        r.SourceContentType,
+                        r.SourceUrl,
+                        r.Link
+                    })
+                    .Select(g =>
+                    {
+                        var partitions = g.SelectMany(r => r.Partitions ?? []);
+                        var firstText = partitions.Select(p => p.Text).FirstOrDefault(t => !string.IsNullOrWhiteSpace(t)) ?? string.Empty;
+                        var preview = firstText.Length > 200 ? firstText[..200] + "…" : firstText;
 
-                        var fileName = string.IsNullOrWhiteSpace(r.SourceName)
-                            ? Path.GetFileName(r.Link ?? "")
-                            : r.SourceName;
+                        var countries = partitions
+                            .SelectMany(p =>
+                                p.Tags?
+                                    .Where(kv => string.Equals(kv.Key, "country", StringComparison.OrdinalIgnoreCase))
+                                    .SelectMany(kv => kv.Value) // kv.Value is List<string>
+                                ?? Enumerable.Empty<string>())
+                            .Distinct(StringComparer.OrdinalIgnoreCase)
+                            .ToArray();
 
-                        items.Add(new
+                        var maxRelevance = partitions.Any() ? Math.Round(partitions.Max(p => p.Relevance), 3) : 0;
+
+                        return new
                         {
-                            FileName = fileName,
-                            DocumentId = r.DocumentId,
-                            Index = string.IsNullOrWhiteSpace(r.Index) ? idx : r.Index
-                        });
-                    }
-                }
-                catch
+                            g.Key.Index,
+                            g.Key.DocumentId,
+                            g.Key.SourceName,
+                            g.Key.SourceContentType,
+                            g.Key.SourceUrl,
+                            g.Key.Link,
+                            Countries = countries,
+                            PartitionCount = partitions.Count(),
+                            MaxRelevance = maxRelevance,
+                            Preview = preview
+                        };
+                    })
+                    .OrderByDescending(d => d.MaxRelevance)
+                    .ToArray();
+
+            // If nothing was found via KM (e.g., connector can’t enumerate), fall back to in-process cache
+            if (items.Length == 0 && IngestedByFileName.Count > 0)
+            {
+                var cached = IngestedByFileName.Select(kvp => new
                 {
-                    // ignore KM listing errors; fallback below will cover
-                }
-            }
+                    Index = kvp.Value.Index,
+                    DocumentId = kvp.Value.DocumentId,
+                    SourceName = kvp.Key,
+                    SourceContentType = (string?)null,
+                    SourceUrl = (string?)null,
+                    Link = (string?)null,
+                    Countries = Array.Empty<string>(),
+                    PartitionCount = 0,
+                    MaxRelevance = 0d,
+                    Preview = string.Empty
+                }).ToArray();
 
-            if (!string.IsNullOrWhiteSpace(_rag.IngestionIndex))
-            {
-                // Specific index requested
-                await AddFromKmAsync(_rag.IngestionIndex);
-
-                // Fallback: include runtime-tracked entries in that index
-                foreach (var kvp in IngestedByFileName)
+                return Ok(new
                 {
-                    var (docId, ix) = kvp.Value;
-                    if (!string.IsNullOrWhiteSpace(docId) &&
-                        ix.Equals(_rag.IngestionIndex, StringComparison.OrdinalIgnoreCase) &&
-                        seen.Add(docId))
-                    {
-                        items.Add(new { FileName = kvp.Key, DocumentId = docId, Index = ix });
-                    }
-                }
-
-                return Ok(items);
+                    Index = _ingestionIndex,
+                    Country = country,
+                    Count = cached.Length,
+                    Items = cached,
+                    Note = "Returned from in-memory cache (Kernel Memory returned no results)."
+                });
             }
 
-            // No index specified: gather known indexes + always include ingestion index
-            var indexes = new List<string>();
-            var all = await memory.ListIndexesAsync();
-            indexes.AddRange(all.Select(i => i.Name).Where(n => !string.IsNullOrWhiteSpace(n)));
-            if (!indexes.Contains(_ingestionIndex, StringComparer.OrdinalIgnoreCase))
+            return Ok(new
             {
-                indexes.Add(_ingestionIndex);
-            }
-
-            foreach (var idx in indexes.Distinct(StringComparer.OrdinalIgnoreCase))
-            {
-                await AddFromKmAsync(idx);
-            }
-
-            // Fallback: include ALL runtime-tracked entries regardless of index
-            foreach (var kvp in IngestedByFileName)
-            {
-                var (docId, ix) = kvp.Value;
-                if (!string.IsNullOrWhiteSpace(docId) && seen.Add(docId))
-                {
-                    items.Add(new { FileName = kvp.Key, DocumentId = docId, Index = ix });
-                }
-            }
-
-            return Ok(items);
+                Index = _ingestionIndex,
+                Country = country,
+                Count = items.Length,
+                Items = items
+            });
         }
         catch (Exception ex)
         {
-            return BadRequest($"Failed to list indexed files: {ex.Message}");
+            return BadRequest($"Failed to list indexed documents: {ex.Message}");
         }
     }
 
@@ -508,5 +534,29 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
         {
             return BadRequest($"Failed to list chunks: {ex.Message}");
         }
+    }
+
+    // Helper to extract the sort token from a JsonElement (used for Elasticsearch search_after)
+    private static object? ExtractSortToken(JsonElement sortToken)
+    {
+        // Handles common Elasticsearch sort token types (string, number, etc.)
+        // Returns the appropriate .NET type for the search_after array
+        switch (sortToken.ValueKind)
+        {
+            case JsonValueKind.String:
+                return sortToken.GetString();
+            case JsonValueKind.Number:
+                if (sortToken.TryGetInt64(out var l)) return l;
+                if (sortToken.TryGetDouble(out var d)) return d;
+                break;
+            case JsonValueKind.True:
+            case JsonValueKind.False:
+                return sortToken.GetBoolean();
+            case JsonValueKind.Null:
+            case JsonValueKind.Undefined:
+                return null;
+        }
+        // Fallback: return the raw text
+        return sortToken.GetRawText();
     }
 }

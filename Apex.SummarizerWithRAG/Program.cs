@@ -10,7 +10,6 @@ using Microsoft.KernelMemory.FileSystem.DevTools;
 using Microsoft.OpenApi.Models;
 using Microsoft.SemanticKernel;
 using Serilog;
-using System.Net.Http;
 
 var configuration = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json")
