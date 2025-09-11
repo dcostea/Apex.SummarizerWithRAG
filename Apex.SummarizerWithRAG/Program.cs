@@ -1,15 +1,16 @@
 using Apex.SummarizerWithRAG.Interfaces;
+using Apex.SummarizerWithRAG.Models;
 using Apex.SummarizerWithRAG.Services;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.KernelMemory;
 using Microsoft.KernelMemory.AI.Ollama;
 using Microsoft.KernelMemory.Configuration;
+using Microsoft.KernelMemory.DocumentStorage.DevTools;
+using Microsoft.KernelMemory.FileSystem.DevTools;
 using Microsoft.OpenApi.Models;
 using Microsoft.SemanticKernel;
 using Serilog;
-using Apex.SummarizerWithRAG.Models;
-using Microsoft.KernelMemory.DocumentStorage.DevTools;
-using Microsoft.KernelMemory.FileSystem.DevTools;
+using System.Net.Http;
 
 var configuration = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json")
@@ -65,6 +66,7 @@ builder.Services.AddKernelMemory(km =>
         op.WithCertificateFingerPrint(configuration["Elastic:ElasticCertFingerprint"]!);
         op.WithEndpoint(configuration["Elastic:ElasticHost"]!);
         op.WithIndexPrefix("km");
+        //op.WithEmbeddingService("elser", "my-elser-endpoint"); // Use your endpoint name
     });
 
     km.WithSimpleFileStorage(new SimpleFileStorageConfig
@@ -79,11 +81,21 @@ builder.Services.AddKernelMemory(km =>
         TextModel = new OllamaModelConfig { ModelName = configuration["Ollama:TextModel"]! }
     });
 
-    km.WithOllamaTextEmbeddingGeneration(new OllamaConfig
+    km.WithLlamaTextEmbeddingGeneration(new LlamaSharpConfig
     {
-        Endpoint = ollamaEndpoint!,
-        EmbeddingModel = new OllamaModelConfig { ModelName = configuration["Ollama:EmbeddingModel"]! }
+        EmbeddingModel = new LlamaSharpModelConfig
+        {
+            ModelPath = configuration["Llama:EmbeddingModelPath"]!,
+            MaxTokenTotal = uint.Parse(configuration["Llama:MaxTokens"]!)
+            //GpuLayerCount = 0
+        }
     });
+
+    //km.WithOllamaTextEmbeddingGeneration(new OllamaConfig
+    //{
+    //    Endpoint = ollamaEndpoint!,
+    //    EmbeddingModel = new OllamaModelConfig { ModelName = configuration["Ollama:EmbeddingModel"]! }
+    //});
 
     km.WithCustomTextPartitioningOptions(new TextPartitioningOptions
     {

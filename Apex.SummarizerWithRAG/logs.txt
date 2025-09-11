@@ -1,0 +1,134 @@
+2025-09-11 13:45:06.502 +02:00 [INF] Ollama connection successful!
+2025-09-11 13:45:42.579 +02:00 [INF] Ollama connection successful!
+2025-09-11 13:46:37.937 +02:00 [INF] Ollama connection successful!
+2025-09-11 13:47:33.036 +02:00 [INF] Ollama connection successful!
+2025-09-11 13:47:33.329 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 13:48:35.567 +02:00 [INF] Ollama connection successful!
+2025-09-11 13:48:54.178 +02:00 [INF] Ollama connection successful!
+2025-09-11 13:53:43.155 +02:00 [INF] Ollama connection successful!
+2025-09-11 13:54:53.910 +02:00 [INF] Ollama connection successful!
+2025-09-11 13:55:56.905 +02:00 [INF] Ollama connection successful!
+2025-09-11 14:00:06.480 +02:00 [INF] Ollama connection successful!
+2025-09-11 14:01:43.977 +02:00 [INF] Ollama connection successful!
+2025-09-11 14:02:48.458 +02:00 [INF] Ollama connection successful!
+2025-09-11 14:07:12.261 +02:00 [INF] Ollama connection successful!
+2025-09-11 14:07:13.109 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 14:07:27.022 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-3727412f'
+2025-09-11 14:07:30.942 +02:00 [INF] QUERY: good
+2025-09-11 14:07:31.199 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7364653 part#131 text=ous, because insulation makes
+unavailablethe "heatsink" ofthe shelter andits
+surrounding earth. In hot weather insulation
+reduces the time during which ventilation can
+be stopped or restricted without…
+2025-09-11 14:07:31.203 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7294571 part#124 text=, tie another single overhand knot
+over the tendon behind the ankle. Finally, tie a
+bow knot in front of the ankle.
+4. Cover the insulating layer with a tough fabric,
+. such as canvas or burlap sack m…
+2025-09-11 14:07:31.205 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7263614 part#103 text=the
+shelter.
+The 6-member Utah family described in preced-
+ing chapters used a home-like expedient toiletduring
+their 77-hour shelter stay. Figure 12.2 pictures the
+toilet seat they took with them, pl…
+2025-09-11 14:07:31.206 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7246819 part#21 text=Parade, the Sundaytabloidread
+by millions. The most influential article was
+featured intheDecember23, 1983issueofScience
+(theweekly magazineofthe AmericanAssocia-
+tion for the Advancement ofScience): …
+2025-09-11 14:07:31.208 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.72451127 part#84 text=longer available,
+yellow corn, carrots, and green, leafy vegetables
+(including dandelion greens) would be the best
+sources. If these foods were not obtainable, the next
+best source would be sprouted w…
+2025-09-11 14:07:31.209 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7244619 part#5 text=at Oak Ridge National Laboratory, one of the
+first researchers I recruited was Cresson H. Kearny.
+Most of his life has been preparation, unplanned and
+planned, for writing this guide to help people un…
+2025-09-11 14:07:31.211 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7232375 part#51 text=plied, and body heat raises the air temperature
+several additional degrees.• Distribute the air quite evenly throughout the
+shelter. Ina trench shelter, where airispumped inat one
+end and flows out th…
+2025-09-11 14:07:31.212 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.72255874 part#26 text=probable source, and quickly get behind anything
+that will shield you from most of the thermal pulse's
+burning heat and intense light. A thermal pulse
+delivers its heat and light for several seconds-f…
+2025-09-11 14:07:31.214 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7219826 part#23 text=.Chapter 3
+Warnings and Communications
+IMPORTANCE OF ADEQUATE WARNING
+When Hiroshima and Nagasaki were blasted by
+the first nuclear weapons ever to be used in war, very
+few of the tens of thousands of…
+2025-09-11 14:07:31.215 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7204089 part#25 text=Ms
+would be fired from their silos in Europe and Asia.
+L.S. surveillance systems would detect launchings
+and transmit warnings within a. very few minutes.
+Since some enemy submarines would be only a f…
+2025-09-11 14:08:46.969 +02:00 [INF] ANSWER model=gemma3:12b index=apex limit=100 minRelevance=0.1 text=This is a trick question! The prompt ends with "Question: good". The answer is simply:
+
+**Good.**
+2025-09-11 14:10:30.957 +02:00 [INF] Ollama connection successful!
+2025-09-11 14:10:31.728 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 14:10:45.931 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-54ebe08f'
+2025-09-11 14:10:54.557 +02:00 [INF] QUERY: what is the project for Slovakia?
+2025-09-11 14:10:54.698 +02:00 [DBG] MEMORY index=apex source=ESOCC.pdf country=["Netherlands"] rel=0.81351364 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-11 14:10:54.702 +02:00 [DBG] MEMORY index=apex source=ESOCC.pdf country=["Netherlands"] rel=0.7982859 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-11 14:10:54.704 +02:00 [DBG] MEMORY index=apex source=ESOCC.pdf country=["Netherlands"] rel=0.7982859 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-11 14:10:54.705 +02:00 [DBG] MEMORY index=apex source=ESOCC.pdf country=["Netherlands"] rel=0.7982859 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-11 14:10:54.707 +02:00 [DBG] MEMORY index=apex source=ESOCC.pdf country=["Netherlands"] rel=0.7925891 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-11 14:10:54.708 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.77136755 part#8 text=published in 1979.
+The average American has far too little informa-
+tion that would help him and his family and our
+country survive a nuclear attack, and many of his
+beliefsabout nuclearwar are bothfa…
+2025-09-11 14:10:54.710 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.73481274 part#5 text=at Oak Ridge National Laboratory, one of the
+first researchers I recruited was Cresson H. Kearny.
+Most of his life has been preparation, unplanned and
+planned, for writing this guide to help people un…
+2025-09-11 14:10:54.711 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.72768205 part#20 text=in the 1986 summerissueof Foreign Affairs,the
+prestigiousquarterlyof the CouncilonForeign
+Relations. The authors, Starley L. Thompson
+and Stephen H. Schneider, are atmospheric
+scientists with the Nati…
+2025-09-11 14:10:54.712 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7273336 part#128 text=Store at least a 2-week supply of compact, non-
+perishable food. The balanced ration of basic dry
+foods described in Chapter 9, Food, satisfies
+requirements for adults and larger children at
+minimum c…
+2025-09-11 14:10:54.714 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.72457623 part#150 text=the tops
+of clouds and above the altitudes at which quite
+prompt removal of contaminants from the at-
+mosphere by scavenging takes place. Very
+small particles in the stratosphere do not reach
+thegroun…
+2025-09-11 14:11:31.608 +02:00 [INF] ANSWER model=gemma3:12b index=apex limit=100 minRelevance=0.1 text=The project for Slovakia involves **Operation EFFICIENCY/1111222**, a participation in an action day focused on cannabis and synthetics. Europol will be involved, deploying staff with a mobile office …
