@@ -21,70 +21,47 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
     private static readonly ConcurrentDictionary<string, (string DocumentId, string Index)> IngestedByFileName = new(StringComparer.OrdinalIgnoreCase);
 
     /// <summary>
-    /// Handles file uploads, saves them, and ingests them into Kernel Memory.
+    /// Handles file uploads and ingests them into Kernel Memory without persisting to local disk.
     /// </summary>
     [HttpPost("/extract/upload")]
     [Consumes("multipart/form-data")]
-    public async Task<IActionResult> UploadAndExtractAsync([FromForm] List<IFormFile> files, string? country)
+    public async Task<IActionResult> ImportAsync([FromForm] List<IFormFile> files, string? country)
     {
         if (files is null || files.Count == 0)
         {
             return BadRequest("No files uploaded.");
         }
 
-        var importPath = "Data";
-        Directory.CreateDirectory(importPath);
-
-        var savedFiles = new List<string>(files.Count);
-
-        foreach (var file in files)
-        {
-            if (file?.Length > 0)
-            {
-                var safeName = Path.GetFileName(file.FileName);
-                var destination = Path.Combine(importPath, safeName);
-
-                if (System.IO.File.Exists(destination))
-                {
-                    var name = Path.GetFileNameWithoutExtension(safeName);
-                    var ext = Path.GetExtension(safeName);
-                    destination = Path.Combine(importPath, $"{name}{ext}");
-                }
-
-                using var stream = new FileStream(destination, FileMode.Create, FileAccess.Write, FileShare.None);
-                await file.CopyToAsync(stream);
-                savedFiles.Add(destination);
-            }
-        }
-
-        if (savedFiles.Count == 0)
-        {
-            return BadRequest("All uploaded files were empty.");
-        }
-
         country ??= "Netherlands";
 
         try
         {
-            var documentIds = new List<string>();
-            foreach (var path in savedFiles)
+            var results = new List<UploadIngestionResult>(files.Count);
+
+            foreach (var file in files)
             {
-                var docId = await documentExtractionService.ImportAsync(path, country);
-                documentIds.Add(docId);
+                if (file?.Length > 0)
+                {
+                    await using var stream = file.OpenReadStream();
+                    var fileName = Path.GetFileName(file.FileName);
+                    var docId = await documentExtractionService.ImportAsync(stream, fileName, country);
+
+                    results.Add(new UploadIngestionResult
+                    {
+                        FilePath = null,                  // no local disk copy
+                        FileName = fileName,
+                        DocumentId = docId,
+                        Index = _ingestionIndex
+                    });
+                }
             }
 
-            var result = savedFiles
-                .Zip(documentIds, (path, docId) => new UploadIngestionResult
-                {
-                    FilePath = path,
-                    FileName = Path.GetFileName(path),
-                    DocumentId = docId,
-                    Index = _ingestionIndex
-                })
-                .ToArray();
+            if (results.Count == 0)
+            {
+                return BadRequest("All uploaded files were empty.");
+            }
 
-            // Track ingested docs during this process lifetime (fallback when KM cannot enumerate)
-            foreach (var item in result)
+            foreach (var item in results)
             {
                 if (!string.IsNullOrWhiteSpace(item.FileName) && !string.IsNullOrWhiteSpace(item.DocumentId))
                 {
@@ -92,7 +69,7 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
                 }
             }
 
-            return Ok(new { Files = result });
+            return Ok(new { Files = results.ToArray() });
         }
         catch (Exception ex)
         {

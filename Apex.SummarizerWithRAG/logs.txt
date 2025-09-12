@@ -213,3 +213,19 @@
 2025-09-12 09:41:09.520 +02:00 [DBG] MEMORY ingest success file='Data\Margies Travel Company Info.pdf' docId='margies_travel_company_info-e8d5f7ff'
 2025-09-12 09:41:19.575 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=london_brochure-c103c115, index=apex)
 2025-09-12 09:41:21.593 +02:00 [DBG] MEMORY Deleted document: 'Margies Travel Company Info.pdf' (docId=margies_travel_company_info-e8d5f7ff, index=apex)
+2025-09-12 09:51:30.174 +02:00 [INF] Ollama connection successful!
+2025-09-12 09:51:30.903 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 09:51:43.442 +02:00 [DBG] MEMORY ingesting stream fileName='Margies Travel Company Info.pdf'...
+2025-09-12 09:51:44.133 +02:00 [DBG] MEMORY ingest success fileName='Margies Travel Company Info.pdf' docId='margies_travel_company_info-c70e95ee'
+2025-09-12 09:51:44.136 +02:00 [DBG] MEMORY ingesting stream fileName='New York Brochure.pdf'...
+2025-09-12 09:51:46.203 +02:00 [DBG] MEMORY ingest success fileName='New York Brochure.pdf' docId='new_york_brochure-de0515a2'
+2025-09-12 09:51:46.205 +02:00 [DBG] MEMORY ingesting stream fileName='San Francisco Brochure.pdf'...
+2025-09-12 09:51:48.268 +02:00 [DBG] MEMORY ingest success fileName='San Francisco Brochure.pdf' docId='san_francisco_brochure-ede560fa'
+2025-09-12 09:51:52.308 +02:00 [DBG] MEMORY Deleted document: 'Margies Travel Company Info.pdf' (docId=margies_travel_company_info-c70e95ee, index=apex)
+2025-09-12 09:52:01.624 +02:00 [INF] Ollama connection successful!
+2025-09-12 09:52:02.395 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 09:52:12.114 +02:00 [DBG] MEMORY ingesting stream fileName='Las Vegas Brochure.pdf'...
+2025-09-12 09:52:13.366 +02:00 [DBG] MEMORY ingest success fileName='Las Vegas Brochure.pdf' docId='las_vegas_brochure-b394e64f'
+2025-09-12 09:52:19.430 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=san_francisco_brochure-ede560fa, index=apex)
+2025-09-12 09:52:22.453 +02:00 [DBG] MEMORY Deleted document: 'Las Vegas Brochure.pdf' (docId=las_vegas_brochure-b394e64f, index=apex)
+2025-09-12 09:52:34.512 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=new_york_brochure-de0515a2, index=apex)
