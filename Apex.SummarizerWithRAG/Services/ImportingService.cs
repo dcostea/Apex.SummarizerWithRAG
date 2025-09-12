@@ -14,6 +14,7 @@ public class ImportingService(IKernelMemory memory, IOptions<RagSettings> ragSet
     public async Task<string> ImportAsync(string filePath, string country)
     {
         var documentId = ToValidDocumentId(filePath);
+        var index = string.IsNullOrWhiteSpace(_ragSettings.IngestionIndex) ? "apex" : _ragSettings.IngestionIndex;
 
         try
         {
@@ -21,17 +22,25 @@ public class ImportingService(IKernelMemory memory, IOptions<RagSettings> ragSet
                 .AddFile(filePath)
                 .AddTag("country", country);
 
-            var returnedId = await memory.ImportDocumentAsync(kmDocument, _ragSettings.IngestionIndex);
+            Log.Debug("MEMORY ingesting file='{File}'...", filePath);
+
+            var returnedId = await memory.ImportDocumentAsync(kmDocument, index);
 
             Log.Debug("MEMORY ingest success file='{File}' docId='{DocId}'", filePath, returnedId);
             return returnedId;
         }
         catch (InvalidIndexNameException iex)
         {
+            var errors = iex.Errors.Any() ? string.Join(" | ", iex.Errors) : "<none>";
             Log.Error("MEMORY failingIndex='{Failing}' passedIndex='{Passed}' errors={Errors}",
                 iex.IndexName,
-                _ragSettings.IngestionIndex,
-                string.Join(" | ", iex.Errors));
+                index,
+                errors);
+            throw;
+        }
+        catch (ArgumentException aex) when (aex.Message.Contains("more tokens than configured batch size", StringComparison.OrdinalIgnoreCase))
+        {
+            Log.Error(aex, "MEMORY ingest failed due to embedding batch size. Reduce TextPartitioning:MaxTokensPerParagraph or switch to Ollama embeddings.");
             throw;
         }
         catch (Exception ex)

@@ -1,4 +1,4 @@
-class ChatbotApp {
+ï»¿class ChatbotApp {
     constructor() {
         this.settings = {
             apiEndpoint: '/search'
@@ -336,7 +336,7 @@ class ChatbotApp {
         this.indexedFilesContainer.classList.remove('hidden');
 
         const rows = Array.from(this.indexedDocs.entries()).map(([docId, { name, index }]) => {
-            const shortId = (docId && docId.length > 14) ? docId.slice(0, 6) + '…' + docId.slice(-6) : (docId || '');
+            const shortId = (docId && docId.length > 14) ? docId.slice(0, 6) + 'â€¦' + docId.slice(-6) : (docId || '');
             return `
                 <div class="uploaded-file">
                     <div class="uploaded-file-info">
@@ -348,7 +348,7 @@ class ChatbotApp {
                         </div>
                         <div class="uploaded-file-details">
                             <div class="uploaded-file-name" title="${name}">${name}</div>
-                            <div class="uploaded-file-size">${index || ''} ${shortId ? '• ' + shortId : ''}</div>
+                            <div class="uploaded-file-size">${index || ''} ${shortId ? 'â€¢ ' + shortId : ''}</div>
                         </div>
                     </div>
                     <button class="remove-file-btn" title="Delete from memory"
@@ -394,39 +394,55 @@ class ChatbotApp {
         }
         const { name, index } = entry;
 
-        if (!confirm(`Remove "${name}" from memory?\n\nDocumentId: ${docId}`)) return;
+        if (!confirm(`Remove "${name}"?\n\nDocumentId: ${docId}`)) return;
 
-        const short = (id) => (id && id.length > 14) ? id.slice(0, 6) + '…' + id.slice(-6) : (id || '');
+        const short = (id) => (id && id.length > 14) ? id.slice(0, 6) + 'ï¿½' + id.slice(-6) : (id || '');
 
         try {
             const url = `/memory/${encodeURIComponent(docId)}${index ? `?index=${encodeURIComponent(index)}` : ''}`;
             const resp = await fetch(url, { method: 'DELETE' });
 
-            if (resp.status === 204 || resp.status === 200 || resp.status === 404) {
-                // Remove locally
+            // 2xx: success
+            if (resp.status === 204 || resp.status === 200) {
+                // Remove locally on success
                 this.indexedDocs.delete(docId);
-
-                // Update legacy structures for consistency
-                // If multiple docs share the same name, we must rebuild maps safely
                 this.rebuildLegacyIndexMapsFromIndexedDocs();
-
                 this.renderFileLists();
 
-                if (resp.status === 404) {
-                    console.info(`[KM] "${name}" (docId=${short(docId)}, index=${index || '(auto)'}) was already removed on server; cleaned up locally.`);
-                    this.showToast(`"${name}" was already removed on the server; UI updated.`, 'info');
-                } else {
-                    console.info(`[KM] Successfully deleted "${name}" (docId=${short(docId)}, index=${index || '(auto)'}), status=${resp.status}.`);
-                    this.showToast(`Removed "${name}" from memory`, 'success');
-                }
+                console.info(`[KM] Successfully deleted "${name}" (docId=${short(docId)}, index=${index || '(auto)'}), status=${resp.status}.`);
+                this.showToast(`Removed "${name}"`, 'success');
 
                 await this.refreshIndexedFromServer();
                 this.renderFileLists();
                 return;
             }
 
-            const msg = await resp.text().catch(() => '');
-            throw new Error(msg || `HTTP ${resp.status}`);
+            // 404: could be "not found" OR "not ready" (server message clarifies)
+            if (resp.status === 404) {
+                const msg = (await resp.text().catch(() => '')) || '';
+                // Heuristic: server message includes "not ready" when ingestion not completed
+                if (/not ready/i.test(msg)) {
+                    console.info(`[KM] "${name}" (docId=${short(docId)}, index=${index || '(auto)'}) not ready yet; server said: ${msg}`);
+                    this.showToast(`"${name}" is not ready yet; please retry in a moment.`, 'warn');
+                    return; // keep it in UI
+                }
+
+                // Otherwise treat as "already removed"
+                this.indexedDocs.delete(docId);
+                this.rebuildLegacyIndexMapsFromIndexedDocs();
+                this.renderFileLists();
+
+                console.info(`[KM] "${name}" (docId=${short(docId)}, index=${index || '(auto)'}) was already removed on server; cleaned up locally.`);
+                this.showToast(`"${name}" was already removed on the server; UI updated.`, 'info');
+
+                await this.refreshIndexedFromServer();
+                this.renderFileLists();
+                return;
+            }
+
+            // Other errors
+            const msg = await resp.text().catch(() => '') || `HTTP ${resp.status}`;
+            throw new Error(msg);
         } catch (err) {
             console.error(`[KM] Failed to delete "${name}" (docId=${short(docId)}, index=${entry.index || '(auto)'}):`, err);
             this.showToast(`Failed to delete: ${err.message}`, 'error');
@@ -674,7 +690,7 @@ class ChatbotApp {
             const truncate = (t, len = 220) => {
                 if (!t) return '';
                 const s = t.trim().replace(/\s+/g, ' ');
-                return s.length > len ? s.slice(0, len) + '…' : s;
+                return s.length > len ? s.slice(0, len) + 'â€¦' : s;
             };
 
             refs.forEach((r) => {
@@ -683,7 +699,7 @@ class ChatbotApp {
 
                 const resolvedName = r.SourceName || idToName.get(r.DocumentId || '') || '';
                 const shortId = (r.DocumentId && r.DocumentId.length > 14)
-                    ? r.DocumentId.slice(0, 6) + '…' + r.DocumentId.slice(-6)
+                    ? r.DocumentId.slice(0, 6) + 'â€¦' + r.DocumentId.slice(-6)
                     : (r.DocumentId || '');
                 const titleText = resolvedName || shortId || r.Link || '';
 
@@ -701,7 +717,7 @@ class ChatbotApp {
                 if (!resolvedName && shortId) metaBits.push(shortId);
                 if (r.SourceContentType) metaBits.push(r.SourceContentType.toUpperCase());
                 if (metaBits.length > 0) {
-                    meta.textContent = metaBits.join(' • ');
+                    meta.textContent = metaBits.join(' â€¢ ');
                     item.appendChild(meta);
                 }
 

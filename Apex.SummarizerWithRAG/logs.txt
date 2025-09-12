@@ -1,196 +1,215 @@
-2025-09-11 13:45:06.502 +02:00 [INF] Ollama connection successful!
-2025-09-11 13:45:42.579 +02:00 [INF] Ollama connection successful!
-2025-09-11 13:46:37.937 +02:00 [INF] Ollama connection successful!
-2025-09-11 13:47:33.036 +02:00 [INF] Ollama connection successful!
-2025-09-11 13:47:33.329 +02:00 [INF] Apex.Summarizer application started successfully
-2025-09-11 13:48:35.567 +02:00 [INF] Ollama connection successful!
-2025-09-11 13:48:54.178 +02:00 [INF] Ollama connection successful!
-2025-09-11 13:53:43.155 +02:00 [INF] Ollama connection successful!
-2025-09-11 13:54:53.910 +02:00 [INF] Ollama connection successful!
-2025-09-11 13:55:56.905 +02:00 [INF] Ollama connection successful!
-2025-09-11 14:00:06.480 +02:00 [INF] Ollama connection successful!
-2025-09-11 14:01:43.977 +02:00 [INF] Ollama connection successful!
-2025-09-11 14:02:48.458 +02:00 [INF] Ollama connection successful!
-2025-09-11 14:07:12.261 +02:00 [INF] Ollama connection successful!
-2025-09-11 14:07:13.109 +02:00 [INF] Apex.Summarizer application started successfully
-2025-09-11 14:07:27.022 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-3727412f'
-2025-09-11 14:07:30.942 +02:00 [INF] QUERY: good
-2025-09-11 14:07:31.199 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7364653 part#131 text=ous, because insulation makes
-unavailablethe "heatsink" ofthe shelter andits
-surrounding earth. In hot weather insulation
-reduces the time during which ventilation can
-be stopped or restricted without…
-2025-09-11 14:07:31.203 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7294571 part#124 text=, tie another single overhand knot
-over the tendon behind the ankle. Finally, tie a
-bow knot in front of the ankle.
-4. Cover the insulating layer with a tough fabric,
-. such as canvas or burlap sack m…
-2025-09-11 14:07:31.205 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7263614 part#103 text=the
-shelter.
-The 6-member Utah family described in preced-
-ing chapters used a home-like expedient toiletduring
-their 77-hour shelter stay. Figure 12.2 pictures the
-toilet seat they took with them, pl…
-2025-09-11 14:07:31.206 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7246819 part#21 text=Parade, the Sundaytabloidread
-by millions. The most influential article was
-featured intheDecember23, 1983issueofScience
-(theweekly magazineofthe AmericanAssocia-
-tion for the Advancement ofScience): …
-2025-09-11 14:07:31.208 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.72451127 part#84 text=longer available,
-yellow corn, carrots, and green, leafy vegetables
-(including dandelion greens) would be the best
-sources. If these foods were not obtainable, the next
-best source would be sprouted w…
-2025-09-11 14:07:31.209 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7244619 part#5 text=at Oak Ridge National Laboratory, one of the
-first researchers I recruited was Cresson H. Kearny.
-Most of his life has been preparation, unplanned and
-planned, for writing this guide to help people un…
-2025-09-11 14:07:31.211 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7232375 part#51 text=plied, and body heat raises the air temperature
-several additional degrees.• Distribute the air quite evenly throughout the
-shelter. Ina trench shelter, where airispumped inat one
-end and flows out th…
-2025-09-11 14:07:31.212 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.72255874 part#26 text=probable source, and quickly get behind anything
-that will shield you from most of the thermal pulse's
-burning heat and intense light. A thermal pulse
-delivers its heat and light for several seconds-f…
-2025-09-11 14:07:31.214 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7219826 part#23 text=.Chapter 3
-Warnings and Communications
-IMPORTANCE OF ADEQUATE WARNING
-When Hiroshima and Nagasaki were blasted by
-the first nuclear weapons ever to be used in war, very
-few of the tens of thousands of…
-2025-09-11 14:07:31.215 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7204089 part#25 text=Ms
-would be fired from their silos in Europe and Asia.
-L.S. surveillance systems would detect launchings
-and transmit warnings within a. very few minutes.
-Since some enemy submarines would be only a f…
-2025-09-11 14:08:46.969 +02:00 [INF] ANSWER model=gemma3:12b index=apex limit=100 minRelevance=0.1 text=This is a trick question! The prompt ends with "Question: good". The answer is simply:
-
-**Good.**
-2025-09-11 14:10:30.957 +02:00 [INF] Ollama connection successful!
-2025-09-11 14:10:31.728 +02:00 [INF] Apex.Summarizer application started successfully
-2025-09-11 14:10:45.931 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-54ebe08f'
-2025-09-11 14:10:54.557 +02:00 [INF] QUERY: what is the project for Slovakia?
-2025-09-11 14:10:54.698 +02:00 [DBG] MEMORY index=apex source=ESOCC.pdf country=["Netherlands"] rel=0.81351364 part#0 text=RESTREINT UE / EU RESTRICTED
-(Europol)
-2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
-WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
-IMPORTANT OPERATIONAL ACTIVITIES 
-WEEK 35 (25-31 AUGUST 2025)
-Planned …
-2025-09-11 14:10:54.702 +02:00 [DBG] MEMORY index=apex source=ESOCC.pdf country=["Netherlands"] rel=0.7982859 part#0 text=RESTREINT UE / EU RESTRICTED
-(Europol)
-2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
-WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
-IMPORTANT OPERATIONAL ACTIVITIES 
-WEEK 35 (25-31 AUGUST 2025)
-Planned …
-2025-09-11 14:10:54.704 +02:00 [DBG] MEMORY index=apex source=ESOCC.pdf country=["Netherlands"] rel=0.7982859 part#0 text=RESTREINT UE / EU RESTRICTED
-(Europol)
-2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
-WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
-IMPORTANT OPERATIONAL ACTIVITIES 
-WEEK 35 (25-31 AUGUST 2025)
-Planned …
-2025-09-11 14:10:54.705 +02:00 [DBG] MEMORY index=apex source=ESOCC.pdf country=["Netherlands"] rel=0.7982859 part#0 text=RESTREINT UE / EU RESTRICTED
-(Europol)
-2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
-WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
-IMPORTANT OPERATIONAL ACTIVITIES 
-WEEK 35 (25-31 AUGUST 2025)
-Planned …
-2025-09-11 14:10:54.707 +02:00 [DBG] MEMORY index=apex source=ESOCC.pdf country=["Netherlands"] rel=0.7925891 part#0 text=RESTREINT UE / EU RESTRICTED
-(Europol)
-2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
-WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
-IMPORTANT OPERATIONAL ACTIVITIES 
-WEEK 35 (25-31 AUGUST 2025)
-Planned …
-2025-09-11 14:10:54.708 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.77136755 part#8 text=published in 1979.
-The average American has far too little informa-
-tion that would help him and his family and our
-country survive a nuclear attack, and many of his
-beliefsabout nuclearwar are bothfa…
-2025-09-11 14:10:54.710 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.73481274 part#5 text=at Oak Ridge National Laboratory, one of the
-first researchers I recruited was Cresson H. Kearny.
-Most of his life has been preparation, unplanned and
-planned, for writing this guide to help people un…
-2025-09-11 14:10:54.711 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.72768205 part#20 text=in the 1986 summerissueof Foreign Affairs,the
-prestigiousquarterlyof the CouncilonForeign
-Relations. The authors, Starley L. Thompson
-and Stephen H. Schneider, are atmospheric
-scientists with the Nati…
-2025-09-11 14:10:54.712 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.7273336 part#128 text=Store at least a 2-week supply of compact, non-
-perishable food. The balanced ration of basic dry
-foods described in Chapter 9, Food, satisfies
-requirements for adults and larger children at
-minimum c…
-2025-09-11 14:10:54.714 +02:00 [DBG] MEMORY index=apex source=nwss.pdf country=["Netherlands"] rel=0.72457623 part#150 text=the tops
-of clouds and above the altitudes at which quite
-prompt removal of contaminants from the at-
-mosphere by scavenging takes place. Very
-small particles in the stratosphere do not reach
-thegroun…
-2025-09-11 14:11:31.608 +02:00 [INF] ANSWER model=gemma3:12b index=apex limit=100 minRelevance=0.1 text=The project for Slovakia involves **Operation EFFICIENCY/1111222**, a participation in an action day focused on cannabis and synthetics. Europol will be involved, deploying staff with a mobile office …
-2025-09-11 14:16:29.298 +02:00 [INF] Ollama connection successful!
-2025-09-11 14:16:30.073 +02:00 [INF] Apex.Summarizer application started successfully
-2025-09-11 14:16:49.858 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-83a85c8b'
-2025-09-11 14:22:28.846 +02:00 [INF] Ollama connection successful!
-2025-09-11 14:22:29.638 +02:00 [INF] Apex.Summarizer application started successfully
-2025-09-11 14:23:09.648 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-f5e005c4'
-2025-09-11 14:23:22.845 +02:00 [INF] Ollama connection successful!
-2025-09-11 14:23:23.631 +02:00 [INF] Apex.Summarizer application started successfully
-2025-09-11 14:23:56.709 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-c948bff2'
-2025-09-11 14:24:11.308 +02:00 [INF] Ollama connection successful!
-2025-09-11 14:24:12.092 +02:00 [INF] Apex.Summarizer application started successfully
-2025-09-11 14:30:34.402 +02:00 [INF] Ollama connection successful!
-2025-09-11 14:30:35.180 +02:00 [INF] Apex.Summarizer application started successfully
-2025-09-11 14:44:16.980 +02:00 [INF] Ollama connection successful!
-2025-09-11 14:44:17.833 +02:00 [INF] Apex.Summarizer application started successfully
-2025-09-11 14:44:23.944 +02:00 [INF] DEBUG: Starting GetIndexedDocumentsAsync, _ingestionIndex = 'apex'
-2025-09-11 14:44:24.029 +02:00 [WRN] Failed to retrieve documents from Elasticsearch: The SSL connection could not be established, see inner exception.
-2025-09-11 14:44:24.030 +02:00 [INF] DEBUG: TryListFromElasticAsync returned 0 items
-2025-09-11 14:44:24.032 +02:00 [INF] DEBUG: Final result has 0 items
-2025-09-11 14:44:50.402 +02:00 [INF] DEBUG: Starting GetIndexedDocumentsAsync, _ingestionIndex = 'apex'
-2025-09-11 14:44:50.445 +02:00 [WRN] Failed to retrieve documents from Elasticsearch: The SSL connection could not be established, see inner exception.
-2025-09-11 14:44:50.446 +02:00 [INF] DEBUG: TryListFromElasticAsync returned 0 items
-2025-09-11 14:44:50.447 +02:00 [INF] DEBUG: Final result has 0 items
-2025-09-11 14:44:59.663 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-cc2e933b'
-2025-09-11 14:44:59.671 +02:00 [INF] DEBUG: Starting GetIndexedDocumentsAsync, _ingestionIndex = 'apex'
-2025-09-11 14:44:59.717 +02:00 [WRN] Failed to retrieve documents from Elasticsearch: The SSL connection could not be established, see inner exception.
-2025-09-11 14:44:59.718 +02:00 [INF] DEBUG: TryListFromElasticAsync returned 0 items
-2025-09-11 14:44:59.719 +02:00 [INF] DEBUG: Final result has 0 items
-2025-09-11 14:44:59.724 +02:00 [INF] DEBUG: Starting GetIndexedDocumentsAsync, _ingestionIndex = 'apex'
-2025-09-11 14:44:59.767 +02:00 [WRN] Failed to retrieve documents from Elasticsearch: The SSL connection could not be established, see inner exception.
-2025-09-11 14:44:59.767 +02:00 [INF] DEBUG: TryListFromElasticAsync returned 0 items
-2025-09-11 14:44:59.768 +02:00 [INF] DEBUG: Final result has 0 items
-2025-09-11 14:45:14.397 +02:00 [INF] DEBUG: Starting GetIndexedDocumentsAsync, _ingestionIndex = 'apex'
-2025-09-11 14:45:14.443 +02:00 [WRN] Failed to retrieve documents from Elasticsearch: The SSL connection could not be established, see inner exception.
-2025-09-11 14:45:14.444 +02:00 [INF] DEBUG: TryListFromElasticAsync returned 0 items
-2025-09-11 14:45:14.445 +02:00 [INF] DEBUG: Final result has 0 items
-2025-09-11 14:52:07.040 +02:00 [INF] Ollama connection successful!
-2025-09-11 14:52:07.833 +02:00 [INF] Apex.Summarizer application started successfully
-2025-09-11 14:52:14.557 +02:00 [INF] DEBUG: Starting GetIndexedDocumentsAsync, _ingestionIndex = 'apex'
-2025-09-11 14:52:14.633 +02:00 [WRN] Failed to retrieve documents from Elasticsearch: The SSL connection could not be established, see inner exception.
-2025-09-11 14:52:14.634 +02:00 [INF] DEBUG: TryListFromElasticAsync returned 0 items
-2025-09-11 14:52:14.637 +02:00 [INF] DEBUG: Final result has 0 items
-2025-09-11 14:57:50.867 +02:00 [INF] Ollama connection successful!
-2025-09-11 14:57:51.668 +02:00 [INF] Apex.Summarizer application started successfully
-2025-09-11 14:58:15.210 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-22609029'
-2025-09-11 15:01:55.378 +02:00 [INF] Ollama connection successful!
-2025-09-11 15:01:56.162 +02:00 [INF] Apex.Summarizer application started successfully
-2025-09-11 15:02:14.027 +02:00 [DBG] MEMORY Delete skipped (not found or not ready): docId=nwss-9f79dfe1, index=apex
-2025-09-11 15:02:21.186 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=esocc-f5e005c4, index=apex)
-2025-09-11 15:08:50.175 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=esocc-c948bff2, index=apex)
-2025-09-11 15:09:01.304 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=esocc-cc2e933b, index=apex)
-2025-09-11 15:09:10.409 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=esocc-83a85c8b, index=apex)
-2025-09-11 15:11:19.401 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=esocc-22609029, index=apex)
-2025-09-11 15:11:39.754 +02:00 [INF] Ollama connection successful!
-2025-09-11 15:11:40.536 +02:00 [INF] Apex.Summarizer application started successfully
-2025-09-11 15:11:54.008 +02:00 [DBG] MEMORY Delete skipped (not found or not ready): docId=nwss-9f79dfe1, index=apex
-2025-09-11 15:12:06.142 +02:00 [DBG] MEMORY Delete skipped (not found or not ready): docId=esocc-54ebe08f, index=apex
-2025-09-11 15:12:19.906 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-cc374725'
-2025-09-11 15:12:26.980 +02:00 [DBG] MEMORY Deleted document: 'ESOCC.pdf' (docId=esocc-cc374725, index=apex)
-2025-09-11 15:12:30.437 +02:00 [DBG] MEMORY Delete skipped (not found or not ready): docId=esocc-54ebe08f, index=apex
-2025-09-11 15:12:38.247 +02:00 [DBG] MEMORY Delete skipped (not found or not ready): docId=esocc-54ebe08f, index=apex
-2025-09-11 15:12:52.192 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-43648be0'
+2025-09-11 16:35:53.618 +02:00 [INF] Ollama connection successful!
+2025-09-11 16:35:54.544 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 16:45:06.357 +02:00 [INF] Ollama connection successful!
+2025-09-11 16:45:07.187 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 16:45:33.374 +02:00 [DBG] MEMORY Delete skipped (not found or not ready): docId=nwss-63ef9c1d, index=apex
+2025-09-11 16:45:39.681 +02:00 [DBG] MEMORY Delete skipped (not found or not ready): docId=esocc-3c3365f0, index=apex
+2025-09-11 16:45:45.384 +02:00 [DBG] MEMORY Delete skipped (not found or not ready): docId=privacy_notice_ta_ca_interns-3a34152d, index=apex
+2025-09-11 16:46:02.081 +02:00 [DBG] MEMORY Delete skipped (not found or not ready): docId=esocc-0a884b7e, index=apex
+2025-09-11 16:46:27.446 +02:00 [DBG] MEMORY ingesting file='Data\ESOCC.pdf'...
+2025-09-11 16:46:29.490 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-d7bd2112'
+2025-09-11 16:46:36.264 +02:00 [DBG] MEMORY ingesting file='Data\privacy_notice_ta_ca_interns.pdf'...
+2025-09-11 16:46:56.375 +02:00 [DBG] MEMORY ingest success file='Data\privacy_notice_ta_ca_interns.pdf' docId='privacy_notice_ta_ca_interns-d24cd25e'
+2025-09-11 16:47:06.512 +02:00 [DBG] MEMORY Deleted document: 'ESOCC.pdf' (docId=esocc-d7bd2112, index=apex)
+2025-09-11 16:47:14.697 +02:00 [DBG] MEMORY ingesting file='Data\ESOCC.pdf'...
+2025-09-11 16:47:16.490 +02:00 [DBG] MEMORY ingest success file='Data\ESOCC.pdf' docId='esocc-fc15391b'
+2025-09-11 16:47:59.197 +02:00 [INF] Ollama connection successful!
+2025-09-11 16:48:11.212 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 16:48:37.337 +02:00 [INF] Ollama connection successful!
+2025-09-11 16:48:38.180 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 16:51:34.269 +02:00 [INF] Ollama connection successful!
+2025-09-11 16:51:35.126 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 16:52:23.552 +02:00 [INF] Ollama connection successful!
+2025-09-11 16:52:24.411 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 16:53:53.974 +02:00 [INF] Ollama connection successful!
+2025-09-11 16:53:54.737 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 16:54:26.416 +02:00 [INF] Ollama connection successful!
+2025-09-11 16:54:27.201 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 16:57:20.909 +02:00 [INF] Ollama connection successful!
+2025-09-11 16:57:21.690 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 17:38:25.209 +02:00 [INF] Ollama connection successful!
+2025-09-11 17:38:26.019 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 17:45:01.150 +02:00 [INF] Ollama connection successful!
+2025-09-11 17:45:02.090 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 17:58:49.998 +02:00 [INF] Ollama connection successful!
+2025-09-11 17:58:50.770 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 18:05:11.375 +02:00 [INF] Ollama connection successful!
+2025-09-11 18:05:12.063 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 18:05:41.567 +02:00 [INF] Ollama connection successful!
+2025-09-11 18:05:43.195 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 18:06:13.143 +02:00 [DBG] MEMORY ingesting file='Data\nwss.pdf'...
+2025-09-11 18:10:45.260 +02:00 [INF] Ollama connection successful!
+2025-09-11 18:10:47.158 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 18:31:56.736 +02:00 [INF] Ollama connection successful!
+2025-09-11 18:31:58.679 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 18:33:18.442 +02:00 [INF] Ollama connection successful!
+2025-09-11 18:33:20.380 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 18:34:07.901 +02:00 [INF] Ollama connection successful!
+2025-09-11 18:34:08.671 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 18:34:27.022 +02:00 [DBG] MEMORY ingesting file='Data\Dubai Brochure.pdf'...
+2025-09-11 18:34:27.037 +02:00 [DBG] MEMORY ingesting file='Data\Las Vegas Brochure.pdf'...
+2025-09-11 18:34:27.040 +02:00 [DBG] MEMORY ingesting file='Data\London Brochure.pdf'...
+2025-09-11 18:34:27.055 +02:00 [DBG] MEMORY ingesting file='Data\Margies Travel Company Info.pdf'...
+2025-09-11 18:34:27.061 +02:00 [DBG] MEMORY ingesting file='Data\New York Brochure.pdf'...
+2025-09-11 18:34:27.065 +02:00 [DBG] MEMORY ingesting file='Data\San Francisco Brochure.pdf'...
+2025-09-11 18:34:43.215 +02:00 [INF] Ollama connection successful!
+2025-09-11 18:34:43.945 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 18:34:54.252 +02:00 [DBG] MEMORY ingesting file='Data\Dubai Brochure.pdf'...
+2025-09-11 18:34:55.073 +02:00 [DBG] MEMORY ingest success file='Data\Dubai Brochure.pdf' docId='dubai_brochure-e9a3c75c'
+2025-09-11 18:35:15.419 +02:00 [INF] Ollama connection successful!
+2025-09-11 18:35:16.160 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 18:35:25.555 +02:00 [DBG] MEMORY ingesting file='Data\Las Vegas Brochure.pdf'...
+2025-09-11 18:35:27.133 +02:00 [DBG] MEMORY ingest success file='Data\Las Vegas Brochure.pdf' docId='las_vegas_brochure-39b09c1d'
+2025-09-11 19:40:12.685 +02:00 [INF] Ollama connection successful!
+2025-09-11 19:40:13.759 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-11 19:40:25.827 +02:00 [DBG] MEMORY ingesting file='Data\Dubai Brochure.pdf'...
+2025-09-12 08:59:12.855 +02:00 [INF] Ollama connection successful!
+2025-09-12 09:02:32.703 +02:00 [INF] Ollama connection successful!
+2025-09-12 09:03:39.298 +02:00 [INF] Ollama connection successful!
+2025-09-12 09:03:55.392 +02:00 [INF] Ollama connection successful!
+2025-09-12 09:03:56.238 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 09:04:48.235 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=esocc-fc15391b, index=apex)
+2025-09-12 09:05:10.552 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=privacy_notice_ta_ca_interns-d24cd25e, index=apex)
+2025-09-12 09:05:25.788 +02:00 [INF] Ollama connection successful!
+2025-09-12 09:05:26.513 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 09:05:36.580 +02:00 [DBG] MEMORY Delete skipped (not found or not ready): docId=privacy_notice_ta_ca_interns-d24cd25e, index=apex
+2025-09-12 09:05:49.106 +02:00 [DBG] MEMORY Delete skipped (not found or not ready): docId=privacy_notice_ta_ca_interns-d24cd25e, index=apex
+2025-09-12 09:06:00.620 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=dubai_brochure-e9a3c75c, index=apex)
+2025-09-12 09:06:21.866 +02:00 [DBG] MEMORY ingesting file='Data\London Brochure.pdf'...
+2025-09-12 09:06:23.719 +02:00 [DBG] MEMORY ingest success file='Data\London Brochure.pdf' docId='london_brochure-59d72aaa'
+2025-09-12 09:06:31.628 +02:00 [DBG] MEMORY ingesting file='Data\Margies Travel Company Info.pdf'...
+2025-09-12 09:06:31.631 +02:00 [DBG] MEMORY ingesting file='Data\New York Brochure.pdf'...
+2025-09-12 09:06:31.633 +02:00 [DBG] MEMORY ingesting file='Data\San Francisco Brochure.pdf'...
+2025-09-12 09:08:21.819 +02:00 [INF] Ollama connection successful!
+2025-09-12 09:08:22.562 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 09:09:22.544 +02:00 [DBG] MEMORY ingesting file='Data\Margies Travel Company Info.pdf'...
+2025-09-12 09:09:22.556 +02:00 [DBG] MEMORY ingesting file='Data\New York Brochure.pdf'...
+2025-09-12 09:09:22.559 +02:00 [DBG] MEMORY ingesting file='Data\San Francisco Brochure.pdf'...
+2025-09-12 09:09:49.059 +02:00 [INF] Ollama connection successful!
+2025-09-12 09:09:49.787 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 09:10:45.240 +02:00 [DBG] MEMORY ingesting file='Data\Margies Travel Company Info.pdf'...
+2025-09-12 09:11:05.540 +02:00 [DBG] MEMORY ingesting file='Data\New York Brochure.pdf'...
+2025-09-12 09:11:10.758 +02:00 [DBG] MEMORY ingesting file='Data\San Francisco Brochure.pdf'...
+2025-09-12 09:23:24.595 +02:00 [INF] Ollama connection successful!
+2025-09-12 09:23:25.406 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 09:23:44.285 +02:00 [DBG] MEMORY ingesting file='Data\Margies Travel Company Info.pdf'...
+2025-09-12 09:23:51.683 +02:00 [DBG] MEMORY ingest success file='Data\Margies Travel Company Info.pdf' docId='margies_travel_company_info-c39d7a63'
+2025-09-12 09:23:51.685 +02:00 [DBG] MEMORY ingesting file='Data\New York Brochure.pdf'...
+2025-09-12 09:23:53.676 +02:00 [DBG] MEMORY ingest success file='Data\New York Brochure.pdf' docId='new_york_brochure-fc3e8e4c'
+2025-09-12 09:23:53.677 +02:00 [DBG] MEMORY ingesting file='Data\San Francisco Brochure.pdf'...
+2025-09-12 09:23:55.753 +02:00 [DBG] MEMORY ingest success file='Data\San Francisco Brochure.pdf' docId='san_francisco_brochure-fe122da7'
+2025-09-12 09:24:04.797 +02:00 [DBG] MEMORY Deleted document: 'New York Brochure.pdf' (docId=new_york_brochure-fc3e8e4c, index=apex)
+2025-09-12 09:24:14.861 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=london_brochure-59d72aaa, index=apex)
+2025-09-12 09:24:18.912 +02:00 [DBG] MEMORY Deleted document: 'San Francisco Brochure.pdf' (docId=san_francisco_brochure-fe122da7, index=apex)
+2025-09-12 09:24:20.936 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=las_vegas_brochure-39b09c1d, index=apex)
+2025-09-12 09:24:22.680 +02:00 [DBG] MEMORY Delete skipped (not found or not ready): docId=privacy_notice_ta_ca_interns-d24cd25e, index=apex
+2025-09-12 09:25:52.890 +02:00 [INF] Ollama connection successful!
+2025-09-12 09:26:22.249 +02:00 [INF] Ollama connection successful!
+2025-09-12 09:26:23.007 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 09:26:32.047 +02:00 [DBG] MEMORY Delete skipped (not found or not ready): docId=privacy_notice_ta_ca_interns-d24cd25e, index=apex
+2025-09-12 09:33:31.156 +02:00 [INF] Ollama connection successful!
+2025-09-12 09:33:31.915 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 09:34:01.621 +02:00 [DBG] MEMORY ingesting file='Data\Dubai Brochure.pdf'...
+2025-09-12 09:34:02.415 +02:00 [DBG] MEMORY ingest success file='Data\Dubai Brochure.pdf' docId='dubai_brochure-623bd862'
+2025-09-12 09:34:02.416 +02:00 [DBG] MEMORY ingesting file='Data\Las Vegas Brochure.pdf'...
+2025-09-12 09:34:03.457 +02:00 [DBG] MEMORY ingest success file='Data\Las Vegas Brochure.pdf' docId='las_vegas_brochure-237e38d2'
+2025-09-12 09:34:03.460 +02:00 [DBG] MEMORY ingesting file='Data\London Brochure.pdf'...
+2025-09-12 09:34:05.519 +02:00 [DBG] MEMORY ingest success file='Data\London Brochure.pdf' docId='london_brochure-c2b8cdcc'
+2025-09-12 09:34:05.520 +02:00 [DBG] MEMORY ingesting file='Data\Margies Travel Company Info.pdf'...
+2025-09-12 09:34:06.551 +02:00 [DBG] MEMORY ingest success file='Data\Margies Travel Company Info.pdf' docId='margies_travel_company_info-9f92727b'
+2025-09-12 09:34:06.552 +02:00 [DBG] MEMORY ingesting file='Data\New York Brochure.pdf'...
+2025-09-12 09:34:08.632 +02:00 [DBG] MEMORY ingest success file='Data\New York Brochure.pdf' docId='new_york_brochure-06365121'
+2025-09-12 09:34:08.634 +02:00 [DBG] MEMORY ingesting file='Data\San Francisco Brochure.pdf'...
+2025-09-12 09:34:10.705 +02:00 [DBG] MEMORY ingest success file='Data\San Francisco Brochure.pdf' docId='san_francisco_brochure-38fcb79a'
+2025-09-12 09:34:31.873 +02:00 [DBG] MEMORY Delete skipped (not ready): docId=privacy_notice_ta_ca_interns-d24cd25e, index=apex
+2025-09-12 09:34:37.321 +02:00 [DBG] MEMORY Delete skipped (not ready): docId=privacy_notice_ta_ca_interns-d24cd25e, index=apex
+2025-09-12 09:34:40.771 +02:00 [DBG] MEMORY Deleted document: 'New York Brochure.pdf' (docId=new_york_brochure-06365121, index=apex)
+2025-09-12 09:34:46.104 +02:00 [DBG] MEMORY Delete skipped (not ready): docId=margies_travel_company_info-c39d7a63, index=apex
+2025-09-12 09:34:54.819 +02:00 [DBG] MEMORY Deleted document: 'Margies Travel Company Info.pdf' (docId=margies_travel_company_info-9f92727b, index=apex)
+2025-09-12 09:34:58.896 +02:00 [DBG] MEMORY Deleted document: 'London Brochure.pdf' (docId=london_brochure-c2b8cdcc, index=apex)
+2025-09-12 09:35:00.914 +02:00 [DBG] MEMORY Deleted document: 'Dubai Brochure.pdf' (docId=dubai_brochure-623bd862, index=apex)
+2025-09-12 09:35:02.915 +02:00 [DBG] MEMORY Deleted document: 'Las Vegas Brochure.pdf' (docId=las_vegas_brochure-237e38d2, index=apex)
+2025-09-12 09:35:05.983 +02:00 [DBG] MEMORY Deleted document: 'San Francisco Brochure.pdf' (docId=san_francisco_brochure-38fcb79a, index=apex)
+2025-09-12 09:35:07.282 +02:00 [DBG] MEMORY Delete skipped (not ready): docId=margies_travel_company_info-c39d7a63, index=apex
+2025-09-12 09:35:11.657 +02:00 [DBG] MEMORY Delete skipped (not ready): docId=privacy_notice_ta_ca_interns-d24cd25e, index=apex
+2025-09-12 09:35:55.450 +02:00 [DBG] MEMORY ingesting file='Data\Dubai Brochure.pdf'...
+2025-09-12 09:35:56.092 +02:00 [DBG] MEMORY ingest success file='Data\Dubai Brochure.pdf' docId='dubai_brochure-7915e3e7'
+2025-09-12 09:35:56.093 +02:00 [DBG] MEMORY ingesting file='Data\Las Vegas Brochure.pdf'...
+2025-09-12 09:35:57.131 +02:00 [DBG] MEMORY ingest success file='Data\Las Vegas Brochure.pdf' docId='las_vegas_brochure-68d5eb90'
+2025-09-12 09:35:57.134 +02:00 [DBG] MEMORY ingesting file='Data\London Brochure.pdf'...
+2025-09-12 09:35:59.220 +02:00 [DBG] MEMORY ingest success file='Data\London Brochure.pdf' docId='london_brochure-9f27c468'
+2025-09-12 09:35:59.222 +02:00 [DBG] MEMORY ingesting file='Data\Margies Travel Company Info.pdf'...
+2025-09-12 09:36:00.264 +02:00 [DBG] MEMORY ingest success file='Data\Margies Travel Company Info.pdf' docId='margies_travel_company_info-99313ed1'
+2025-09-12 09:36:00.266 +02:00 [DBG] MEMORY ingesting file='Data\New York Brochure.pdf'...
+2025-09-12 09:36:02.349 +02:00 [DBG] MEMORY ingest success file='Data\New York Brochure.pdf' docId='new_york_brochure-1baddd97'
+2025-09-12 09:36:02.351 +02:00 [DBG] MEMORY ingesting file='Data\San Francisco Brochure.pdf'...
+2025-09-12 09:36:04.377 +02:00 [DBG] MEMORY ingest success file='Data\San Francisco Brochure.pdf' docId='san_francisco_brochure-b689407c'
+2025-09-12 09:36:15.425 +02:00 [DBG] MEMORY Deleted document: 'London Brochure.pdf' (docId=london_brochure-9f27c468, index=apex)
+2025-09-12 09:36:19.489 +02:00 [DBG] MEMORY Deleted document: 'San Francisco Brochure.pdf' (docId=san_francisco_brochure-b689407c, index=apex)
+2025-09-12 09:36:26.311 +02:00 [INF] Ollama connection successful!
+2025-09-12 09:36:27.048 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 09:36:49.139 +02:00 [DBG] MEMORY ingesting file='Data\Dubai Brochure.pdf'...
+2025-09-12 09:36:50.552 +02:00 [DBG] MEMORY ingest success file='Data\Dubai Brochure.pdf' docId='dubai_brochure-fbb6f749'
+2025-09-12 09:36:50.554 +02:00 [DBG] MEMORY ingesting file='Data\Las Vegas Brochure.pdf'...
+2025-09-12 09:36:51.588 +02:00 [DBG] MEMORY ingest success file='Data\Las Vegas Brochure.pdf' docId='las_vegas_brochure-615ae9ea'
+2025-09-12 09:36:51.589 +02:00 [DBG] MEMORY ingesting file='Data\London Brochure.pdf'...
+2025-09-12 09:36:53.659 +02:00 [DBG] MEMORY ingest success file='Data\London Brochure.pdf' docId='london_brochure-bac5badf'
+2025-09-12 09:36:53.661 +02:00 [DBG] MEMORY ingesting file='Data\Margies Travel Company Info.pdf'...
+2025-09-12 09:36:54.696 +02:00 [DBG] MEMORY ingest success file='Data\Margies Travel Company Info.pdf' docId='margies_travel_company_info-2b50230d'
+2025-09-12 09:36:54.697 +02:00 [DBG] MEMORY ingesting file='Data\New York Brochure.pdf'...
+2025-09-12 09:36:56.782 +02:00 [DBG] MEMORY ingest success file='Data\New York Brochure.pdf' docId='new_york_brochure-195cd16c'
+2025-09-12 09:36:56.783 +02:00 [DBG] MEMORY ingesting file='Data\San Francisco Brochure.pdf'...
+2025-09-12 09:36:58.872 +02:00 [DBG] MEMORY ingest success file='Data\San Francisco Brochure.pdf' docId='san_francisco_brochure-88868bf1'
+2025-09-12 09:37:05.299 +02:00 [INF] Ollama connection successful!
+2025-09-12 09:37:06.001 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 09:37:17.926 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=new_york_brochure-1baddd97, index=apex)
+2025-09-12 09:37:20.976 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=new_york_brochure-195cd16c, index=apex)
+2025-09-12 09:37:23.007 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=margies_travel_company_info-99313ed1, index=apex)
+2025-09-12 09:37:25.050 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=margies_travel_company_info-2b50230d, index=apex)
+2025-09-12 09:37:28.115 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=london_brochure-bac5badf, index=apex)
+2025-09-12 09:37:31.181 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=san_francisco_brochure-88868bf1, index=apex)
+2025-09-12 09:37:34.204 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=dubai_brochure-7915e3e7, index=apex)
+2025-09-12 09:37:36.226 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=las_vegas_brochure-68d5eb90, index=apex)
+2025-09-12 09:37:43.394 +02:00 [DBG] MEMORY ingesting file='Data\Dubai Brochure.pdf'...
+2025-09-12 09:37:44.269 +02:00 [DBG] MEMORY ingest success file='Data\Dubai Brochure.pdf' docId='dubai_brochure-25288faf'
+2025-09-12 09:37:44.270 +02:00 [DBG] MEMORY ingesting file='Data\Las Vegas Brochure.pdf'...
+2025-09-12 09:37:45.316 +02:00 [DBG] MEMORY ingest success file='Data\Las Vegas Brochure.pdf' docId='las_vegas_brochure-8f0193ce'
+2025-09-12 09:37:45.318 +02:00 [DBG] MEMORY ingesting file='Data\London Brochure.pdf'...
+2025-09-12 09:37:47.392 +02:00 [DBG] MEMORY ingest success file='Data\London Brochure.pdf' docId='london_brochure-88c379ee'
+2025-09-12 09:37:47.393 +02:00 [DBG] MEMORY ingesting file='Data\Margies Travel Company Info.pdf'...
+2025-09-12 09:37:48.430 +02:00 [DBG] MEMORY ingest success file='Data\Margies Travel Company Info.pdf' docId='margies_travel_company_info-9f28abf8'
+2025-09-12 09:37:48.432 +02:00 [DBG] MEMORY ingesting file='Data\New York Brochure.pdf'...
+2025-09-12 09:37:50.505 +02:00 [DBG] MEMORY ingest success file='Data\New York Brochure.pdf' docId='new_york_brochure-7d829940'
+2025-09-12 09:37:50.506 +02:00 [DBG] MEMORY ingesting file='Data\San Francisco Brochure.pdf'...
+2025-09-12 09:37:52.576 +02:00 [DBG] MEMORY ingest success file='Data\San Francisco Brochure.pdf' docId='san_francisco_brochure-61780884'
+2025-09-12 09:37:59.371 +02:00 [INF] Ollama connection successful!
+2025-09-12 09:38:00.121 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 09:38:12.554 +02:00 [DBG] MEMORY ingesting file='Data\New York Brochure.pdf'...
+2025-09-12 09:38:14.681 +02:00 [DBG] MEMORY ingest success file='Data\New York Brochure.pdf' docId='new_york_brochure-db78996d'
+2025-09-12 09:38:14.682 +02:00 [DBG] MEMORY ingesting file='Data\San Francisco Brochure.pdf'...
+2025-09-12 09:38:16.771 +02:00 [DBG] MEMORY ingest success file='Data\San Francisco Brochure.pdf' docId='san_francisco_brochure-7779e099'
+2025-09-12 09:38:31.810 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=new_york_brochure-7d829940, index=apex)
+2025-09-12 09:38:34.873 +02:00 [DBG] MEMORY Deleted document: 'New York Brochure.pdf' (docId=new_york_brochure-db78996d, index=apex)
+2025-09-12 09:38:36.901 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=margies_travel_company_info-9f28abf8, index=apex)
+2025-09-12 09:38:39.962 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=london_brochure-88c379ee, index=apex)
+2025-09-12 09:38:43.022 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=san_francisco_brochure-61780884, index=apex)
+2025-09-12 09:38:46.080 +02:00 [DBG] MEMORY Deleted document: 'San Francisco Brochure.pdf' (docId=san_francisco_brochure-7779e099, index=apex)
+2025-09-12 09:38:48.104 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=dubai_brochure-fbb6f749, index=apex)
+2025-09-12 09:38:50.149 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=dubai_brochure-25288faf, index=apex)
+2025-09-12 09:38:52.181 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=las_vegas_brochure-615ae9ea, index=apex)
+2025-09-12 09:38:54.210 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=las_vegas_brochure-8f0193ce, index=apex)
+2025-09-12 09:39:48.403 +02:00 [INF] Ollama connection successful!
+2025-09-12 09:39:49.179 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 09:40:18.477 +02:00 [INF] Ollama connection successful!
+2025-09-12 09:40:19.241 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 09:40:28.932 +02:00 [DBG] MEMORY ingesting file='Data\London Brochure.pdf'...
+2025-09-12 09:40:31.337 +02:00 [DBG] MEMORY ingest success file='Data\London Brochure.pdf' docId='london_brochure-c103c115'
+2025-09-12 09:40:33.860 +02:00 [DBG] MEMORY ingesting file='Data\New York Brochure.pdf'...
+2025-09-12 09:40:35.407 +02:00 [DBG] MEMORY ingest success file='Data\New York Brochure.pdf' docId='new_york_brochure-b721a2ec'
+2025-09-12 09:40:50.469 +02:00 [DBG] MEMORY Deleted document: 'New York Brochure.pdf' (docId=new_york_brochure-b721a2ec, index=apex)
+2025-09-12 09:40:58.608 +02:00 [INF] Ollama connection successful!
+2025-09-12 09:40:59.372 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 09:41:08.885 +02:00 [DBG] MEMORY ingesting file='Data\Margies Travel Company Info.pdf'...
+2025-09-12 09:41:09.520 +02:00 [DBG] MEMORY ingest success file='Data\Margies Travel Company Info.pdf' docId='margies_travel_company_info-e8d5f7ff'
+2025-09-12 09:41:19.575 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=london_brochure-c103c115, index=apex)
+2025-09-12 09:41:21.593 +02:00 [DBG] MEMORY Deleted document: 'Margies Travel Company Info.pdf' (docId=margies_travel_company_info-e8d5f7ff, index=apex)

@@ -8,9 +8,6 @@ using Serilog;
 using System.Collections.Concurrent;
 using System.Text.Json;
 using Apex.SummarizerWithRAG.Models;
-using System.Net.Http.Headers;
-using System.Security.Cryptography;
-using System.Text;
 
 namespace Apex.SummarizerWithRAG.Controllers;
 
@@ -69,11 +66,12 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
 
         try
         {
-            var ingestionTasks = savedFiles
-                .Select(path => documentExtractionService.ImportAsync(path, country))
-                .ToArray();
-
-            var documentIds = await Task.WhenAll(ingestionTasks);
+            var documentIds = new List<string>();
+            foreach (var path in savedFiles)
+            {
+                var docId = await documentExtractionService.ImportAsync(path, country);
+                documentIds.Add(docId);
+            }
 
             var result = savedFiles
                 .Zip(documentIds, (path, docId) => new UploadIngestionResult
@@ -224,6 +222,7 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
     [HttpDelete("/memory/{documentId}")]
     [ProducesResponseType(Microsoft.AspNetCore.Http.StatusCodes.Status204NoContent)]
     [ProducesResponseType(Microsoft.AspNetCore.Http.StatusCodes.Status404NotFound, Type = typeof(string))]
+    [ProducesResponseType(Microsoft.AspNetCore.Http.StatusCodes.Status409Conflict, Type = typeof(string))]
     [ProducesResponseType(Microsoft.AspNetCore.Http.StatusCodes.Status400BadRequest, Type = typeof(string))]
     public async Task<IActionResult> DeleteIndexedDocumentsAsync(string documentId, [FromQuery] string? index)
     {
@@ -260,8 +259,8 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
                 var ready = await memory.IsDocumentReadyAsync(documentId, index);
                 if (!ready)
                 {
-                    Log.Debug("MEMORY Delete skipped (not found or not ready): docId={DocumentId}, index={Index}", documentId, index);
-                    return NotFound($"Document '{documentId}' not found or not ready in index '{index}'.");
+                    Log.Debug("MEMORY Delete skipped (not ready): docId={DocumentId}, index={Index}", documentId, index);
+                    return StatusCode(StatusCodes.Status409Conflict, $"Document '{documentId}' not ready in index '{index}'.");
                 }
 
                 await memory.DeleteDocumentAsync(documentId, index);
@@ -296,7 +295,7 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
             }
 
             Log.Error("MEMORY Delete failed (not found): docId={DocumentId}", documentId);
-            return NotFound($"Document '{documentId}' not found or not ready.");
+            return NotFound($"Document '{documentId}' not found.");
         }
         catch (Exception ex)
         {

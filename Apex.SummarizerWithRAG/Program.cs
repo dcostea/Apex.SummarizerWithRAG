@@ -1,6 +1,7 @@
 using Apex.SummarizerWithRAG.Interfaces;
 using Apex.SummarizerWithRAG.Models;
 using Apex.SummarizerWithRAG.Services;
+using LLama.Native;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.KernelMemory;
 using Microsoft.KernelMemory.AI.Ollama;
@@ -10,6 +11,24 @@ using Microsoft.KernelMemory.FileSystem.DevTools;
 using Microsoft.OpenApi.Models;
 using Microsoft.SemanticKernel;
 using Serilog;
+
+NativeLibraryConfig.All.WithLogCallback((level, message) =>
+{
+    // Log all CUDA/GPU related messages to understand why GPU isn't being used
+    if (message.Contains("CUDA", StringComparison.OrdinalIgnoreCase) ||
+        message.Contains("GPU", StringComparison.OrdinalIgnoreCase) ||
+        message.Contains("ggml_backend", StringComparison.OrdinalIgnoreCase) ||
+        message.Contains("device", StringComparison.OrdinalIgnoreCase))
+    {
+        Console.WriteLine($"[{level}] {message.TrimEnd('\n')}");
+    }
+
+    // Also log errors and warnings
+    if (level == LLamaLogLevel.Error || level == LLamaLogLevel.Warning)
+    {
+        Console.WriteLine($"[{level}] {message.TrimEnd('\n')}");
+    }
+});
 
 var configuration = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json")
@@ -65,7 +84,6 @@ builder.Services.AddKernelMemory(km =>
         op.WithCertificateFingerPrint(configuration["Elastic:ElasticCertFingerprint"]!);
         op.WithEndpoint(configuration["Elastic:ElasticHost"]!);
         op.WithIndexPrefix("km");
-        //op.WithEmbeddingService("elser", "my-elser-endpoint"); // Use your endpoint name
     });
 
     km.WithSimpleFileStorage(new SimpleFileStorageConfig
@@ -85,8 +103,8 @@ builder.Services.AddKernelMemory(km =>
         EmbeddingModel = new LlamaSharpModelConfig
         {
             ModelPath = configuration["Llama:EmbeddingModelPath"]!,
-            MaxTokenTotal = uint.Parse(configuration["Llama:MaxTokens"]!)
-            //GpuLayerCount = 0
+            MaxTokenTotal = uint.Parse(configuration["Llama:MaxTokens"]!),
+            GpuLayerCount = int.Parse(configuration["Llama:GpuLayerCount"]!)
         }
     });
 
