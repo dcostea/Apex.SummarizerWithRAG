@@ -321,8 +321,23 @@
 
         this.indexedFilesContainer.classList.remove('hidden');
 
+        const truncateFileName = (name, maxLen = 27) => {
+            if (!name || name.length <= maxLen) return name || '';
+            // Preserve extension if present
+            const dot = name.lastIndexOf('.');
+            if (dot > 0 && dot < name.length - 1) {
+                const ext = name.slice(dot); // includes dot
+                const base = name.slice(0, dot);
+                const keep = Math.max(1, maxLen - ext.length - 1); // leave room for ellipsis
+                return base.slice(0, keep) + '…' + ext;
+            }
+            // No extension
+            return name.slice(0, maxLen) + '…';
+        };
+
         const rows = Array.from(this.indexedDocs.entries()).map(([docId, { name, index }]) => {
-            const shortId = (docId && docId.length > 14) ? docId.slice(0, 6) + '…' + docId.slice(-6) : (docId || '');
+            const displayName = truncateFileName(name);
+            const fullDocId = docId || '';
             return `
                 <div class="uploaded-file">
                     <div class="uploaded-file-info">
@@ -333,8 +348,8 @@
                             </svg>
                         </div>
                         <div class="uploaded-file-details">
-                            <div class="uploaded-file-name" title="${name}">${name}</div>
-                            <div class="uploaded-file-size">${index || ''} ${shortId ? '• ' + shortId : ''}</div>
+                            <div class="uploaded-file-name" title="${name}">${displayName}</div>
+                            <div class="uploaded-file-index-id">${fullDocId ? fullDocId : ''}</div>
                         </div>
                     </div>
                     <button class="remove-file-btn" title="Delete from memory"

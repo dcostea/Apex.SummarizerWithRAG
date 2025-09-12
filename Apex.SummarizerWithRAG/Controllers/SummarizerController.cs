@@ -22,10 +22,11 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
 
     /// <summary>
     /// Handles file uploads and ingests them into Kernel Memory without persisting to local disk.
+    /// Optional: wait for ingestion pipeline readiness before returning.
     /// </summary>
     [HttpPost("/extract/upload")]
     [Consumes("multipart/form-data")]
-    public async Task<IActionResult> ImportAsync([FromForm] List<IFormFile> files, string? country)
+    public async Task<IActionResult> ImportAsync([FromForm] List<IFormFile> files, string? country, [FromQuery] bool wait = false, [FromQuery] int waitSeconds = 60)
     {
         if (files is null || files.Count == 0)
         {
@@ -45,6 +46,23 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
                     await using var stream = file.OpenReadStream();
                     var fileName = Path.GetFileName(file.FileName);
                     var docId = await documentExtractionService.ImportAsync(stream, fileName, country);
+
+                    if (wait)
+                    {
+                        var seconds = Math.Max(1, waitSeconds);
+                        var (ready, timedOut, error) = await WaitForDocumentReadinessAsync(docId, _ingestionIndex, TimeSpan.FromSeconds(seconds));
+                        if (!ready)
+                        {
+                            if (timedOut)
+                            {
+                                Log.Error("MEMORY ingest timeout after {Seconds}s: docId={DocumentId}, index={Index}, error={Error}", seconds, docId, _ingestionIndex, error ?? "<none>");
+                            }
+                            else
+                            {
+                                Log.Information("MEMORY ingest not ready yet: docId={DocumentId}, index={Index}, status={Status}", docId, _ingestionIndex, error ?? "<none>");
+                            }
+                        }
+                    }
 
                     results.Add(new UploadIngestionResult
                     {
@@ -83,6 +101,7 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
         try
         {
             // Default country tag if not provided
+            
             country ??= "Netherlands";
 
             // Build an optional filter (by country)
@@ -190,6 +209,44 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
         catch (Exception ex)
         {
             return BadRequest($"Failed to list indexed documents: {ex.Message}");
+        }
+    }
+
+    /// <summary>
+    /// Check if a document is ready (ingestion pipeline completed).
+    /// </summary>
+    [HttpGet("/memory/{documentId}/ready")]
+    public async Task<IActionResult> IsReadyAsync(string documentId, [FromQuery] string? index = null)
+    {
+        if (string.IsNullOrWhiteSpace(documentId)) return BadRequest("documentId is required.");
+        var idx = string.IsNullOrWhiteSpace(index) ? _ingestionIndex : index;
+        try
+        {
+            var ready = await memory.IsDocumentReadyAsync(documentId, idx);
+            return Ok(new { Index = idx, DocumentId = documentId, Ready = ready });
+        }
+        catch (Exception ex)
+        {
+            return BadRequest($"Failed to get readiness for '{documentId}': {ex.Message}");
+        }
+    }
+
+    /// <summary>
+    /// Get full pipeline status and possible errors for a document.
+    /// </summary>
+    [HttpGet("/memory/{documentId}/status")]
+    public async Task<IActionResult> GetStatusAsync(string documentId, [FromQuery] string? index = null)
+    {
+        if (string.IsNullOrWhiteSpace(documentId)) return BadRequest("documentId is required.");
+        var idx = string.IsNullOrWhiteSpace(index) ? _ingestionIndex : index;
+        try
+        {
+            var status = await memory.GetDocumentStatusAsync(documentId, idx);
+            return Ok(status);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest($"Failed to get status for '{documentId}': {ex.Message}");
         }
     }
 
@@ -307,12 +364,6 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
         Log.Information("QUERY: {Query}", query);
 
         var filter = MemoryFilters.ByTag("country", country);
-
-        //var isReady = await memory.IsDocumentReadyAsync("");
-        //if (isReady)
-        //{
-        //    return NotFound(@"Document `` not ready!");
-        //}
 
         var search = await memory.SearchAsync(query, index: _ingestionIndex, limit: _rag.Limit, minRelevance: _rag.MinRelevance, filter: filter);
 
@@ -454,7 +505,7 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
     /// NOTE: This issues a broad search to retrieve as many partitions as the connector allows.
     /// </summary>
     [HttpGet("/chunks")]
-    public async Task<IActionResult> GetChunksAsync([FromQuery] string? country = null)
+    public async Task<IActionResult> GetChunksAsync([FromQuery] string? country = null, [FromQuery] string? documentId = null)
     {
         try
         {
@@ -467,12 +518,17 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
                 filter = (filter is null) ? MemoryFilters.ByTag("country", country) : filter.ByTag("country", country);
             }
 
+            if (!string.IsNullOrWhiteSpace(documentId))
+            {
+                filter = (filter is null) ? new MemoryFilter().ByDocument(documentId) : filter.ByDocument(documentId);
+            }
+
             // Broad search to retrieve partitions; set minRelevance low and limit high/unbounded
             var sr = await memory.SearchAsync(
                 query: " ",
                 index: _ingestionIndex,
                 filter: filter,
-                minRelevance: _rag.MinRelevance,
+                minRelevance: 0, // ensure nothing is filtered out while diagnosing
                 limit: _rag.Limit);
 
             var chunks = (sr?.Results ?? [])
@@ -494,14 +550,15 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
                 .OrderByDescending(c => c.Relevance)
                 .ToArray();
 
-            Log.Information("CHUNKS index={Index} count={Count} minRel={MinRel} limit={Limit} country={Country}",
-                _ingestionIndex, chunks.Length, _rag.MinRelevance, _rag.Limit, country);
+            Log.Information("CHUNKS index={Index} count={Count} minRel={MinRel} limit={Limit} country={Country} docId={DocId}",
+                _ingestionIndex, chunks.Length, 0, _rag.Limit, country, documentId ?? "<none>");
 
             return Ok(new
             {
                 Index = _ingestionIndex,
                 Country = country,
-                _rag.MinRelevance,
+                DocumentId = documentId,
+                MinRelevance = 0,
                 _rag.Limit,
                 Chunks = chunks
             });
@@ -512,27 +569,48 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
         }
     }
 
-    // Helper to extract the sort token from a JsonElement (used for Elasticsearch search_after)
-    private static object? ExtractSortToken(JsonElement sortToken)
+    // Helper to wait for document readiness with basic polling
+    private async Task<(bool Ready, bool TimedOut, string? Error)> WaitForDocumentReadinessAsync(string documentId, string index, TimeSpan timeout, TimeSpan? pollInterval = null)
     {
-        // Handles common Elasticsearch sort token types (string, number, etc.)
-        // Returns the appropriate .NET type for the search_after array
-        switch (sortToken.ValueKind)
+        var delay = pollInterval ?? TimeSpan.FromSeconds(2);
+        var start = DateTimeOffset.UtcNow;
+        string? lastInfo = null;
+
+        while (DateTimeOffset.UtcNow - start < timeout)
         {
-            case JsonValueKind.String:
-                return sortToken.GetString();
-            case JsonValueKind.Number:
-                if (sortToken.TryGetInt64(out var l)) return l;
-                if (sortToken.TryGetDouble(out var d)) return d;
-                break;
-            case JsonValueKind.True:
-            case JsonValueKind.False:
-                return sortToken.GetBoolean();
-            case JsonValueKind.Null:
-            case JsonValueKind.Undefined:
-                return null;
+            try
+            {
+                if (await memory.IsDocumentReadyAsync(documentId, index))
+                {
+                    return (true, false, null);
+                }
+
+                var status = await memory.GetDocumentStatusAsync(documentId, index);
+                if (status is not null)
+                {
+                    if (status.RemainingSteps is { Count: > 0 })
+                    {
+                        lastInfo = "Remaining: " + string.Join(", ", status.RemainingSteps);
+                    }
+                    else if (status.CompletedSteps is { Count: > 0 })
+                    {
+                        lastInfo = "Completed: " + string.Join(", ", status.CompletedSteps);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                lastInfo = "Error: " + ex.Message;
+                Log.Debug("MEMORY readiness check transient error: {Error}", ex.Message);
+            }
+
+            await Task.Delay(delay);
         }
-        // Fallback: return the raw text
-        return sortToken.GetRawText();
+
+        var msg = lastInfo is null
+            ? $"Timed out after {timeout.TotalSeconds:N0}s"
+            : $"Timed out after {timeout.TotalSeconds:N0}s. Last status: {lastInfo}";
+
+        return (false, true, msg);
     }
 }

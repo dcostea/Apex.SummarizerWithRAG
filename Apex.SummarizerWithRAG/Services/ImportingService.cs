@@ -104,10 +104,22 @@ public class ImportingService(IKernelMemory memory, IOptions<RagSettings> ragSet
 
     private static string ToValidDocumentId(string fileNameOrPath)
     {
-        var fileBaseName = Path.GetFileNameWithoutExtension(fileNameOrPath);
-        var guid = Guid.NewGuid().ToString("N")[..8];
-        var documentId = $"{Document.ReplaceInvalidChars(fileBaseName)}-{guid}".ToLowerInvariant();
+        var fileBaseName = Path.GetFileNameWithoutExtension(fileNameOrPath) ?? string.Empty;
 
+        // Sanitize first, then take up to 10 chars from the base name
+        var sanitized = Document.ReplaceInvalidChars(fileBaseName);
+        var prefix = sanitized.Length > 16 ? sanitized[..16] : sanitized;
+
+        // Fallback if the name becomes empty after sanitization
+        if (string.IsNullOrWhiteSpace(prefix))
+        {
+            prefix = "doc";
+        }
+
+        var guid = Guid.NewGuid().ToString("N")[..8];
+
+        // Result: <= 16 + 1 + 8 = 25 chars
+        var documentId = $"{prefix}-{guid}".ToLowerInvariant();
         return documentId;
     }
 

@@ -84,6 +84,7 @@ builder.Services.AddKernelMemory(km =>
         op.WithCertificateFingerPrint(configuration["Elastic:ElasticCertFingerprint"]!);
         op.WithEndpoint(configuration["Elastic:ElasticHost"]!);
         op.WithIndexPrefix("km");
+        op.WithShardsAndReplicas(1, 0);
     });
 
     km.WithSimpleFileStorage(new SimpleFileStorageConfig
@@ -98,21 +99,27 @@ builder.Services.AddKernelMemory(km =>
         TextModel = new OllamaModelConfig { ModelName = configuration["Ollama:TextModel"]! }
     });
 
-    km.WithLlamaTextEmbeddingGeneration(new LlamaSharpConfig
+    if (configuration["Rag:EmbeddingLib"] == "Ollama")
     {
-        EmbeddingModel = new LlamaSharpModelConfig
+        km.WithOllamaTextEmbeddingGeneration(new OllamaConfig
         {
-            ModelPath = configuration["Llama:EmbeddingModelPath"]!,
-            MaxTokenTotal = uint.Parse(configuration["Llama:MaxTokens"]!),
-            GpuLayerCount = int.Parse(configuration["Llama:GpuLayerCount"]!)
-        }
-    });
+            Endpoint = ollamaEndpoint!,
+            EmbeddingModel = new OllamaModelConfig { ModelName = configuration["Ollama:EmbeddingModel"]! }
+        });
+    }
 
-    //km.WithOllamaTextEmbeddingGeneration(new OllamaConfig
-    //{
-    //    Endpoint = ollamaEndpoint!,
-    //    EmbeddingModel = new OllamaModelConfig { ModelName = configuration["Ollama:EmbeddingModel"]! }
-    //});
+    if (configuration["Rag:EmbeddingLib"] == "Llama")
+    {
+        km.WithLlamaTextEmbeddingGeneration(new LlamaSharpConfig
+        {
+            EmbeddingModel = new LlamaSharpModelConfig
+            {
+                ModelPath = configuration["Llama:EmbeddingModelPath"]!,
+                MaxTokenTotal = uint.Parse(configuration["Llama:MaxTokens"]!),
+                GpuLayerCount = int.Parse(configuration["Llama:GpuLayerCount"]!)
+            }
+        });
+    }
 
     km.WithCustomTextPartitioningOptions(new TextPartitioningOptions
     {
