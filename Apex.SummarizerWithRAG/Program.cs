@@ -151,12 +151,12 @@ builder.Services.AddSwaggerGen(static c =>
 
 builder.Services.Configure<FormOptions>(o =>
 {
-    o.MultipartBodyLengthLimit = 100 * 1024 * 1024; // 100 MB
+    o.MultipartBodyLengthLimit = 10 * 1024 * 1024; // 10 MB
 });
 
 builder.WebHost.ConfigureKestrel(o =>
 {
-    o.Limits.MaxRequestBodySize = 100 * 1024 * 1024;
+    o.Limits.MaxRequestBodySize = 10 * 1024 * 1024;
 });
 
 var app = builder.Build();

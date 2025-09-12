@@ -144,3 +144,142 @@ By sharing these insights alongside case stu…
 2025-09-12 15:33:17.451 +02:00 [DBG] MEMORY ingest success fileName='RedTeam LLM Leassons.pdf' docId='redteam_llm_leas-98b2aa03'
 2025-09-12 15:35:34.245 +02:00 [INF] Ollama connection successful!
 2025-09-12 15:35:34.497 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 15:44:49.152 +02:00 [INF] Ollama connection successful!
+2025-09-12 15:44:49.401 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 15:47:41.778 +02:00 [INF] Ollama connection successful!
+2025-09-12 15:47:42.031 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 15:48:08.191 +02:00 [DBG] MEMORY ingesting stream fileName='RedTeam LLM Leassons.pdf'...
+2025-09-12 15:48:27.874 +02:00 [DBG] MEMORY ingest success fileName='RedTeam LLM Leassons.pdf' docId='redteam_llm_leas-017437e7'
+2025-09-12 15:48:54.166 +02:00 [DBG] MEMORY Deleted document: 'RedTeam LLM Leassons.pdf' (docId=redteam_llm_leas-017437e7, index=apex)
+2025-09-12 15:50:31.151 +02:00 [DBG] MEMORY Delete skipped (not ready): docId=redteam_llm_leas-017437e7, index=apex
+2025-09-12 15:50:39.309 +02:00 [DBG] MEMORY Delete skipped (not ready): docId=redteam_llm_leas-017437e7, index=apex
+2025-09-12 15:58:07.602 +02:00 [INF] Ollama connection successful!
+2025-09-12 15:58:07.857 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 15:58:24.401 +02:00 [DBG] MEMORY ingesting stream fileName='ESOCC.pdf'...
+2025-09-12 15:58:27.668 +02:00 [DBG] MEMORY ingest success fileName='ESOCC.pdf' docId='esocc-0ae9204f'
+2025-09-12 15:58:31.692 +02:00 [DBG] MEMORY Deleted document: 'ESOCC.pdf' (docId=esocc-0ae9204f, index=apex)
+2025-09-12 15:58:40.841 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=redteam_llm_leas-017437e7, index=apex)
+2025-09-12 15:58:53.620 +02:00 [DBG] MEMORY ingesting stream fileName='RedTeam LLM Leassons.pdf'...
+2025-09-12 15:59:10.524 +02:00 [DBG] MEMORY ingest success fileName='RedTeam LLM Leassons.pdf' docId='redteam_llm_leas-ab13589a'
+2025-09-12 16:03:20.980 +02:00 [INF] Ollama connection successful!
+2025-09-12 16:03:21.229 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 16:03:40.293 +02:00 [DBG] MEMORY Ingesting stream fileName='ESOCC.pdf'...
+2025-09-12 16:03:43.761 +02:00 [DBG] MEMORY Ingest success fileName='ESOCC.pdf' docId='esocc-75798d67'
+2025-09-12 16:04:11.142 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=redteam_llm_leas-ab13589a, index=apex)
+2025-09-12 16:04:37.309 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=redteam_llm_leas-ab13589a, index=apex)
+2025-09-12 16:04:43.347 +02:00 [DBG] MEMORY Deleted document: 'ESOCC.pdf' (docId=esocc-75798d67, index=apex)
+2025-09-12 16:05:05.521 +02:00 [DBG] MEMORY Ingesting stream fileName='privacy_notice_ta_ca_interns.pdf'...
+2025-09-12 16:05:10.453 +02:00 [DBG] MEMORY Ingest success fileName='privacy_notice_ta_ca_interns.pdf' docId='privacy_notice_t-1a848af1'
+2025-09-12 16:05:11.584 +02:00 [DBG] MEMORY Ingesting stream fileName='RedTeam LLM Leassons.pdf'...
+2025-09-12 16:05:29.130 +02:00 [DBG] MEMORY Ingest success fileName='RedTeam LLM Leassons.pdf' docId='redteam_llm_leas-113c39df'
+2025-09-12 16:05:36.231 +02:00 [DBG] MEMORY Deleted document: 'privacy_notice_ta_ca_interns.pdf' (docId=privacy_notice_t-1a848af1, index=apex)
+2025-09-12 16:05:48.546 +02:00 [DBG] MEMORY Deleted document: 'RedTeam LLM Leassons.pdf' (docId=redteam_llm_leas-113c39df, index=apex)
+2025-09-12 16:06:22.868 +02:00 [INF] Ollama connection successful!
+2025-09-12 16:06:23.085 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 16:07:18.773 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=redteam_llm_leas-113c39df, index=apex)
+2025-09-12 16:07:34.792 +02:00 [DBG] MEMORY Ingesting stream fileName='RedTeam LLM Leassons.pdf'...
+2025-09-12 16:07:54.455 +02:00 [DBG] MEMORY Ingest success fileName='RedTeam LLM Leassons.pdf' docId='redteam_llm_leas-ffeb4ba8'
+2025-09-12 16:08:06.721 +02:00 [DBG] MEMORY Deleted document: 'RedTeam LLM Leassons.pdf' (docId=redteam_llm_leas-ffeb4ba8, index=apex)
+2025-09-12 16:17:49.271 +02:00 [INF] Ollama connection successful!
+2025-09-12 16:17:49.521 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 16:18:05.423 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=redteam_llm_leas-ffeb4ba8, index=apex)
+2025-09-12 16:18:25.721 +02:00 [DBG] MEMORY Ingesting stream fileName='Dubai Brochure.pdf'...
+2025-09-12 16:18:28.421 +02:00 [DBG] MEMORY Ingest success fileName='Dubai Brochure.pdf' docId='dubai_brochure-f8a7bcb5'
+2025-09-12 16:18:28.423 +02:00 [DBG] MEMORY Ingesting stream fileName='Las Vegas Brochure.pdf'...
+2025-09-12 16:18:29.455 +02:00 [DBG] MEMORY Ingest success fileName='Las Vegas Brochure.pdf' docId='las_vegas_brochu-9490e83c'
+2025-09-12 16:18:29.456 +02:00 [DBG] MEMORY Ingesting stream fileName='London Brochure.pdf'...
+2025-09-12 16:18:30.497 +02:00 [DBG] MEMORY Ingest success fileName='London Brochure.pdf' docId='london_brochure-e1957042'
+2025-09-12 16:18:30.499 +02:00 [DBG] MEMORY Ingesting stream fileName='Margies Travel Company Info.pdf'...
+2025-09-12 16:18:31.521 +02:00 [DBG] MEMORY Ingest success fileName='Margies Travel Company Info.pdf' docId='margies_travel_c-1a996d64'
+2025-09-12 16:18:31.522 +02:00 [DBG] MEMORY Ingesting stream fileName='New York Brochure.pdf'...
+2025-09-12 16:18:32.555 +02:00 [DBG] MEMORY Ingest success fileName='New York Brochure.pdf' docId='new_york_brochur-323ce990'
+2025-09-12 16:18:32.558 +02:00 [DBG] MEMORY Ingesting stream fileName='San Francisco Brochure.pdf'...
+2025-09-12 16:18:33.599 +02:00 [DBG] MEMORY Ingest success fileName='San Francisco Brochure.pdf' docId='san_francisco_br-adbe477b'
+2025-09-12 16:18:48.741 +02:00 [INF] QUERY: give me the full list of hotels in the brochures
+2025-09-12 16:18:48.786 +02:00 [DBG] MEMORY index=apex source=Las Vegas Brochure.pdf country=["Netherlands"] rel=0.8044752 part#0 text=Margie’s Travel Presents…
+Las Vegas 
+Las Vegas, officially
+the City of Las Vegas
+and often known
+simply as Vegas, is the
+28th-most populated
+city in the United
+States, the most
+populated city in the
+s…
+2025-09-12 16:18:48.792 +02:00 [DBG] MEMORY index=apex source=San Francisco Brochure.pdf country=["Netherlands"] rel=0.7992229 part#0 text=Margie’s Travel Presents…
+San Francisco
+San Francisco, officially the City and County of San
+Francisco, is the cultural, commercial, and financial
+center of Northern California. It is the birthplace o…
+2025-09-12 16:18:48.794 +02:00 [DBG] MEMORY index=apex source=New York Brochure.pdf country=["Netherlands"] rel=0.787221 part#0 text=Margie’s Travel Presents…
+New York
+The City of New York, often called New York City or simply
+New York, is the most populous city in the United States.
+With an estimated 2015 population of 8,550,405 d…
+2025-09-12 16:18:48.795 +02:00 [DBG] MEMORY index=apex source=Dubai Brochure.pdf country=["Netherlands"] rel=0.78004074 part#0 text=Margie’s Travel Presents…
+Dubai 
+Dubai is the largest and most populous city in the United
+Arab Emirates. It is located on the southeast coast of the
+Persian Gulf and is the capital of the Emirate of …
+2025-09-12 16:18:48.796 +02:00 [DBG] MEMORY index=apex source=London Brochure.pdf country=["Netherlands"] rel=0.77624774 part#0 text=Margie’s Travel Presents…
+London
+London is the capital and
+most populous city of
+England and the United
+Kingdom. Standing on the
+River Thames in the south
+east of the island of Great
+Britain, London h…
+2025-09-12 16:18:48.797 +02:00 [DBG] MEMORY index=apex source=Margies Travel Company Info.pdf country=["Netherlands"] rel=0.7439106 part#0 text=Wherever you want to go, Margie’s Travel can get you there!
+Margie’s Travel is a world-leading travel agency, combining international reach with local
+expertise. Just tell us where you want to go, and…
+2025-09-12 16:19:15.856 +02:00 [INF] ANSWER model=gemma3:12b index=apex limit=100 minRelevance=0.1 text=Here's the full list of hotels mentioned in the brochures:
+
+*   The Volcano Hotel
+*   The Fountain Hotel
+*   The Canal Hotel
+*   The Lombard Hotel
+*   The Wharf Hotel
+*   The Manhattan Hotel
+*   The G…
+2025-09-12 16:19:24.642 +02:00 [DBG] MEMORY Deleted document: 'London Brochure.pdf' (docId=london_brochure-e1957042, index=apex)
+2025-09-12 16:19:30.670 +02:00 [DBG] MEMORY Deleted document: 'New York Brochure.pdf' (docId=new_york_brochur-323ce990, index=apex)
+2025-09-12 16:19:38.398 +02:00 [INF] QUERY: give me the full list of hotels in the brochures
+2025-09-12 16:19:38.506 +02:00 [DBG] MEMORY index=apex source=Las Vegas Brochure.pdf country=["Netherlands"] rel=0.8044752 part#0 text=Margie’s Travel Presents…
+Las Vegas 
+Las Vegas, officially
+the City of Las Vegas
+and often known
+simply as Vegas, is the
+28th-most populated
+city in the United
+States, the most
+populated city in the
+s…
+2025-09-12 16:19:38.511 +02:00 [DBG] MEMORY index=apex source=San Francisco Brochure.pdf country=["Netherlands"] rel=0.7992229 part#0 text=Margie’s Travel Presents…
+San Francisco
+San Francisco, officially the City and County of San
+Francisco, is the cultural, commercial, and financial
+center of Northern California. It is the birthplace o…
+2025-09-12 16:19:38.514 +02:00 [DBG] MEMORY index=apex source=Dubai Brochure.pdf country=["Netherlands"] rel=0.78004074 part#0 text=Margie’s Travel Presents…
+Dubai 
+Dubai is the largest and most populous city in the United
+Arab Emirates. It is located on the southeast coast of the
+Persian Gulf and is the capital of the Emirate of …
+2025-09-12 16:19:38.516 +02:00 [DBG] MEMORY index=apex source=Margies Travel Company Info.pdf country=["Netherlands"] rel=0.7439106 part#0 text=Wherever you want to go, Margie’s Travel can get you there!
+Margie’s Travel is a world-leading travel agency, combining international reach with local
+expertise. Just tell us where you want to go, and…
+2025-09-12 16:20:04.654 +02:00 [INF] ANSWER model=gemma3:12b index=apex limit=100 minRelevance=0.1 text=Here's the full list of hotels from the brochures:
+
+*   **Las Vegas:**
+    1. The Volcano Hotel
+    2. The Fountain Hotel
+    3. The Canal Hotel
+*   **San Francisco:**
+    1. The Lombard Hotel
+    2. …
+2025-09-12 16:20:17.732 +02:00 [DBG] MEMORY Deleted document: 'San Francisco Brochure.pdf' (docId=san_francisco_br-adbe477b, index=apex)
+2025-09-12 16:20:22.763 +02:00 [DBG] MEMORY Deleted document: 'Dubai Brochure.pdf' (docId=dubai_brochure-f8a7bcb5, index=apex)
+2025-09-12 16:20:24.788 +02:00 [DBG] MEMORY Deleted document: 'Las Vegas Brochure.pdf' (docId=las_vegas_brochu-9490e83c, index=apex)
+2025-09-12 16:20:30.793 +02:00 [DBG] MEMORY Deleted document: 'Margies Travel Company Info.pdf' (docId=margies_travel_c-1a996d64, index=apex)

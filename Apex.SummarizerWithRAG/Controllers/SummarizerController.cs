@@ -55,11 +55,11 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
                         {
                             if (timedOut)
                             {
-                                Log.Error("MEMORY ingest timeout after {Seconds}s: docId={DocumentId}, index={Index}, error={Error}", seconds, docId, _ingestionIndex, error ?? "<none>");
+                                Log.Error("MEMORY Ingest timeout after {Seconds}s: docId={DocumentId}, index={Index}, error={Error}", seconds, docId, _ingestionIndex, error ?? "<none>");
                             }
                             else
                             {
-                                Log.Information("MEMORY ingest not ready yet: docId={DocumentId}, index={Index}, status={Status}", docId, _ingestionIndex, error ?? "<none>");
+                                Log.Information("MEMORY Ingest not ready yet: docId={DocumentId}, index={Index}, status={Status}", docId, _ingestionIndex, error ?? "<none>");
                             }
                         }
                     }
@@ -256,7 +256,6 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
     [HttpDelete("/memory/{documentId}")]
     [ProducesResponseType(Microsoft.AspNetCore.Http.StatusCodes.Status204NoContent)]
     [ProducesResponseType(Microsoft.AspNetCore.Http.StatusCodes.Status404NotFound, Type = typeof(string))]
-    [ProducesResponseType(Microsoft.AspNetCore.Http.StatusCodes.Status409Conflict, Type = typeof(string))]
     [ProducesResponseType(Microsoft.AspNetCore.Http.StatusCodes.Status400BadRequest, Type = typeof(string))]
     public async Task<IActionResult> DeleteIndexedDocumentsAsync(string documentId, [FromQuery] string? index)
     {
@@ -288,17 +287,40 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
                 }
             }
 
+            async Task WaitForDeletionAsync(string docId, string? idx, TimeSpan timeout)
+            {
+                var start = DateTimeOffset.UtcNow;
+                while (DateTimeOffset.UtcNow - start < timeout)
+                {
+                    try
+                    {
+                        // If status is null, consider it deleted from coordination store
+                        var status = await memory.GetDocumentStatusAsync(docId, idx);
+                        if (status is null)
+                        {
+                            // Double-check via a broad search snapshot to see if any partition still surfaces
+                            var sr = await memory.SearchAsync(" ", index: idx, minRelevance: 0, limit: Math.Max(1000, _rag.Limit));
+                            var stillThere = sr?.Results?.Any(r => string.Equals(r.DocumentId, docId, StringComparison.OrdinalIgnoreCase)) ?? false;
+                            if (!stillThere) return; // deleted from both status and memory db
+                        }
+                    }
+                    catch
+                    {
+                        // Ignore transient errors
+                    }
+
+                    await Task.Delay(500);
+                }
+            }
+
             if (!string.IsNullOrWhiteSpace(index))
             {
-                var ready = await memory.IsDocumentReadyAsync(documentId, index);
-                if (!ready)
-                {
-                    Log.Debug("MEMORY Delete skipped (not ready): docId={DocumentId}, index={Index}", documentId, index);
-                    return StatusCode(StatusCodes.Status409Conflict, $"Document '{documentId}' not ready in index '{index}'.");
-                }
-
                 await memory.DeleteDocumentAsync(documentId, index);
                 Log.Debug("MEMORY Deleted document: '{FileName}' (docId={DocumentId}, index={Index})", ResolveFileName(documentId), documentId, index);
+
+                // Best-effort wait for deletion to propagate to the vector DB
+                await WaitForDeletionAsync(documentId, index, TimeSpan.FromSeconds(5));
+
                 CleanupCache();
                 return NoContent();
             }
@@ -310,22 +332,36 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
                          .Where(n => !string.IsNullOrWhiteSpace(n))
                          .Distinct(StringComparer.OrdinalIgnoreCase))
             {
-                if (await memory.IsDocumentReadyAsync(documentId, idx))
+                try
                 {
                     await memory.DeleteDocumentAsync(documentId, idx);
                     Log.Debug("MEMORY Deleted document: '{FileName}' (docId={DocumentId}, index={Index})", ResolveFileName(documentId), documentId, idx);
+
+                    await WaitForDeletionAsync(documentId, idx, TimeSpan.FromSeconds(5));
+
                     CleanupCache();
                     return NoContent();
+                }
+                catch
+                {
+                    // Ignore and continue trying other indexes
                 }
             }
 
             // Last resort: try default (null) index
-            if (await memory.IsDocumentReadyAsync(documentId, null))
+            try
             {
                 await memory.DeleteDocumentAsync(documentId, null);
                 Log.Debug("MEMORY Deleted document: '{FileName}' (docId={DocumentId}, index=<default>)", ResolveFileName(documentId), documentId);
+
+                await WaitForDeletionAsync(documentId, null, TimeSpan.FromSeconds(5));
+
                 CleanupCache();
                 return NoContent();
+            }
+            catch
+            {
+                // fallthrough to not found
             }
 
             Log.Error("MEMORY Delete failed (not found): docId={DocumentId}", documentId);
@@ -496,76 +532,6 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
         catch (Exception ex)
         {
             return StatusCode(StatusCodes.Status502BadGateway, $"Failed to retrieve models from Ollama: {ex.Message}");
-        }
-    }
-
-    /// <summary>
-    /// Lists all Kernel Memory chunks (partitions) in an index.
-    /// Optional filters: documentId and country tag.
-    /// NOTE: This issues a broad search to retrieve as many partitions as the connector allows.
-    /// </summary>
-    [HttpGet("/chunks")]
-    public async Task<IActionResult> GetChunksAsync([FromQuery] string? country = null, [FromQuery] string? documentId = null)
-    {
-        try
-        {
-            MemoryFilter? filter = null;
-
-            country ??= "Netherlands";
-
-            if (!string.IsNullOrWhiteSpace(country))
-            {
-                filter = (filter is null) ? MemoryFilters.ByTag("country", country) : filter.ByTag("country", country);
-            }
-
-            if (!string.IsNullOrWhiteSpace(documentId))
-            {
-                filter = (filter is null) ? new MemoryFilter().ByDocument(documentId) : filter.ByDocument(documentId);
-            }
-
-            // Broad search to retrieve partitions; set minRelevance low and limit high/unbounded
-            var sr = await memory.SearchAsync(
-                query: " ",
-                index: _ingestionIndex,
-                filter: filter,
-                minRelevance: 0, // ensure nothing is filtered out while diagnosing
-                limit: _rag.Limit);
-
-            var chunks = (sr?.Results ?? [])
-                .SelectMany(r => (r.Partitions ?? [])
-                    .Select(p => new
-                    {
-                        r.Index,
-                        r.DocumentId,
-                        r.SourceName,
-                        r.SourceContentType,
-                        r.SourceUrl,
-                        r.Link,
-                        p.PartitionNumber,
-                        p.SectionNumber,
-                        Relevance = Math.Round(p.Relevance, 3),
-                        p.Text,
-                        Tags = p.Tags?.ToDictionary(kv => kv.Key, kv => kv.Value)
-                    }))
-                .OrderByDescending(c => c.Relevance)
-                .ToArray();
-
-            Log.Information("CHUNKS index={Index} count={Count} minRel={MinRel} limit={Limit} country={Country} docId={DocId}",
-                _ingestionIndex, chunks.Length, 0, _rag.Limit, country, documentId ?? "<none>");
-
-            return Ok(new
-            {
-                Index = _ingestionIndex,
-                Country = country,
-                DocumentId = documentId,
-                MinRelevance = 0,
-                _rag.Limit,
-                Chunks = chunks
-            });
-        }
-        catch (Exception ex)
-        {
-            return BadRequest($"Failed to list chunks: {ex.Message}");
         }
     }
 
