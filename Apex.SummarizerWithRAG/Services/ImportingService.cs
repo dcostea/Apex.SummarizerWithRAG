@@ -14,7 +14,7 @@ public class ImportingService(IKernelMemory memory, IOptions<RagSettings> ragSet
     public async Task<string> ImportAsync(string filePath, string country)
     {
         var documentId = ToValidDocumentId(filePath);
-        var index = string.IsNullOrWhiteSpace(_ragSettings.IngestionIndex) ? "apex" : _ragSettings.IngestionIndex;
+        var index = GetIngestionIndex();
 
         try
         {
@@ -53,7 +53,7 @@ public class ImportingService(IKernelMemory memory, IOptions<RagSettings> ragSet
     public async Task<string> ImportAsync(Stream content, string fileName, string country)
     {
         var documentId = ToValidDocumentId(fileName);
-        var index = string.IsNullOrWhiteSpace(_ragSettings.IngestionIndex) ? "apex" : _ragSettings.IngestionIndex;
+        var index = GetIngestionIndex();
 
         try
         {
@@ -110,4 +110,7 @@ public class ImportingService(IKernelMemory memory, IOptions<RagSettings> ragSet
 
         return documentId;
     }
+
+    private string GetIngestionIndex() =>
+        string.IsNullOrWhiteSpace(_ragSettings.IngestionIndex) ? "apex" : _ragSettings.IngestionIndex;
 }

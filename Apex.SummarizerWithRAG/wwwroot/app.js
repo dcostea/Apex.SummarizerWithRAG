@@ -5,16 +5,10 @@
         };
         this.uploadedFiles = []; // pending files (not yet uploaded)
 
-        // New: server-driven documents keyed by documentId
+        // Canonical: server-driven documents keyed by documentId
         this.indexedDocs = new Map();        // docId -> { name, index }
 
-        // Legacy structures (kept for citations and minimal impact)
-        this.indexedFiles = new Set();
-        this.indexedFileIds = new Map();     // name -> documentId (last one wins if duplicates)
-        this.indexedFileIndexes = new Map(); // name -> index
-
         this.chatHistory = [];
-        this.isTyping = false;
         this.isSending = false; // prevent double send
 
         this.initializeElements();
@@ -47,9 +41,6 @@
 
             // Clear
             this.indexedDocs.clear();
-            this.indexedFiles.clear();
-            this.indexedFileIds.clear();
-            this.indexedFileIndexes.clear();
 
             // Populate
             for (const it of list) {
@@ -58,13 +49,8 @@
                 const index = it.Index || it.index || '';
                 if (!name || !docId) continue;
 
-                // New canonical structure
+                // Canonical structure
                 this.indexedDocs.set(docId, { name, index });
-
-                // Legacy structures for minimal changes elsewhere
-                this.indexedFiles.add(name);
-                this.indexedFileIds.set(name, docId);      // note: duplicates by name overwrite
-                if (index) this.indexedFileIndexes.set(name, index);
             }
         } catch (e) {
             console.warn('Failed to fetch indexed files:', e);
@@ -377,14 +363,10 @@
         const docId = decodeURIComponent(e.currentTarget.dataset.id || '');
         if (docId) {
             this.deleteIndexedDocumentById(docId);
-            return;
         }
-        // Fallback: legacy path by name (ambiguous if duplicates)
-        const name = decodeURIComponent(e.currentTarget.dataset.name || '');
-        if (name) this.deleteIndexedDocument(name);
     }
 
-    // New: delete by documentId (unambiguous)
+    // Delete by documentId (unambiguous)
     async deleteIndexedDocumentById(docId) {
         const entry = this.indexedDocs.get(docId);
         if (!entry) {
@@ -406,7 +388,6 @@
             if (resp.status === 204 || resp.status === 200) {
                 // Remove locally on success
                 this.indexedDocs.delete(docId);
-                this.rebuildLegacyIndexMapsFromIndexedDocs();
                 this.renderFileLists();
 
                 console.info(`[KM] Successfully deleted "${name}" (docId=${short(docId)}, index=${index || '(auto)'}), status=${resp.status}.`);
@@ -429,7 +410,6 @@
 
                 // Otherwise treat as "already removed"
                 this.indexedDocs.delete(docId);
-                this.rebuildLegacyIndexMapsFromIndexedDocs();
                 this.renderFileLists();
 
                 console.info(`[KM] "${name}" (docId=${short(docId)}, index=${index || '(auto)'}) was already removed on server; cleaned up locally.`);
@@ -446,31 +426,6 @@
         } catch (err) {
             console.error(`[KM] Failed to delete "${name}" (docId=${short(docId)}, index=${entry.index || '(auto)'}):`, err);
             this.showToast(`Failed to delete: ${err.message}`, 'error');
-        }
-    }
-
-    // Legacy: delete by name (kept for backward compatibility). If multiple docIds share the same name, deletes the first match.
-    async deleteIndexedDocument(fileName) {
-        // Find a docId by name from the canonical map
-        const docId = [...this.indexedDocs.entries()].find(([_, v]) => v.name === fileName)?.[0]
-            || this.indexedFileIds.get(fileName);
-        if (!docId) {
-            this.showToast('Delete unavailable for this entry', 'error');
-            console.warn(`[KM] Delete unavailable (missing docId) for "${fileName}"`);
-            return;
-        }
-        await this.deleteIndexedDocumentById(docId);
-    }
-
-    // Rebuild legacy structures from canonical indexedDocs
-    rebuildLegacyIndexMapsFromIndexedDocs() {
-        this.indexedFiles.clear();
-        this.indexedFileIds.clear();
-        this.indexedFileIndexes.clear();
-        for (const [docId, { name, index }] of this.indexedDocs.entries()) {
-            this.indexedFiles.add(name);
-            this.indexedFileIds.set(name, docId);
-            if (index) this.indexedFileIndexes.set(name, index);
         }
     }
 
@@ -550,11 +505,6 @@
 
                     // Canonical
                     this.indexedDocs.set(docId, { name, index });
-
-                    // Legacy
-                    this.indexedFiles.add(name);
-                    this.indexedFileIds.set(name, docId);
-                    if (index) this.indexedFileIndexes.set(name, index);
                 }
                 // Render immediately so users can retract/delete pending docs
                 this.renderFileLists();

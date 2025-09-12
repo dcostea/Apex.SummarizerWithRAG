@@ -229,3 +229,45 @@
 2025-09-12 09:52:19.430 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=san_francisco_brochure-ede560fa, index=apex)
 2025-09-12 09:52:22.453 +02:00 [DBG] MEMORY Deleted document: 'Las Vegas Brochure.pdf' (docId=las_vegas_brochure-b394e64f, index=apex)
 2025-09-12 09:52:34.512 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=new_york_brochure-de0515a2, index=apex)
+2025-09-12 10:02:19.116 +02:00 [INF] Ollama connection successful!
+2025-09-12 10:02:19.876 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 10:02:30.658 +02:00 [DBG] MEMORY ingesting stream fileName='Dubai Brochure.pdf'...
+2025-09-12 10:02:32.037 +02:00 [DBG] MEMORY ingest success fileName='Dubai Brochure.pdf' docId='dubai_brochure-752ea97d'
+2025-09-12 10:02:32.038 +02:00 [DBG] MEMORY ingesting stream fileName='Las Vegas Brochure.pdf'...
+2025-09-12 10:02:33.070 +02:00 [DBG] MEMORY ingest success fileName='Las Vegas Brochure.pdf' docId='las_vegas_brochure-95bb8a62'
+2025-09-12 10:02:33.073 +02:00 [DBG] MEMORY ingesting stream fileName='London Brochure.pdf'...
+2025-09-12 10:02:35.137 +02:00 [DBG] MEMORY ingest success fileName='London Brochure.pdf' docId='london_brochure-e1025f03'
+2025-09-12 10:02:35.425 +02:00 [DBG] MEMORY ingesting stream fileName='Margies Travel Company Info.pdf'...
+2025-09-12 10:02:36.171 +02:00 [DBG] MEMORY ingest success fileName='Margies Travel Company Info.pdf' docId='margies_travel_company_info-f6c51c8f'
+2025-09-12 10:02:41.226 +02:00 [DBG] MEMORY Deleted document: 'London Brochure.pdf' (docId=london_brochure-e1025f03, index=apex)
+2025-09-12 10:02:49.528 +02:00 [INF] Ollama connection successful!
+2025-09-12 10:02:50.337 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 10:02:58.247 +02:00 [DBG] MEMORY ingesting stream fileName='San Francisco Brochure.pdf'...
+2025-09-12 10:03:00.317 +02:00 [DBG] MEMORY ingest success fileName='San Francisco Brochure.pdf' docId='san_francisco_brochure-b2cd568a'
+2025-09-12 10:03:04.342 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=margies_travel_company_info-f6c51c8f, index=apex)
+2025-09-12 10:03:06.462 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=dubai_brochure-752ea97d, index=apex)
+2025-09-12 10:03:09.437 +02:00 [DBG] MEMORY Deleted document: 'San Francisco Brochure.pdf' (docId=san_francisco_brochure-b2cd568a, index=apex)
+2025-09-12 10:03:15.222 +02:00 [INF] Ollama connection successful!
+2025-09-12 10:03:15.999 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-12 10:03:25.464 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=las_vegas_brochure-95bb8a62, index=apex)
+2025-09-12 10:03:34.624 +02:00 [DBG] MEMORY ingesting stream fileName='Dubai Brochure.pdf'...
+2025-09-12 10:03:35.468 +02:00 [DBG] MEMORY ingest success fileName='Dubai Brochure.pdf' docId='dubai_brochure-ecd5da18'
+2025-09-12 10:03:41.151 +02:00 [INF] QUERY: what is the dubai best offer?
+2025-09-12 10:03:41.178 +02:00 [DBG] MEMORY index=apex source=Dubai Brochure.pdf country=["Netherlands"] rel=0.8532527 part#0 text=Margie’s Travel Presents…
+Dubai 
+Dubai is the largest and most populous city in the United
+Arab Emirates. It is located on the southeast coast of the
+Persian Gulf and is the capital of the Emirate of …
+2025-09-12 10:04:18.836 +02:00 [INF] ANSWER model=gemma3:12b index=apex limit=100 minRelevance=0.1 text=Unfortunately, I can't answer your question. The provided information doesn't contain any details about "the best offer" for Dubai. It only lists accommodation options.
+
+
+
+
+2025-09-12 10:05:01.569 +02:00 [INF] QUERY: tell me about The Creek Hotel
+2025-09-12 10:05:01.604 +02:00 [DBG] MEMORY index=apex source=Dubai Brochure.pdf country=["Netherlands"] rel=0.781718 part#0 text=Margie’s Travel Presents…
+Dubai 
+Dubai is the largest and most populous city in the United
+Arab Emirates. It is located on the southeast coast of the
+Persian Gulf and is the capital of the Emirate of …
+2025-09-12 10:05:13.058 +02:00 [INF] ANSWER model=gemma3:12b index=apex limit=100 minRelevance=0.1 text=According to the provided information, The Creek Hotel is a friendly boutique hotel located in the bustling Dubai Creek area. It's one of the accommodation options offered by Margie’s Travel in Dubai.…
+2025-09-12 10:05:45.578 +02:00 [DBG] MEMORY Deleted document: 'Dubai Brochure.pdf' (docId=dubai_brochure-ecd5da18, index=apex)
