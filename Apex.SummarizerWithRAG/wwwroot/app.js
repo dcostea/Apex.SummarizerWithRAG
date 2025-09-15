@@ -11,6 +11,9 @@
         this.chatHistory = [];
         this.isSending = false; // prevent double send
 
+        // Track active citations popup
+        this.activeCitationsPopup = null;
+
         this.initializeElements();
         this.initializeEventListeners();
         this.loadSettings();
@@ -326,16 +329,15 @@
             // Preserve extension if present
             const dot = name.lastIndexOf('.');
             if (dot > 0 && dot < name.length - 1) {
-                const ext = name.slice(dot); // includes dot
+                const ext = name.slice(dot);
                 const base = name.slice(0, dot);
-                const keep = Math.max(1, maxLen - ext.length - 1); // leave room for ellipsis
+                const keep = Math.max(1, maxLen - ext.length - 1);
                 return base.slice(0, keep) + '…' + ext;
             }
-            // No extension
             return name.slice(0, maxLen) + '…';
         };
 
-        const rows = Array.from(this.indexedDocs.entries()).map(([docId, { name, index }]) => {
+        const rows = Array.from(this.indexedDocs.entries()).map(([docId, { name }]) => {
             const displayName = truncateFileName(name);
             const fullDocId = docId || '';
             return `
@@ -363,6 +365,13 @@
                 </div>`;
         }).join('');
 
+// Inserted Code Block Start
+
+        // Always show, even if empty (for smoother UX)
+        if (this.indexedFilesContainer.classList.contains('hidden')) {
+            this.indexedFilesContainer.classList.remove('hidden');
+        }
+
         this.indexedFilesContainer.innerHTML = `
             <div class="uploaded-files-section">
                 <div class="uploaded-files-title">Indexed files (${this.indexedDocs.size})</div>
@@ -371,6 +380,8 @@
                 </div>
             </div>
         `;
+
+// Inserted Code Block End
     }
 
     // Click handler used by inline button HTML
@@ -393,15 +404,13 @@
 
         if (!confirm(`Remove "${name}"?\n\nDocumentId: ${docId}`)) return;
 
-        const short = (id) => (id && id.length > 14) ? id.slice(0, 6) + '�' + id.slice(-6) : (id || '');
+        const short = (id) => (id && id.length > 14) ? id.slice(0, 6) + '…' + id.slice(-6) : (id || '');
 
         try {
             const url = `/memory/${encodeURIComponent(docId)}${index ? `?index=${encodeURIComponent(index)}` : ''}`;
             const resp = await fetch(url, { method: 'DELETE' });
 
-            // 2xx: success
             if (resp.status === 204 || resp.status === 200) {
-                // Remove locally on success
                 this.indexedDocs.delete(docId);
                 this.renderFileLists();
 
@@ -413,17 +422,14 @@
                 return;
             }
 
-            // 404: could be "not found" OR "not ready" (server message clarifies)
             if (resp.status === 404) {
                 const msg = (await resp.text().catch(() => '')) || '';
-                // Heuristic: server message includes "not ready" when ingestion not completed
                 if (/not ready/i.test(msg)) {
                     console.info(`[KM] "${name}" (docId=${short(docId)}, index=${index || '(auto)'}) not ready yet; server said: ${msg}`);
                     this.showToast(`"${name}" is not ready yet; please retry in a moment.`, 'warn');
-                    return; // keep it in UI
+                    return;
                 }
 
-                // Otherwise treat as "already removed"
                 this.indexedDocs.delete(docId);
                 this.renderFileLists();
 
@@ -435,7 +441,6 @@
                 return;
             }
 
-            // Other errors
             const msg = await resp.text().catch(() => '') || `HTTP ${resp.status}`;
             throw new Error(msg);
         } catch (err) {
@@ -577,7 +582,17 @@
         this.sendBtn.disabled = true;
         this.sendBtn.setAttribute('aria-busy', 'true');
 
-        this.addMessage(message, 'user');
+        // Before sending, close any open citations popup
+        this.closeCitationsPopup();
+
+        // capture selected model at send time
+        const selectedModel = (this.modelSelect?.value || '').trim();
+
+        // add user message with meta
+        this.addMessage(message, 'user', null, {
+            model: selectedModel || 'default',
+            timestamp: new Date().toISOString()
+        });
         this.messageInput.value = '';
         this.autoResizeTextarea();
 
@@ -585,7 +600,6 @@
 
         try {
             const params = { query: message };
-            const selectedModel = (this.modelSelect?.value || '').trim();
             if (selectedModel) params.model = selectedModel;
 
             const url = `${this.settings.apiEndpoint}?${new URLSearchParams(params).toString()}`;
@@ -599,10 +613,23 @@
 
             this.hideTypingIndicator();
             const citations = data.Citations || data.citations || [];
-            this.addMessage(data.Answer || data.answer || data.response || data.message || 'No response received', 'assistant', citations);
+            const modelFromServer = data.Model || data.model || selectedModel || 'default';
+            this.addMessage(
+                data.Answer || data.answer || data.response || data.message || 'No response received',
+                'assistant',
+                citations,
+                {
+                    model: modelFromServer,
+                    timestamp: new Date().toISOString()
+                }
+            );
         } catch (error) {
             this.hideTypingIndicator();
-            this.addMessage(`Error: ${error.message}. Please check your API endpoint and try again.`, 'assistant');
+            const selectedOrDefault = selectedModel || 'default';
+            this.addMessage(`Error: ${error.message}. Please check your API endpoint and try again.`, 'assistant', null, {
+                model: selectedOrDefault,
+                timestamp: new Date().toISOString()
+            });
             this.showToast('Failed to send message', 'error');
             this.updateConnectionStatus();
         } finally {
@@ -613,8 +640,53 @@
         }
     }
 
-    // Append a chat message (unchanged, except id->name mapping uses indexedDocs)
-    addMessage(content, role = 'assistant', citations = null) {
+    // Build KernelMemory doc/chunk refs from citations (case-tolerant)
+    buildKmRefs(citations) {
+        const docs = new Map(); // docId -> { index?: string, count: number }
+        const chunkRefs = [];   // { documentId, index, partition, section, relevance }
+
+        (citations || []).forEach(c => {
+            const docId = c.DocumentId || c.documentId || '';
+            const index = c.Index || c.index || '';
+            const parts = Array.isArray(c.Partitions) ? c.Partitions
+                        : Array.isArray(c.partitions) ? c.partitions
+                        : [];
+
+            if (docId) {
+                if (!docs.has(docId)) docs.set(docId, { index, count: 0 });
+                const entry = docs.get(docId);
+                parts.forEach(p => {
+                    const partition = p.PartitionNumber ?? p.partitionNumber;
+                    const section = p.SectionNumber ?? p.sectionNumber;
+                    const relevance = p.Relevance ?? p.relevance;
+                    entry.count += 1;
+                    chunkRefs.push({ documentId: docId, index, partition, section, relevance });
+                });
+            } else {
+                parts.forEach(p => {
+                    const partition = p.PartitionNumber ?? p.partitionNumber;
+                    const section = p.SectionNumber ?? p.sectionNumber;
+                    const relevance = p.Relevance ?? p.relevance;
+                    chunkRefs.push({ documentId: '', index, partition, section, relevance });
+                });
+            }
+        });
+
+        const docIds = Array.from(docs.keys());
+        const chunkCount = chunkRefs.length;
+
+        return {
+            docIds,
+            chunkCount,
+            chunks: chunkRefs,
+            indexByDoc: Object.fromEntries(
+                Array.from(docs.entries()).map(([id, { index }]) => [id, index])
+            )
+        };
+    }
+
+    // Append a chat message with optional citations and meta (model + timestamp + KM refs)
+    addMessage(content, role = 'assistant', citations = null, meta = null) {
         if (!this.chatMessages) return;
 
         const isUser = role === 'user';
@@ -624,6 +696,7 @@
         const contentDiv = document.createElement('div');
         contentDiv.className = 'message-content';
 
+        // Render content (markdown -> sanitized HTML when available)
         try {
             if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
                 const html = DOMPurify.sanitize(marked.parse(content ?? ''), { USE_PROFILES: { html: true } });
@@ -635,23 +708,70 @@
             contentDiv.textContent = content ?? '';
         }
 
-        wrapper.appendChild(contentDiv);
+        // Footer meta (timestamp + model [+ refs])
+        const footerDiv = document.createElement('div');
+        footerDiv.className = 'message-meta';
 
-        // Render references/citations under assistant messages
-        const refs = Array.isArray(citations) ? citations : [];
-        if (!isUser && refs.length > 0) {
-            // Build id->name map from canonical store
+        const tsSpan = document.createElement('span');
+        tsSpan.className = 'message-meta__item';
+        const ts = meta?.timestamp || new Date().toISOString();
+        tsSpan.textContent = this.formatTimestamp(ts);
+
+        const sep1 = document.createElement('span');
+        sep1.className = 'message-meta__sep';
+        sep1.textContent = '•';
+
+        const modelSpan = document.createElement('span');
+        modelSpan.className = 'message-meta__item';
+        const modelValue = (meta?.model || (isUser ? (this.modelSelect?.value || 'default') : 'default')).toString();
+        modelSpan.textContent = `Model: ${modelValue}`;
+
+        footerDiv.appendChild(tsSpan);
+        footerDiv.appendChild(sep1);
+        footerDiv.appendChild(modelSpan);
+
+        // If assistant, summarize KernelMemory refs
+        let km = null;
+        let refsDivForPopup = null;
+        if (!isUser) {
+            const refs = Array.isArray(citations) ? citations : [];
+            km = this.buildKmRefs(refs);
+
+            const sep2 = document.createElement('span');
+            sep2.className = 'message-meta__sep';
+            sep2.textContent = '•';
+
+            const refsSpan = document.createElement('span');
+            refsSpan.className = 'message-meta__item message-meta__link';
+            refsSpan.setAttribute('role', 'button');
+            refsSpan.setAttribute('tabindex', '0');
+            refsSpan.title = 'View citations';
+
+            const shortId = (id) => {
+                if (!id) return '';
+                return id.length > 14 ? `${id.slice(0, 6)}…${id.slice(-6)}` : id;
+            };
+
+            if (km.docIds.length === 1) {
+                const only = km.docIds[0];
+                refsSpan.textContent = `Doc: ${shortId(only)} • ${km.chunkCount} chunk${km.chunkCount === 1 ? '' : 's'}`;
+            } else {
+                refsSpan.textContent = `Refs: ${km.docIds.length} doc${km.docIds.length === 1 ? '' : 's'} • ${km.chunkCount} chunk${km.chunkCount === 1 ? '' : 's'}`;
+            }
+
+            footerDiv.appendChild(sep2);
+            footerDiv.appendChild(refsSpan);
+
+            // Build citations element (detached, for popup)
             const idToName = new Map();
             for (const [docId, { name }] of this.indexedDocs.entries()) {
                 idToName.set(docId, name);
             }
-
             const refsDiv = document.createElement('div');
             refsDiv.className = 'message-citations';
 
             const list = document.createElement('div');
             list.className = 'message-citations__list';
-
             const truncate = (t, len = 220) => {
                 if (!t) return '';
                 const s = t.trim().replace(/\s+/g, ' ');
@@ -662,11 +782,10 @@
                 const item = document.createElement('div');
                 item.className = 'message-citation';
 
-                const resolvedName = r.SourceName || idToName.get(r.DocumentId || '') || '';
-                const shortId = (r.DocumentId && r.DocumentId.length > 14)
-                    ? r.DocumentId.slice(0, 6) + '…' + r.DocumentId.slice(-6)
-                    : (r.DocumentId || '');
-                const titleText = resolvedName || shortId || r.Link || '';
+                const docId = r.DocumentId || r.documentId || '';
+                const resolvedName = r.SourceName || r.sourceName || idToName.get(docId || '') || '';
+                const shortDocId = (docId && docId.length > 14) ? docId.slice(0, 6) + '…' + docId.slice(-6) : (docId || '');
+                const titleText = resolvedName || shortDocId || r.Link || r.link || r.SourceUrl || r.sourceUrl || '';
 
                 if (titleText) {
                     const title = document.createElement('div');
@@ -675,40 +794,208 @@
                     item.appendChild(title);
                 }
 
-                const meta = document.createElement('div');
-                meta.className = 'message-citation__meta';
+                const metaDiv = document.createElement('div');
+                metaDiv.className = 'message-citation__meta';
                 const metaBits = [];
-                if (r.Index) metaBits.push(r.Index);
-                if (!resolvedName && shortId) metaBits.push(shortId);
-                if (r.SourceContentType) metaBits.push(r.SourceContentType.toUpperCase());
+                const idx = r.Index || r.index;
+                if (idx) metaBits.push(idx);
+                if (!resolvedName && shortDocId) metaBits.push(shortDocId);
+                const sct = r.SourceContentType || r.sourceContentType;
+                if (sct) metaBits.push(String(sct).toUpperCase());
                 if (metaBits.length > 0) {
-                    meta.textContent = metaBits.join(' • ');
-                    item.appendChild(meta);
+                    metaDiv.textContent = metaBits.join(' • ');
+                    item.appendChild(metaDiv);
                 }
 
-                const parts = Array.isArray(r.Partitions) ? r.Partitions : [];
-                if (parts.length > 0) {
-                    parts.forEach((p) => {
-                        const pDiv = document.createElement('div');
-                        pDiv.className = 'message-citation__snippet';
-                        const page = Number.isFinite(p.SectionNumber) && p.SectionNumber > 0 ? `p.${p.SectionNumber} ` : '';
-                        const rel = (p.Relevance ?? 0).toFixed ? ` (${(p.Relevance).toFixed(3)})` : '';
-                        pDiv.textContent = `${page}${truncate(p.Text || '')}${rel}`;
-                        item.appendChild(pDiv);
-                    });
-                }
+                const parts = Array.isArray(r.Partitions) ? r.Partitions
+                            : Array.isArray(r.partitions) ? r.partitions
+                            : [];
+                parts.forEach((p) => {
+                    const pDiv = document.createElement('div');
+                    pDiv.className = 'message-citation__snippet';
+                    const sectionNumber = p.SectionNumber ?? p.sectionNumber;
+                    const relevance = p.Relevance ?? p.relevance;
+                    const page = Number.isFinite(sectionNumber) && sectionNumber > 0 ? `p.${sectionNumber} ` : '';
+                    const rel = (typeof relevance === 'number' && isFinite(relevance)) ? ` (${relevance.toFixed(3)})` : '';
+                    const txt = p.Text ?? p.text ?? '';
+                    pDiv.textContent = `${page}${truncate(txt)}${rel}`;
+                    item.appendChild(pDiv);
+                });
+
                 if (item.childNodes.length > 0) {
                     list.appendChild(item);
                 }
             });
 
             refsDiv.appendChild(list);
-            wrapper.appendChild(refsDiv);
+            refsDivForPopup = refsDiv;
+
+            // Toggle popup on click/keyboard
+            const openHandler = (ev) => {
+                ev.preventDefault();
+                ev.stopPropagation();
+                if (refsDivForPopup) {
+                    this.toggleCitationsPopup(refsSpan, refsDivForPopup);
+                }
+            };
+            refsSpan.addEventListener('click', openHandler);
+            refsSpan.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    openHandler(e);
+                }
+            });
+
+            // Expose for programmatic access
+            wrapper.dataset.kmDocIds = km.docIds.join(',');
+            wrapper.dataset.kmChunkCount = String(km.chunkCount);
         }
 
+        // Place footer inside the bubble at the bottom
+        contentDiv.appendChild(footerDiv);
+
+        wrapper.appendChild(contentDiv);
+
         this.chatMessages.appendChild(wrapper);
-        this.chatHistory.push({ role, content, citations: refs, timestamp: new Date().toISOString() });
+        this.chatHistory.push({
+            role,
+            content,
+            citations: Array.isArray(citations) ? citations : [],
+            timestamp: ts,
+            model: modelValue,
+            km // { docIds, chunkCount, chunks, indexByDoc }
+        });
         this.scrollToBottom();
+    }
+
+    // Popup helpers
+    toggleCitationsPopup(anchorEl, refsContentEl) {
+        if (this.activeCitationsPopup?.anchor === anchorEl) {
+            this.closeCitationsPopup();
+            return;
+        }
+        this.showCitationsPopup(anchorEl, refsContentEl);
+    }
+
+    showCitationsPopup(anchorEl, refsContentEl) {
+        this.closeCitationsPopup();
+
+        // Overlay
+        const overlay = document.createElement('div');
+        overlay.className = 'popup-overlay';
+        overlay.addEventListener('click', () => this.closeCitationsPopup());
+
+        // Popup container
+        const popup = document.createElement('div');
+        popup.className = 'citations-popup';
+        popup.setAttribute('role', 'dialog');
+        popup.setAttribute('aria-label', 'Citations');
+
+        // Stop events inside popup from bubbling to overlay/window
+        ['click', 'wheel', 'touchstart', 'touchmove'].forEach(evt =>
+            popup.addEventListener(evt, (e) => e.stopPropagation(), { passive: true })
+        );
+
+        // Header
+        const header = document.createElement('div');
+        header.className = 'citations-popup__header';
+        const title = document.createElement('div');
+        title.className = 'citations-popup__title';
+        title.textContent = 'Citations';
+        const closeBtn = document.createElement('button');
+        closeBtn.className = 'citations-popup__close';
+        closeBtn.type = 'button';
+        closeBtn.title = 'Close';
+        closeBtn.innerHTML = '&times;';
+        closeBtn.addEventListener('click', () => this.closeCitationsPopup());
+        header.appendChild(title);
+        header.appendChild(closeBtn);
+
+        // Content (clone so we don't mutate any existing nodes)
+        const body = document.createElement('div');
+        body.className = 'citations-popup__body';
+        body.appendChild(refsContentEl.cloneNode(true));
+
+        popup.appendChild(header);
+        popup.appendChild(body);
+
+        document.body.appendChild(overlay);
+        document.body.appendChild(popup);
+
+        // Initial position
+        this.positionCitationsPopup(anchorEl, popup);
+
+        const onKeyDown = (e) => {
+            if (e.key === 'Escape') this.closeCitationsPopup();
+        };
+        document.addEventListener('keydown', onKeyDown, true);
+
+        // Reposition on resize (do NOT close on scroll so user can scroll inside popup)
+        const onResize = () => this.positionCitationsPopup(anchorEl, popup);
+        window.addEventListener('resize', onResize, true);
+
+        this.activeCitationsPopup = {
+            anchor: anchorEl,
+            overlay,
+            popup,
+            onKeyDown,
+            onResize
+        };
+    }
+
+    positionCitationsPopup(anchorEl, popup) {
+        if (!anchorEl || !popup) return;
+
+        // Prepare for measurement
+        popup.style.visibility = 'hidden';
+        popup.style.top = '0px';
+        popup.style.left = '0px';
+
+        const rect = anchorEl.getBoundingClientRect();
+        const margin = 8;
+
+        // Ensure width fits viewport
+        const maxWidth = Math.min(560, window.innerWidth - margin * 2);
+        popup.style.maxWidth = `${maxWidth}px`;
+
+        // Force layout to get dimensions
+        const desiredTop = rect.bottom + margin;
+        const desiredLeft = Math.min(
+            Math.max(margin, rect.left),
+            window.innerWidth - popup.offsetWidth - margin
+        );
+
+        let top = desiredTop;
+        // If bottom overflows, place above the anchor
+        if (top + popup.offsetHeight + margin > window.innerHeight) {
+            top = Math.max(margin, rect.top - popup.offsetHeight - margin);
+        }
+
+        popup.style.left = `${desiredLeft}px`;
+        popup.style.top = `${top}px`;
+        popup.style.visibility = 'visible';
+    }
+
+    closeCitationsPopup() {
+        const active = this.activeCitationsPopup;
+        if (!active) return;
+        try {
+            active.overlay?.remove();
+            active.popup?.remove();
+            document.removeEventListener('keydown', active.onKeyDown, true);
+            if (active.onResize) window.removeEventListener('resize', active.onResize, true);
+        } finally {
+            this.activeCitationsPopup = null;
+        }
+    }
+
+    formatTimestamp(value) {
+        try {
+            const d = value instanceof Date ? value : new Date(value);
+        // e.g., 9/15/2025, 14:23:01
+            return d.toLocaleString(undefined, { hour12: false });
+        } catch {
+            return new Date().toLocaleString(undefined, { hour12: false });
+        }
     }
 
     showToast(message, type = 'info') {

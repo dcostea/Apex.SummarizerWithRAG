@@ -896,17 +896,32 @@ select.form-control {
   word-wrap: break-word;
 }
 
-.message--user .message-content {
-  background: var(--color-primary);
-  color: var(--color-btn-primary-text);
-  border-bottom-right-radius: var(--radius-sm);
+/* Meta footer inside message bubble */
+.message-meta {
+  display: flex;
+  gap: var(--space-8);
+  align-items: center;
+  margin-top: var(--space-8);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
 }
 
-.message--assistant .message-content {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  color: var(--color-text);
-  border-bottom-left-radius: var(--radius-sm);
+.message-meta__link {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.message-meta__sep {
+  opacity: 0.6;
+}
+
+/* Align meta according to bubble side */
+.message--assistant .message-meta {
+  justify-content: flex-start;
+}
+
+.message--user .message-meta {
+  justify-content: flex-end;
 }
 
 .message-files {
@@ -1285,4 +1300,68 @@ select.form-control {
   .toast {
     min-width: unset;
   }
+}
+
+/* Fullscreen transparent overlay behind popup */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: transparent; /* keep background interactive feel */
+  z-index: 2000;
+}
+
+/* Citations popup panel */
+.citations-popup {
+  position: fixed;
+  z-index: 2001;
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  max-width: min(560px, 92vw);
+  max-height: 70vh;
+  overflow: auto;
+}
+
+/* Popup header */
+.citations-popup__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-12) var(--space-16);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  background: var(--color-surface);
+  z-index: 1;
+}
+
+.citations-popup__title {
+  font-weight: var(--font-weight-semibold);
+}
+
+.citations-popup__close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  padding: var(--space-4);
+  border-radius: var(--radius-sm);
+}
+.citations-popup__close:hover {
+  background: var(--color-secondary);
+}
+
+/* Popup body, reuse existing message-citations styling inside */
+.citations-popup__body {
+  padding: var(--space-12) var(--space-16);
+}
+
+/* Ensure inner list stretches nicely */
+.citations-popup .message-citations__list {
+  display: grid;
+  gap: var(--space-12);
 }

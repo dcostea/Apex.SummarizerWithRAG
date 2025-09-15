@@ -90,7 +90,7 @@ builder.Services.AddKernelMemory(km =>
     km.WithSimpleFileStorage(new SimpleFileStorageConfig
     {
         StorageType = FileSystemTypes.Disk,
-        Directory = Path.Combine(builder.Environment.ContentRootPath, "kmdata", "docs")
+        Directory = Path.Combine(builder.Environment.ContentRootPath, "kmdata")
     });
 
     km.WithOllamaTextGeneration(new OllamaConfig

@@ -283,3 +283,1113 @@ expertise. Just tell us where you want to go, and…
 2025-09-12 16:20:22.763 +02:00 [DBG] MEMORY Deleted document: 'Dubai Brochure.pdf' (docId=dubai_brochure-f8a7bcb5, index=apex)
 2025-09-12 16:20:24.788 +02:00 [DBG] MEMORY Deleted document: 'Las Vegas Brochure.pdf' (docId=las_vegas_brochu-9490e83c, index=apex)
 2025-09-12 16:20:30.793 +02:00 [DBG] MEMORY Deleted document: 'Margies Travel Company Info.pdf' (docId=margies_travel_c-1a996d64, index=apex)
+2025-09-15 13:58:26.754 +02:00 [INF] Ollama connection successful!
+2025-09-15 13:58:27.982 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-15 13:58:45.441 +02:00 [DBG] MEMORY Ingesting stream fileName='Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf'...
+2025-09-15 13:58:46.080 +02:00 [ERR] MEMORY Ingest failed due to embedding batch size. Reduce TextPartitioning:MaxTokensPerParagraph or switch to Ollama embeddings.
+System.ArgumentException: Input contains more tokens than configured batch size (Parameter 'batch')
+   at LLama.LLamaContext.Decode(LLamaBatch batch)
+   at LLama.LLamaContext.<>c__DisplayClass39_0.<DecodeAsync>b__0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at LLama.LLamaEmbedder.GetEmbeddingsWithTokenCount(String input, CancellationToken cancellationToken)
+   at LLama.LLamaEmbedder.GetEmbeddings(String input, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.AI.LlamaSharp.LlamaSharpTextEmbeddingGenerator.GenerateEmbeddingAsync(String text, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Handlers.GenerateEmbeddingsHandler.GenerateEmbeddingsOneAtATimeAsync(DataPipeline pipeline, ITextEmbeddingGenerator generator, List`1 partitions, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Handlers.GenerateEmbeddingsHandler.InvokeAsync(DataPipeline pipeline, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Pipeline.InProcessPipelineOrchestrator.RunPipelineAsync(DataPipeline pipeline, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Pipeline.BaseOrchestrator.ImportDocumentAsync(String index, DocumentUploadRequest uploadRequest, IContext context, CancellationToken cancellationToken)
+   at Apex.SummarizerWithRAG.Services.ImportingService.ImportAsync(Stream content, String fileName, String country) in C:\Users\danie\source\repos\Apex.SummarizerWithKM\Apex.SummarizerWithRAG\Services\ImportingService.cs:line 28
+2025-09-15 13:59:14.480 +02:00 [DBG] MEMORY Ingesting stream fileName='Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf'...
+2025-09-15 13:59:14.704 +02:00 [ERR] MEMORY Ingest failed due to embedding batch size. Reduce TextPartitioning:MaxTokensPerParagraph or switch to Ollama embeddings.
+System.ArgumentException: Input contains more tokens than configured batch size (Parameter 'batch')
+   at LLama.LLamaContext.Decode(LLamaBatch batch)
+   at LLama.LLamaContext.<>c__DisplayClass39_0.<DecodeAsync>b__0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at LLama.LLamaEmbedder.GetEmbeddingsWithTokenCount(String input, CancellationToken cancellationToken)
+   at LLama.LLamaEmbedder.GetEmbeddings(String input, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.AI.LlamaSharp.LlamaSharpTextEmbeddingGenerator.GenerateEmbeddingAsync(String text, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Handlers.GenerateEmbeddingsHandler.GenerateEmbeddingsOneAtATimeAsync(DataPipeline pipeline, ITextEmbeddingGenerator generator, List`1 partitions, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Handlers.GenerateEmbeddingsHandler.InvokeAsync(DataPipeline pipeline, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Pipeline.InProcessPipelineOrchestrator.RunPipelineAsync(DataPipeline pipeline, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Pipeline.BaseOrchestrator.ImportDocumentAsync(String index, DocumentUploadRequest uploadRequest, IContext context, CancellationToken cancellationToken)
+   at Apex.SummarizerWithRAG.Services.ImportingService.ImportAsync(Stream content, String fileName, String country) in C:\Users\danie\source\repos\Apex.SummarizerWithKM\Apex.SummarizerWithRAG\Services\ImportingService.cs:line 28
+2025-09-15 13:59:33.674 +02:00 [INF] Ollama connection successful!
+2025-09-15 13:59:34.625 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-15 13:59:46.856 +02:00 [DBG] MEMORY Ingesting stream fileName='Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf'...
+2025-09-15 13:59:47.505 +02:00 [ERR] MEMORY Ingest failed due to embedding batch size. Reduce TextPartitioning:MaxTokensPerParagraph or switch to Ollama embeddings.
+System.ArgumentException: Input contains more tokens than configured batch size (Parameter 'batch')
+   at LLama.LLamaContext.Decode(LLamaBatch batch)
+   at LLama.LLamaContext.<>c__DisplayClass39_0.<DecodeAsync>b__0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at LLama.LLamaEmbedder.GetEmbeddingsWithTokenCount(String input, CancellationToken cancellationToken)
+   at LLama.LLamaEmbedder.GetEmbeddings(String input, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.AI.LlamaSharp.LlamaSharpTextEmbeddingGenerator.GenerateEmbeddingAsync(String text, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Handlers.GenerateEmbeddingsHandler.GenerateEmbeddingsOneAtATimeAsync(DataPipeline pipeline, ITextEmbeddingGenerator generator, List`1 partitions, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Handlers.GenerateEmbeddingsHandler.InvokeAsync(DataPipeline pipeline, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Pipeline.InProcessPipelineOrchestrator.RunPipelineAsync(DataPipeline pipeline, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Pipeline.BaseOrchestrator.ImportDocumentAsync(String index, DocumentUploadRequest uploadRequest, IContext context, CancellationToken cancellationToken)
+   at Apex.SummarizerWithRAG.Services.ImportingService.ImportAsync(Stream content, String fileName, String country) in C:\Users\danie\source\repos\Apex.SummarizerWithKM\Apex.SummarizerWithRAG\Services\ImportingService.cs:line 28
+2025-09-15 14:00:50.108 +02:00 [INF] Ollama connection successful!
+2025-09-15 14:00:50.988 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-15 14:01:05.322 +02:00 [DBG] MEMORY Ingesting stream fileName='Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf'...
+2025-09-15 14:01:05.807 +02:00 [ERR] MEMORY Ingest failed due to embedding batch size. Reduce TextPartitioning:MaxTokensPerParagraph or switch to Ollama embeddings.
+System.ArgumentException: Input contains more tokens than configured batch size (Parameter 'batch')
+   at LLama.LLamaContext.Decode(LLamaBatch batch)
+   at LLama.LLamaContext.<>c__DisplayClass39_0.<DecodeAsync>b__0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at LLama.LLamaEmbedder.GetEmbeddingsWithTokenCount(String input, CancellationToken cancellationToken)
+   at LLama.LLamaEmbedder.GetEmbeddings(String input, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.AI.LlamaSharp.LlamaSharpTextEmbeddingGenerator.GenerateEmbeddingAsync(String text, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Handlers.GenerateEmbeddingsHandler.GenerateEmbeddingsOneAtATimeAsync(DataPipeline pipeline, ITextEmbeddingGenerator generator, List`1 partitions, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Handlers.GenerateEmbeddingsHandler.InvokeAsync(DataPipeline pipeline, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Pipeline.InProcessPipelineOrchestrator.RunPipelineAsync(DataPipeline pipeline, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Pipeline.BaseOrchestrator.ImportDocumentAsync(String index, DocumentUploadRequest uploadRequest, IContext context, CancellationToken cancellationToken)
+   at Apex.SummarizerWithRAG.Services.ImportingService.ImportAsync(Stream content, String fileName, String country) in C:\Users\danie\source\repos\Apex.SummarizerWithKM\Apex.SummarizerWithRAG\Services\ImportingService.cs:line 28
+2025-09-15 14:01:25.644 +02:00 [DBG] MEMORY Ingesting stream fileName='Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf'...
+2025-09-15 14:01:25.824 +02:00 [ERR] MEMORY Ingest failed due to embedding batch size. Reduce TextPartitioning:MaxTokensPerParagraph or switch to Ollama embeddings.
+System.ArgumentException: Input contains more tokens than configured batch size (Parameter 'batch')
+   at LLama.LLamaContext.Decode(LLamaBatch batch)
+   at LLama.LLamaContext.<>c__DisplayClass39_0.<DecodeAsync>b__0()
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at LLama.LLamaEmbedder.GetEmbeddingsWithTokenCount(String input, CancellationToken cancellationToken)
+   at LLama.LLamaEmbedder.GetEmbeddings(String input, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.AI.LlamaSharp.LlamaSharpTextEmbeddingGenerator.GenerateEmbeddingAsync(String text, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Handlers.GenerateEmbeddingsHandler.GenerateEmbeddingsOneAtATimeAsync(DataPipeline pipeline, ITextEmbeddingGenerator generator, List`1 partitions, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Handlers.GenerateEmbeddingsHandler.InvokeAsync(DataPipeline pipeline, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Pipeline.InProcessPipelineOrchestrator.RunPipelineAsync(DataPipeline pipeline, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Pipeline.BaseOrchestrator.ImportDocumentAsync(String index, DocumentUploadRequest uploadRequest, IContext context, CancellationToken cancellationToken)
+   at Apex.SummarizerWithRAG.Services.ImportingService.ImportAsync(Stream content, String fileName, String country) in C:\Users\danie\source\repos\Apex.SummarizerWithKM\Apex.SummarizerWithRAG\Services\ImportingService.cs:line 28
+2025-09-15 14:01:55.388 +02:00 [INF] Ollama connection successful!
+2025-09-15 14:01:56.298 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-15 14:02:07.742 +02:00 [DBG] MEMORY Ingesting stream fileName='Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf'...
+2025-09-15 14:02:12.796 +02:00 [ERR] MEMORY Ingest failure stream fileName='Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf' docId='senior_specialis-4ac1504d'
+Elastic.Transport.TransportException: No connection could be made because the target machine actively refused it. (localhost:9200). Call: Status code unknown from: HEAD /kmapex
+ ---> System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:9200)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|285_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Elastic.Transport.HttpRequestInvoker.RequestCoreAsync[TResponse](Boolean isAsync, RequestData requestData, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Elastic.Transport.DistributedTransport`1.HandleTransportException(RequestData data, Exception clientException, TransportResponse response)
+   at Elastic.Transport.DistributedTransport`1.FinalizeResponse[TResponse](RequestData requestData, RequestPipeline pipeline, List`1 seenExceptions, TResponse response)
+   at Elastic.Transport.DistributedTransport`1.RequestCoreAsync[TResponse](Boolean isAsync, HttpMethod method, String path, PostData data, RequestParameters requestParameters, OpenTelemetryData openTelemetryData, CancellationToken cancellationToken)
+   at Elastic.Clients.Elasticsearch.ElasticsearchClient.<>c__DisplayClass28_0`3.<<DoRequestCoreAsync>g__SendRequest|0>d.MoveNext() in /_/src/Elastic.Clients.Elasticsearch/Client/ElasticsearchClient.cs:line 158
+--- End of stack trace from previous location ---
+   at Microsoft.KernelMemory.MemoryDb.Elasticsearch.ElasticsearchMemory.CreateIndexAsync(String index, Int32 vectorSize, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Handlers.SaveRecordsHandler.CreateIndexOnceAsync(IMemoryDb client, HashSet`1 createdIndexes, String indexName, Int32 vectorLength, CancellationToken cancellationToken, Boolean force)
+   at Microsoft.KernelMemory.Handlers.SaveRecordsHandler.InvokeAsync(DataPipeline pipeline, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Pipeline.InProcessPipelineOrchestrator.RunPipelineAsync(DataPipeline pipeline, CancellationToken cancellationToken)
+   at Microsoft.KernelMemory.Pipeline.BaseOrchestrator.ImportDocumentAsync(String index, DocumentUploadRequest uploadRequest, IContext context, CancellationToken cancellationToken)
+   at Apex.SummarizerWithRAG.Services.ImportingService.ImportAsync(Stream content, String fileName, String country) in C:\Users\danie\source\repos\Apex.SummarizerWithKM\Apex.SummarizerWithRAG\Services\ImportingService.cs:line 28
+2025-09-15 14:07:32.195 +02:00 [INF] Ollama connection successful!
+2025-09-15 14:07:33.553 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-15 14:07:47.838 +02:00 [DBG] MEMORY Ingesting stream fileName='Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf'...
+2025-09-15 14:07:59.751 +02:00 [DBG] MEMORY Ingest success fileName='Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf' docId='senior_specialis-3effc794'
+2025-09-15 14:08:08.296 +02:00 [INF] QUERY: give me the position name
+2025-09-15 14:08:08.346 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.76912934 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 14:08:08.353 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.75904965 part#3 text=one of the languages of the Union and a satisfactory knowledge of another
+language of the Union to the extent necessary for the performance of the duties.
+b. Candidates must have
+• A level of educatio…
+2025-09-15 14:08:08.356 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.75334704 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 14:08:08.359 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.74764013 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 14:08:08.362 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.72622526 part#4 text=8 or later and C# 12;
+• Experience with front-end development using JavaScript and/or TypeScript, with familiarity in popular frameworks such as
+Vue.js or React;
+• Experience in DevOps practices, incl…
+2025-09-15 14:08:08.366 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7261751 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-15 14:08:08.368 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.72476906 part#10 text=icated in the vacancy notice. Failure to obtain the requisite security clearance before the expiration of the probationary
+period may be cause for termination of the employment contract.
+Candidates wh…
+2025-09-15 14:08:08.372 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.719224 part#6 text=10 highest scoring candidates. All candidates having a score equal to the 10th
+highest scoring candidate will be invited to take part in the selection procedure. At shortlisting stage, the Selection
+C…
+2025-09-15 14:08:08.374 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.71339774 part#5 text=and privacy by design principles;• Knowledge of Clean Architecture, Domain Driven Design (DDD), and SOLID principles applied in .NET projects.
+c. General competencies
+Essential:
+Communicating:
+• Excel…
+2025-09-15 14:08:08.376 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7122922 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-15 14:08:58.858 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=The position name is "Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)."
+2025-09-15 14:55:54.512 +02:00 [DBG] MEMORY Ingesting stream fileName='privacy_notice_ta_ca_interns.pdf'...
+2025-09-15 14:56:02.237 +02:00 [DBG] MEMORY Ingest success fileName='privacy_notice_ta_ca_interns.pdf' docId='privacy_notice_t-a072a334'
+2025-09-15 14:56:34.900 +02:00 [INF] QUERY: what is data collected?
+2025-09-15 14:56:34.998 +02:00 [DBG] MEMORY index=apex source=privacy_notice_ta_ca_interns.pdf country=["Netherlands"] rel=0.8059798 part#2 text=legal basis for the processing the personal data for interns is the Decision of the Europol Executive
+Director on Internships of 5 May 2023. 
+RECIPIENTS OF THE DATA
+Recipients of the data related to t…
+2025-09-15 14:56:35.002 +02:00 [DBG] MEMORY index=apex source=privacy_notice_ta_ca_interns.pdf country=["Netherlands"] rel=0.78246355 part#4 text=as from the year as from the year the final proposal is signed by the Authority Authorised to
+Conclude Contracts of Employment (‘AACC’). Data of candidates included on the reserve list are kept
+for at…
+2025-09-15 14:56:35.007 +02:00 [DBG] MEMORY index=apex source=privacy_notice_ta_ca_interns.pdf country=["Netherlands"] rel=0.7818427 part#1 text=of the application process with the Europol Implementing
+Rules in force (Decision of the Management Board of Europol of 28 February 2019). 
+LEGAL BASES FOR THE PROCESSING OF PERSONAL DATA
+The legal ba…
+2025-09-15 14:56:35.022 +02:00 [DBG] MEMORY index=apex source=privacy_notice_ta_ca_interns.pdf country=["Netherlands"] rel=0.7745445 part#3 text=wC EU Services EESV,
+Culliganlaan 5,1831, Machelen Belgium) to conduct a Management Skills assessment centre. The
+scope and purpose of the processing of personal data are defined in a framework contra…
+2025-09-15 14:56:35.036 +02:00 [DBG] MEMORY index=apex source=privacy_notice_ta_ca_interns.pdf country=["Netherlands"] rel=0.7618723 part#0 text=Europol Public Information 
+EDOC #952133v21   
+PRIVACY NOTICE – EXTERNAL RECRUITMENT AND SELECTION PROCESS FOR TEMPORARY
+AGENTS (TA), CONTRACT AGENTS (CA) AND INTERNS 
+Regulation (EU) 2018/1725 of the…
+2025-09-15 14:56:35.050 +02:00 [DBG] MEMORY index=apex source=privacy_notice_ta_ca_interns.pdf country=["Netherlands"] rel=0.7590951 part#6 text=Parliament grants discharge in respect of implementation of the budget of Europol, in line with Article
+47 of the Financial Regulation applicable to Europol. 
+RIGHTS AS DATA SUBJECT
+Candidates have th…
+2025-09-15 14:56:35.067 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.75697064 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 14:56:35.079 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.75291276 part#5 text=and privacy by design principles;• Knowledge of Clean Architecture, Domain Driven Design (DDD), and SOLID principles applied in .NET projects.
+c. General competencies
+Essential:
+Communicating:
+• Excel…
+2025-09-15 14:56:35.086 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.75229704 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-15 14:56:35.093 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.75155723 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 15:01:41.977 +02:00 [INF] Ollama connection successful!
+2025-09-15 15:01:43.652 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-15 15:02:08.221 +02:00 [INF] QUERY: what is the position name?
+2025-09-15 15:02:08.354 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7981847 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 15:02:08.381 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.78050315 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 15:02:08.400 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7766118 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 15:02:08.419 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.76975894 part#3 text=one of the languages of the Union and a satisfactory knowledge of another
+language of the Union to the extent necessary for the performance of the duties.
+b. Candidates must have
+• A level of educatio…
+2025-09-15 15:02:08.439 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7606714 part#10 text=icated in the vacancy notice. Failure to obtain the requisite security clearance before the expiration of the probationary
+period may be cause for termination of the employment contract.
+Candidates wh…
+2025-09-15 15:02:08.460 +02:00 [DBG] MEMORY index=apex source=privacy_notice_ta_ca_interns.pdf country=["Netherlands"] rel=0.79330254 part#2 text=legal basis for the processing the personal data for interns is the Decision of the Europol Executive
+Director on Internships of 5 May 2023. 
+RECIPIENTS OF THE DATA
+Recipients of the data related to t…
+2025-09-15 15:02:08.472 +02:00 [DBG] MEMORY index=apex source=privacy_notice_ta_ca_interns.pdf country=["Netherlands"] rel=0.79322684 part#4 text=as from the year as from the year the final proposal is signed by the Authority Authorised to
+Conclude Contracts of Employment (‘AACC’). Data of candidates included on the reserve list are kept
+for at…
+2025-09-15 15:02:08.481 +02:00 [DBG] MEMORY index=apex source=privacy_notice_ta_ca_interns.pdf country=["Netherlands"] rel=0.78978693 part#1 text=of the application process with the Europol Implementing
+Rules in force (Decision of the Management Board of Europol of 28 February 2019). 
+LEGAL BASES FOR THE PROCESSING OF PERSONAL DATA
+The legal ba…
+2025-09-15 15:02:08.489 +02:00 [DBG] MEMORY index=apex source=privacy_notice_ta_ca_interns.pdf country=["Netherlands"] rel=0.77471995 part#0 text=Europol Public Information 
+EDOC #952133v21   
+PRIVACY NOTICE – EXTERNAL RECRUITMENT AND SELECTION PROCESS FOR TEMPORARY
+AGENTS (TA), CONTRACT AGENTS (CA) AND INTERNS 
+Regulation (EU) 2018/1725 of the…
+2025-09-15 15:02:08.498 +02:00 [DBG] MEMORY index=apex source=privacy_notice_ta_ca_interns.pdf country=["Netherlands"] rel=0.7641799 part#3 text=wC EU Services EESV,
+Culliganlaan 5,1831, Machelen Belgium) to conduct a Management Skills assessment centre. The
+scope and purpose of the processing of personal data are defined in a framework contra…
+2025-09-15 15:03:27.690 +02:00 [INF] ANSWER model=gemma3:12b index=apex limit=100 minRelevance=0.1 text=The position name is "Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)."
+2025-09-15 15:04:07.857 +02:00 [INF] Ollama connection successful!
+2025-09-15 15:04:08.207 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-15 15:04:27.861 +02:00 [DBG] MEMORY Ingesting stream fileName='Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf'...
+2025-09-15 15:04:44.872 +02:00 [DBG] MEMORY Ingest success fileName='Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf' docId='senior_specialis-b1646f0c'
+2025-09-15 15:04:45.917 +02:00 [INF] QUERY: what is the position name?
+2025-09-15 15:04:46.058 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7601048 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 15:04:46.077 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7549665 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 15:04:46.081 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7393904 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-15 15:04:46.084 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.732862 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-15 15:04:46.088 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.73233193 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 15:04:46.091 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.73070556 part#6 text=10 highest scoring candidates. All candidates having a score equal to the 10th
+highest scoring candidate will be invited to take part in the selection procedure. At shortlisting stage, the Selection
+C…
+2025-09-15 15:04:46.131 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.724458 part#10 text=icated in the vacancy notice. Failure to obtain the requisite security clearance before the expiration of the probationary
+period may be cause for termination of the employment contract.
+Candidates wh…
+2025-09-15 15:04:46.142 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7244491 part#5 text=and privacy by design principles;• Knowledge of Clean Architecture, Domain Driven Design (DDD), and SOLID principles applied in .NET projects.
+c. General competencies
+Essential:
+Communicating:
+• Excel…
+2025-09-15 15:04:46.161 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.74031734 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 15:04:46.165 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7391565 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 15:05:51.161 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=The position name is "Senior Specialist – Application Engineering & Development - .NET."
+2025-09-15 15:29:30.465 +02:00 [INF] Ollama connection successful!
+2025-09-15 15:29:30.702 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-15 15:29:57.224 +02:00 [DBG] MEMORY Ingesting stream fileName='Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf'...
+2025-09-15 15:30:11.486 +02:00 [DBG] MEMORY Ingest success fileName='Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf' docId='senior_specialis-fdf7719f'
+2025-09-15 15:30:18.345 +02:00 [INF] QUERY: what is the position name?
+2025-09-15 15:30:18.396 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7601048 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 15:30:18.403 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7549665 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 15:30:18.405 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7393904 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-15 15:30:18.406 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.732862 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-15 15:30:18.407 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7601048 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 15:30:18.409 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7549665 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 15:30:18.410 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7393904 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-15 15:30:18.411 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.732862 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-15 15:30:18.413 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.74031734 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 15:30:18.414 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7391565 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 15:30:27.950 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=The position name is **Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit**.
+2025-09-15 15:31:33.889 +02:00 [INF] QUERY: when is the deadline?
+2025-09-15 15:31:35.993 +02:00 [DBG] MEMORY index=apex source=privacy_notice_ta_ca_interns.pdf country=["Netherlands"] rel=0.7716572 part#1 text=of the application process with the Europol Implementing
+Rules in force (Decision of the Management Board of Europol of 28 February 2019). 
+LEGAL BASES FOR THE PROCESSING OF PERSONAL DATA
+The legal ba…
+2025-09-15 15:31:35.995 +02:00 [DBG] MEMORY index=apex source=privacy_notice_ta_ca_interns.pdf country=["Netherlands"] rel=0.7431002 part#4 text=as from the year as from the year the final proposal is signed by the Authority Authorised to
+Conclude Contracts of Employment (‘AACC’). Data of candidates included on the reserve list are kept
+for at…
+2025-09-15 15:31:35.997 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.76052713 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 15:31:35.999 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.75326383 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-15 15:31:36.001 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.75148547 part#10 text=icated in the vacancy notice. Failure to obtain the requisite security clearance before the expiration of the probationary
+period may be cause for termination of the employment contract.
+Candidates wh…
+2025-09-15 15:31:36.003 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7474755 part#6 text=10 highest scoring candidates. All candidates having a score equal to the 10th
+highest scoring candidate will be invited to take part in the selection procedure. At shortlisting stage, the Selection
+C…
+2025-09-15 15:31:36.005 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.76052713 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 15:31:36.006 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.75326383 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-15 15:31:36.007 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.75148547 part#10 text=icated in the vacancy notice. Failure to obtain the requisite security clearance before the expiration of the probationary
+period may be cause for termination of the employment contract.
+Candidates wh…
+2025-09-15 15:31:36.009 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7474755 part#6 text=10 highest scoring candidates. All candidates having a score equal to the 10th
+highest scoring candidate will be invited to take part in the selection procedure. At shortlisting stage, the Selection
+C…
+2025-09-15 15:31:51.628 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=I'm sorry, but the information provided does not include any details about a deadline. Could you please provide more specific information or check if there is a deadline mentioned elsewhere?
+2025-09-15 15:33:02.987 +02:00 [INF] Ollama connection successful!
+2025-09-15 15:33:03.200 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-15 15:40:59.566 +02:00 [INF] QUERY: so what is this
+2025-09-15 15:41:02.211 +02:00 [DBG] MEMORY index=apex source=privacy_notice_ta_ca_interns.pdf country=["Netherlands"] rel=0.6946823 part#2 text=legal basis for the processing the personal data for interns is the Decision of the Europol Executive
+Director on Internships of 5 May 2023. 
+RECIPIENTS OF THE DATA
+Recipients of the data related to t…
+2025-09-15 15:41:02.217 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.6906767 part#3 text=one of the languages of the Union and a satisfactory knowledge of another
+language of the Union to the extent necessary for the performance of the duties.
+b. Candidates must have
+• A level of educatio…
+2025-09-15 15:41:02.219 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.6888493 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 15:41:02.221 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.6865786 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 15:41:02.223 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.6876787 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-15 15:41:02.224 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.6858531 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 15:41:02.226 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.68473554 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 15:41:02.228 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.6876787 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-15 15:41:02.229 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.6858531 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 15:41:02.231 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.68473554 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 15:54:34.491 +02:00 [INF] QUERY: so what is this?
+2025-09-15 15:54:34.596 +02:00 [DBG] MEMORY index=apex source=privacy_notice_ta_ca_interns.pdf country=["Netherlands"] rel=0.69898343 part#2 text=legal basis for the processing the personal data for interns is the Decision of the Europol Executive
+Director on Internships of 5 May 2023. 
+RECIPIENTS OF THE DATA
+Recipients of the data related to t…
+2025-09-15 15:54:34.598 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.6958151 part#3 text=one of the languages of the Union and a satisfactory knowledge of another
+language of the Union to the extent necessary for the performance of the duties.
+b. Candidates must have
+• A level of educatio…
+2025-09-15 15:54:34.601 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.6936146 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 15:54:34.603 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.692662 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 15:54:34.605 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.6935257 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-15 15:54:34.607 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.69218713 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 15:54:34.609 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.6874676 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 15:54:34.610 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.6935257 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-15 15:54:34.611 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.69218713 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 15:54:34.613 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.6874676 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 15:56:27.295 +02:00 [INF] QUERY: what are you capable of?
+2025-09-15 15:56:30.082 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7487743 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 15:56:30.083 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7471736 part#5 text=and privacy by design principles;• Knowledge of Clean Architecture, Domain Driven Design (DDD), and SOLID principles applied in .NET projects.
+c. General competencies
+Essential:
+Communicating:
+• Excel…
+2025-09-15 15:56:30.085 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7356682 part#6 text=10 highest scoring candidates. All candidates having a score equal to the 10th
+highest scoring candidate will be invited to take part in the selection procedure. At shortlisting stage, the Selection
+C…
+2025-09-15 15:56:30.088 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7351092 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 15:56:30.089 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7315353 part#4 text=8 or later and C# 12;
+• Experience with front-end development using JavaScript and/or TypeScript, with familiarity in popular frameworks such as
+Vue.js or React;
+• Experience in DevOps practices, incl…
+2025-09-15 15:56:30.091 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7487743 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 15:56:30.093 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7471736 part#5 text=and privacy by design principles;• Knowledge of Clean Architecture, Domain Driven Design (DDD), and SOLID principles applied in .NET projects.
+c. General competencies
+Essential:
+Communicating:
+• Excel…
+2025-09-15 15:56:30.095 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7356682 part#6 text=10 highest scoring candidates. All candidates having a score equal to the 10th
+highest scoring candidate will be invited to take part in the selection procedure. At shortlisting stage, the Selection
+C…
+2025-09-15 15:56:30.096 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7351092 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 15:56:30.098 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7315353 part#4 text=8 or later and C# 12;
+• Experience with front-end development using JavaScript and/or TypeScript, with familiarity in popular frameworks such as
+Vue.js or React;
+• Experience in DevOps practices, incl…
+2025-09-15 15:57:38.113 +02:00 [INF] ANSWER model=gemma3:12b index=apex limit=100 minRelevance=0.1 text=Based on the provided information, here's a summary of my capabilities:
+
+**Technical Capabilities:**
+
+*   **Programming:** Proficient in .NET (version 8 or later) and C# 12.
+*   **API & Microservices:…
+2025-09-15 16:05:59.929 +02:00 [INF] QUERY: so what is the name of the position?
+2025-09-15 16:06:00.039 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7687254 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 16:06:00.042 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7650659 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 16:06:00.043 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7446939 part#6 text=10 highest scoring candidates. All candidates having a score equal to the 10th
+highest scoring candidate will be invited to take part in the selection procedure. At shortlisting stage, the Selection
+C…
+2025-09-15 16:06:00.045 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7439499 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-15 16:06:00.047 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.74340415 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 16:06:00.048 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7687254 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 16:06:00.050 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7650659 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 16:06:00.052 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7446939 part#6 text=10 highest scoring candidates. All candidates having a score equal to the 10th
+highest scoring candidate will be invited to take part in the selection procedure. At shortlisting stage, the Selection
+C…
+2025-09-15 16:06:00.053 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7439499 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-15 16:06:00.054 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.74340415 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 16:06:36.866 +02:00 [INF] QUERY: so what is the name of the position?
+2025-09-15 16:06:37.601 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7687254 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 16:06:37.603 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7650659 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 16:06:37.605 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7446939 part#6 text=10 highest scoring candidates. All candidates having a score equal to the 10th
+highest scoring candidate will be invited to take part in the selection procedure. At shortlisting stage, the Selection
+C…
+2025-09-15 16:06:37.606 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7439499 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-15 16:06:37.608 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.74340415 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 16:06:37.609 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7687254 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 16:06:37.610 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7650659 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 16:06:37.612 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7446939 part#6 text=10 highest scoring candidates. All candidates having a score equal to the 10th
+highest scoring candidate will be invited to take part in the selection procedure. At shortlisting stage, the Selection
+C…
+2025-09-15 16:06:37.613 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7439499 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-15 16:06:37.615 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.74340415 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 16:06:55.871 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=The name of the position is **Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)**.
+2025-09-15 16:56:37.218 +02:00 [INF] Ollama connection successful!
+2025-09-15 16:56:37.619 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-15 17:01:26.013 +02:00 [INF] QUERY: what is the name of the position?
+2025-09-15 17:01:26.120 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.77716285 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 17:01:26.126 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7696713 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 17:01:26.129 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7532869 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-15 17:01:26.132 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7532276 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 17:01:26.134 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7491132 part#6 text=10 highest scoring candidates. All candidates having a score equal to the 10th
+highest scoring candidate will be invited to take part in the selection procedure. At shortlisting stage, the Selection
+C…
+2025-09-15 17:01:26.136 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.77716285 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 17:01:26.139 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7696713 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 17:01:26.142 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7532869 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-15 17:01:26.145 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7532276 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 17:01:26.148 +02:00 [DBG] MEMORY index=apex source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7494778 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 17:01:48.794 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=The name of the position is **"Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)"**.
+2025-09-15 17:01:48.797 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#0(rel=0,777), #2(rel=0,770), #8(rel=0,753)]
+2025-09-15 17:01:48.799 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#0(rel=0,777), #2(rel=0,770), #8(rel=0,753)]
+2025-09-15 17:01:48.800 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-3effc794 source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#0(rel=0,749)]
+2025-09-15 17:10:05.550 +02:00 [INF] Ollama connection successful!
+2025-09-15 17:10:05.753 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-15 17:10:21.491 +02:00 [INF] QUERY: what is this?
+2025-09-15 17:10:21.601 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-3effc794 source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.70594573 part#3 text=one of the languages of the Union and a satisfactory knowledge of another
+language of the Union to the extent necessary for the performance of the duties.
+b. Candidates must have
+• A level of educatio…
+2025-09-15 17:10:21.614 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-3effc794 source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.70144534 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 17:10:21.617 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-3effc794 source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.6971288 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 17:10:21.621 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.6968039 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 17:10:21.624 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.69497067 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-15 17:10:21.627 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.6968039 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 17:10:21.628 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.69497067 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-15 17:10:21.630 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.6845273 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 17:10:21.631 +02:00 [DBG] MEMORY index=apex docId=privacy_notice_t-a072a334 source=privacy_notice_ta_ca_interns.pdf country=["Netherlands"] rel=0.69514656 part#2 text=legal basis for the processing the personal data for interns is the Decision of the Europol Executive
+Director on Internships of 5 May 2023. 
+RECIPIENTS OF THE DATA
+Recipients of the data related to t…
+2025-09-15 17:10:21.633 +02:00 [DBG] MEMORY index=apex docId=privacy_notice_t-a072a334 source=privacy_notice_ta_ca_interns.pdf country=["Netherlands"] rel=0.6878192 part#0 text=Europol Public Information 
+EDOC #952133v21   
+PRIVACY NOTICE – EXTERNAL RECRUITMENT AND SELECTION PROCESS FOR TEMPORARY
+AGENTS (TA), CONTRACT AGENTS (CA) AND INTERNS 
+Regulation (EU) 2018/1725 of the…
+2025-09-15 17:11:12.938 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=This is a job advertisement for the position of **Senior Specialist – Application Engineering & Development - .NET** within the Solution Delivery Unit at Europol. The document provides detailed inform…
+2025-09-15 17:11:12.941 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-3effc794 source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#3(rel=0,706), #0(rel=0,701), #2(rel=0,697)]
+2025-09-15 17:11:12.943 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#0(rel=0,697), #1(rel=0,695)]
+2025-09-15 17:11:12.943 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#0(rel=0,697), #1(rel=0,695), #9(rel=0,685)]
+2025-09-15 17:11:12.944 +02:00 [INF] CITATIONS index=apex docId=privacy_notice_t-a072a334 source=privacy_notice_ta_ca_interns.pdf parts=[#2(rel=0,695), #0(rel=0,688)]
+2025-09-15 17:36:46.432 +02:00 [INF] QUERY: what can you do?
+2025-09-15 17:36:46.529 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.73509115 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 17:36:46.533 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.73265654 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 17:36:46.535 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7294315 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 17:36:46.537 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7209248 part#5 text=and privacy by design principles;• Knowledge of Clean Architecture, Domain Driven Design (DDD), and SOLID principles applied in .NET projects.
+c. General competencies
+Essential:
+Communicating:
+• Excel…
+2025-09-15 17:36:46.539 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.71741676 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-15 17:36:46.540 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.73509115 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 17:36:46.543 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.73265654 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 17:36:46.545 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7294315 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 17:36:46.547 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7209248 part#5 text=and privacy by design principles;• Knowledge of Clean Architecture, Domain Driven Design (DDD), and SOLID principles applied in .NET projects.
+c. General competencies
+Essential:
+Communicating:
+• Excel…
+2025-09-15 17:36:46.549 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.71741676 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-15 17:37:57.207 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=Based on the provided information, I can help you with the following regarding the **Senior Specialist – Application Engineering & Development - .NET** position at Europol:
+
+1. **Job Description and D…
+2025-09-15 17:37:57.209 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#0(rel=0,735), #2(rel=0,733), #9(rel=0,729)]
+2025-09-15 17:37:57.211 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#0(rel=0,735), #2(rel=0,733), #9(rel=0,729)]
+2025-09-15 17:54:28.353 +02:00 [INF] QUERY: what is the name of position?
+2025-09-15 17:54:28.448 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7659474 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 17:54:28.449 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.75683737 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 17:54:28.451 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7451992 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 17:54:28.453 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7439903 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-15 17:54:28.454 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7388544 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-15 17:54:28.455 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7659474 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 17:54:28.457 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.75683737 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 17:54:28.459 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7451992 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 17:54:28.460 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7439903 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-15 17:54:28.462 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-3effc794 source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7461834 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 17:55:02.487 +02:00 [INF] QUERY: what is the name of position?
+2025-09-15 17:55:03.235 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7659474 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 17:55:03.237 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.75683737 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 17:55:03.238 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7451992 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 17:55:03.241 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7439903 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-15 17:55:03.242 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7388544 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-15 17:55:03.243 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7659474 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 17:55:03.245 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.75683737 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 17:55:03.246 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7451992 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 17:55:03.248 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7439903 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-15 17:55:03.250 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-3effc794 source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7461834 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 17:55:22.613 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=The name of the position is **"Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)"**. It may also be referred to as **"Senior Specialist - Head of Team - So…
+2025-09-15 17:55:22.615 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#0(rel=0,766), #2(rel=0,757), #9(rel=0,745)]
+2025-09-15 17:55:22.617 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#0(rel=0,766), #2(rel=0,757), #9(rel=0,745)]
+2025-09-15 17:55:22.618 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-3effc794 source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#0(rel=0,746)]
+2025-09-15 18:02:15.120 +02:00 [INF] QUERY: so what is the position name?
+2025-09-15 18:02:15.216 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7539446 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 18:02:15.218 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.75319207 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 18:02:15.219 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.73457867 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-15 18:02:15.221 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7303825 part#6 text=10 highest scoring candidates. All candidates having a score equal to the 10th
+highest scoring candidate will be invited to take part in the selection procedure. At shortlisting stage, the Selection
+C…
+2025-09-15 18:02:15.223 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7539446 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 18:02:15.224 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.75319207 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 18:02:15.226 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.73457867 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-15 18:02:15.227 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7303825 part#6 text=10 highest scoring candidates. All candidates having a score equal to the 10th
+highest scoring candidate will be invited to take part in the selection procedure. At shortlisting stage, the Selection
+C…
+2025-09-15 18:02:15.229 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-3effc794 source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.73893785 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 18:02:15.230 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-3effc794 source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.73628384 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 18:02:35.524 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=The position name is "Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)."
+2025-09-15 18:02:35.527 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#0(rel=0,754), #2(rel=0,753), #1(rel=0,735)]
+2025-09-15 18:02:35.528 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#0(rel=0,754), #2(rel=0,753), #1(rel=0,735)]
+2025-09-15 18:02:35.529 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-3effc794 source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#2(rel=0,739), #0(rel=0,736)]
+2025-09-15 18:04:01.903 +02:00 [INF] QUERY: what is the position name? give me the response in markdown format
+2025-09-15 18:04:04.704 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7591789 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 18:04:04.706 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.753439 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 18:04:04.708 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.73684204 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-15 18:04:04.710 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7365052 part#4 text=8 or later and C# 12;
+• Experience with front-end development using JavaScript and/or TypeScript, with familiarity in popular frameworks such as
+Vue.js or React;
+• Experience in DevOps practices, incl…
+2025-09-15 18:04:04.711 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.73582625 part#6 text=10 highest scoring candidates. All candidates having a score equal to the 10th
+highest scoring candidate will be invited to take part in the selection procedure. At shortlisting stage, the Selection
+C…
+2025-09-15 18:04:04.714 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7591789 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-15 18:04:04.715 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.753439 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 18:04:04.717 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.73684204 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-15 18:04:04.718 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7365052 part#4 text=8 or later and C# 12;
+• Experience with front-end development using JavaScript and/or TypeScript, with familiarity in popular frameworks such as
+Vue.js or React;
+• Experience in DevOps practices, incl…
+2025-09-15 18:04:04.720 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.73582625 part#6 text=10 highest scoring candidates. All candidates having a score equal to the 10th
+highest scoring candidate will be invited to take part in the selection procedure. At shortlisting stage, the Selection
+C…
+2025-09-15 18:04:27.005 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=```markdown
+**Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit**
+```
+2025-09-15 18:04:27.007 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#0(rel=0,759), #2(rel=0,753), #1(rel=0,737)]
+2025-09-15 18:04:27.008 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#0(rel=0,759), #2(rel=0,753), #1(rel=0,737)]
+2025-09-15 18:05:07.965 +02:00 [INF] QUERY: what do you know?
+2025-09-15 18:05:08.718 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7194177 part#6 text=10 highest scoring candidates. All candidates having a score equal to the 10th
+highest scoring candidate will be invited to take part in the selection procedure. At shortlisting stage, the Selection
+C…
+2025-09-15 18:05:08.722 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7187149 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-15 18:05:08.727 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7146374 part#3 text=one of the languages of the Union and a satisfactory knowledge of another
+language of the Union to the extent necessary for the performance of the duties.
+b. Candidates must have
+• A level of educatio…
+2025-09-15 18:05:08.729 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7138681 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 18:05:08.731 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7094823 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 18:05:08.733 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7194177 part#6 text=10 highest scoring candidates. All candidates having a score equal to the 10th
+highest scoring candidate will be invited to take part in the selection procedure. At shortlisting stage, the Selection
+C…
+2025-09-15 18:05:08.735 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7187149 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-15 18:05:08.737 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7146374 part#3 text=one of the languages of the Union and a satisfactory knowledge of another
+language of the Union to the extent necessary for the performance of the duties.
+b. Candidates must have
+• A level of educatio…
+2025-09-15 18:05:08.739 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7138681 part#9 text=the necessary clearance level is
+not granted or extended.
+The requested level of security clearance for this post is: CONFIDENTIEL UE/EU CONFIDENTIAL.
+Additional conditions:
+Fulfil the condition stipu…
+2025-09-15 18:05:08.741 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-3effc794 source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7168561 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-15 18:06:43.812 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=Based on the provided information, here's what I know:
+
+### Position Details:
+- **Job Title**: Senior Specialist – Application Engineering & Development - .NET
+- **Unit**: Solution Delivery Unit
+- **G…
+2025-09-15 18:06:43.814 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#6(rel=0,719), #1(rel=0,719), #3(rel=0,715)]
+2025-09-15 18:06:43.815 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#6(rel=0,719), #1(rel=0,719), #3(rel=0,715)]
+2025-09-15 18:06:43.817 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-3effc794 source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#2(rel=0,717)]

@@ -95,6 +95,10 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
         }
     }
 
+    /// <summary>
+    /// Retrieves a list of indexed documents from Kernel Memory.
+    /// Supports optional filtering by country and limiting the number of results.
+    /// </summary>
     [HttpGet("/indexed")]
     public async Task<IActionResult> GetIndexedDocumentsAsync([FromQuery] string? country = null, [FromQuery] int? limit = null)
     {
@@ -411,8 +415,8 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
                     ? ""
                     : (p.Text.Length > 100 ? (p.Text.Length >= 200 ? p.Text[..200] + "…" : p.Text + "…") : p.Text);
 
-                Log.Debug("MEMORY index={Index} source={Source} country={Country} rel={Relevance} part#{Partition} text={Preview}",
-                    r.Index, r.SourceName ?? r.Link, p.Tags["country"], p.Relevance, p.PartitionNumber, preview);
+                Log.Debug("MEMORY index={Index} docId={DocumentId} source={Source} country={Country} rel={Relevance} part#{Partition} text={Preview}",
+                    r.Index, r.DocumentId, r.SourceName, p.Tags["country"], p.Relevance, p.PartitionNumber, preview);
             }
         }
 
@@ -455,7 +459,7 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
                 _rag.MinRelevance,
                 (((answerText ?? string.Empty).Length > 200) ? answerText![..200] + "…" : answerText));
 
-            // Build a compact citation DTO
+            // Build a compact citation DTO (top 3 chunks per source)
             var citations = (search.Results ?? [])
                 .Select(r => new
                 {
@@ -478,6 +482,27 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
                         .ToArray()
                 })
                 .ToArray();
+
+            // Log which KM chunks were referenced
+            if (citations.Length > 0)
+            {
+                foreach (var c in citations)
+                {
+                    var parts = c.Partitions;
+                    var partsSummary = parts.Length == 0
+                        ? "<none>"
+                        : string.Join(", ", parts.Select(p => $"#{p.PartitionNumber}" + (p.SectionNumber > 0 ? $"/p{p.SectionNumber}" : "") + $"(rel={p.Relevance:F3})"));
+                    Log.Information("CITATIONS index={Index} docId={DocId} source={Source} parts=[{Parts}]",
+                        c.Index,
+                        string.IsNullOrWhiteSpace(c.DocumentId) ? "<none>" : c.DocumentId,
+                        c.SourceName ?? c.Link ?? c.SourceUrl ?? "<unknown>",
+                        partsSummary);
+                }
+            }
+            else
+            {
+                Log.Information("CITATIONS <none>");
+            }
 
             return Ok(new
             {
