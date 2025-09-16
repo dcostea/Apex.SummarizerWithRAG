@@ -2290,3 +2290,332 @@ The incumbent carries out…
 2025-09-16 10:30:36.706 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-3effc794 source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#0(rel=0,740), #2(rel=0,739)]
 2025-09-16 10:33:41.180 +02:00 [INF] Ollama connection successful!
 2025-09-16 10:33:41.403 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-16 10:33:58.393 +02:00 [INF] QUERY: what is the position name?
+2025-09-16 10:33:58.502 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7601048 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-16 10:33:58.511 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7549665 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-16 10:33:58.513 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7393904 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-16 10:33:58.515 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.732862 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-16 10:33:58.516 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7601048 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-16 10:33:58.518 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7549665 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-16 10:33:58.520 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7393904 part#1 text=service providers to ensure alignment with
+technical standards and project objectives.
+Reporting lines:
+The incumbent will report to the Senior Specialist - Head of Team - Solution Delivery.
+Privacy N…
+2025-09-16 10:33:58.521 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.732862 part#8 text=of employment will be The Hague, The Netherlands.For further information on terms and conditions, please consult the EUSR/CEOS available on Europol’s website.
+Probation period
+Engagement for this post…
+2025-09-16 10:33:58.523 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-3effc794 source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.74031734 part#0 text=01/07/2025
+Europol/2025/TA/AD7/719
+Capabilities Directorate
+01/09/2025
+VACANCY NOTICE
+Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)
+Senior Specialist -…
+2025-09-16 10:33:58.524 +02:00 [DBG] MEMORY index=apex docId=senior_specialis-3effc794 source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf country=["Netherlands"] rel=0.7391565 part#2 text=additional information, please consult the applicable privacy notice available on Europol’s website, also inserted in the
+EUROPOL RECRUITMENT GUIDELINES.
+FUNCTIONS AND DUTIES
+The incumbent carries out…
+2025-09-16 10:34:08.324 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=The position name is **Senior Specialist – Application Engineering & Development - .NET, Solution Delivery Unit (AD7)**.
+2025-09-16 10:34:08.327 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-fdf7719f source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#0(rel=0,760), #2(rel=0,755), #1(rel=0,739)]
+2025-09-16 10:34:08.329 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-b1646f0c source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#0(rel=0,760), #2(rel=0,755), #1(rel=0,739)]
+2025-09-16 10:34:08.330 +02:00 [INF] CITATIONS index=apex docId=senior_specialis-3effc794 source=Senior Specialist – Application Engineering _ Development - .NET, Solution Delivery Unit  (AD7).pdf parts=[#0(rel=0,740), #2(rel=0,739)]
+2025-09-16 12:25:10.992 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=senior_specialis-3effc794, index=apex)
+2025-09-16 12:25:22.314 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=senior_specialis-b1646f0c, index=apex)
+2025-09-16 12:25:37.529 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=privacy_notice_t-a072a334, index=apex)
+2025-09-16 12:25:40.557 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=senior_specialis-b1646f0c, index=apex)
+2025-09-16 12:25:56.883 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=senior_specialis-fdf7719f, index=apex)
+2025-09-16 12:26:06.890 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=senior_specialis-fdf7719f, index=apex)
+2025-09-16 12:26:16.921 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=senior_specialis-3effc794, index=apex)
+2025-09-16 12:28:44.890 +02:00 [DBG] MEMORY Ingesting stream fileName='ESOCC.pdf'...
+2025-09-16 12:28:48.050 +02:00 [DBG] MEMORY Ingest success fileName='ESOCC.pdf' docId='esocc-69d26505'
+2025-09-16 12:28:57.535 +02:00 [INF] QUERY: what is for Slovakia?
+2025-09-16 12:28:57.571 +02:00 [DBG] MEMORY index=apex docId=esocc-69d26505 source=ESOCC.pdf country=["Netherlands"] rel=0.7769512 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-16 12:29:27.833 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=Based on the provided information, Slovakia is involved in the following activities:
+
+1. **Action Day (Cannabis and Synthetics)**:
+   - **Date**: 16-17 August 2025
+   - **Details**: Slovakia is organi…
+2025-09-16 12:29:27.836 +02:00 [INF] CITATIONS index=apex docId=esocc-69d26505 source=ESOCC.pdf parts=[#0(rel=0,777)]
+2025-09-16 12:42:25.804 +02:00 [INF] QUERY: what is the post name?
+2025-09-16 12:42:25.894 +02:00 [DBG] MEMORY index=apex docId=esocc-69d26505 source=ESOCC.pdf country=["Netherlands"] rel=0.69250864 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-16 12:42:46.980 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=The document does not provide any post names or titles for individuals. Therefore, the answer is:
+
+**INFO NOT FOUND**
+2025-09-16 12:42:46.984 +02:00 [INF] CITATIONS index=apex docId=esocc-69d26505 source=ESOCC.pdf parts=[#0(rel=0,693)]
+2025-09-16 12:43:57.520 +02:00 [INF] QUERY: name of the position?
+2025-09-16 12:43:57.610 +02:00 [DBG] MEMORY index=apex docId=esocc-69d26505 source=ESOCC.pdf country=["Netherlands"] rel=0.716823 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-16 12:44:06.390 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=Based on the information provided, I don't have the specific position names. Could you please provide more details or clarify your request?
+2025-09-16 12:44:06.391 +02:00 [INF] CITATIONS index=apex docId=esocc-69d26505 source=ESOCC.pdf parts=[#0(rel=0,717)]
+2025-09-16 12:47:49.482 +02:00 [INF] QUERY: what is the position name?
+2025-09-16 12:47:49.517 +02:00 [DBG] MEMORY index=apex docId=esocc-69d26505 source=ESOCC.pdf country=["Netherlands"] rel=0.70222944 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-16 12:48:07.736 +02:00 [INF] QUERY: what is the position name?
+2025-09-16 12:48:07.769 +02:00 [DBG] MEMORY index=apex docId=esocc-69d26505 source=ESOCC.pdf country=["Netherlands"] rel=0.70222944 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-16 12:48:11.096 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=Based on the information provided, the answer is:
+
+**INFO NOT FOUND**
+2025-09-16 12:48:11.097 +02:00 [INF] CITATIONS index=apex docId=esocc-69d26505 source=ESOCC.pdf parts=[#0(rel=0,702)]
+2025-09-16 12:53:31.358 +02:00 [INF] QUERY: what are the activities per team?
+2025-09-16 12:53:34.009 +02:00 [DBG] MEMORY index=apex docId=esocc-69d26505 source=ESOCC.pdf country=["Netherlands"] rel=0.77472806 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-16 12:54:19.694 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=Based on the provided information, here are the activities per team for the specified weeks in August 2025:
+
+### O2-1 Team:
+1. **Cocaine and Heroin (Op IMPROVEMENT/1234567)**
+   - **Date:** 15/08/2025…
+2025-09-16 12:54:19.697 +02:00 [INF] CITATIONS index=apex docId=esocc-69d26505 source=ESOCC.pdf parts=[#0(rel=0,775)]
+2025-09-16 13:22:49.980 +02:00 [INF] QUERY: what are the activities per team?
+2025-09-16 13:22:50.080 +02:00 [DBG] MEMORY index=apex docId=esocc-69d26505 source=ESOCC.pdf country=["Netherlands"] rel=0.77472806 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-16 13:23:30.528 +02:00 [INF] QUERY: what are the activities per team?
+2025-09-16 13:23:31.119 +02:00 [DBG] MEMORY index=apex docId=esocc-69d26505 source=ESOCC.pdf country=["Netherlands"] rel=0.77472806 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-16 13:23:57.240 +02:00 [INF] ANSWER model=phi4-mini:3.8b index=apex limit=100 minRelevance=0.1 text=Based on the provided information, here is a summary of each team's activity for August 2025:
+
+Team/AP O2-1:
+- Cocaine and Heroin (Op IMPROVEMENT/1234567): On 15th Aug 2025, there was an operational m…
+2025-09-16 13:23:57.242 +02:00 [INF] CITATIONS index=apex docId=esocc-69d26505 source=ESOCC.pdf parts=[#0(rel=0,775)]
+2025-09-16 13:24:16.025 +02:00 [INF] QUERY: what are the activities per team?
+2025-09-16 13:24:16.061 +02:00 [DBG] MEMORY index=apex docId=esocc-69d26505 source=ESOCC.pdf country=["Netherlands"] rel=0.77472806 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-16 13:24:53.047 +02:00 [INF] ANSWER model=gemma3:4b index=apex limit=100 minRelevance=0.1 text=Here’s a breakdown of the activities per team, based on the provided information:
+
+*   **O2-1 COCAINE AND HEROIN:** Operational meeting with Slovakia, Australia, and Belgium to prepare an action day t…
+2025-09-16 13:24:53.051 +02:00 [INF] CITATIONS index=apex docId=esocc-69d26505 source=ESOCC.pdf parts=[#0(rel=0,775)]
+2025-09-16 13:25:04.457 +02:00 [INF] QUERY: what are the activities per team?
+2025-09-16 13:25:05.044 +02:00 [DBG] MEMORY index=apex docId=esocc-69d26505 source=ESOCC.pdf country=["Netherlands"] rel=0.77472806 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-16 13:25:52.792 +02:00 [INF] ANSWER model=qwen3:8b index=apex limit=100 minRelevance=0.1 text=<think>
+Okay, let's see. The user is asking for the activities per team based on the provided information. Let me go through the data again to make sure I get everything right.
+
+First, there are three…
+2025-09-16 13:25:52.796 +02:00 [INF] CITATIONS index=apex docId=esocc-69d26505 source=ESOCC.pdf parts=[#0(rel=0,775)]
+2025-09-16 13:26:07.839 +02:00 [INF] QUERY: what are the activities per team?
+2025-09-16 13:26:08.455 +02:00 [DBG] MEMORY index=apex docId=esocc-69d26505 source=ESOCC.pdf country=["Netherlands"] rel=0.77472806 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-16 13:27:24.624 +02:00 [INF] ANSWER model=second_constantine/gpt-oss-u:20b index=apex limit=100 minRelevance=0.1 text=**Activities per Team**
+
+| Team | Focus | Activities (date & description) |
+|------|-------|--------------------------------|
+| **O2‑1** | Cocaine & Heroin, Cannabis & Synthetics, Weapons & Explosives…
+2025-09-16 13:27:24.626 +02:00 [INF] CITATIONS index=apex docId=esocc-69d26505 source=ESOCC.pdf parts=[#0(rel=0,775)]
+2025-09-16 13:27:47.453 +02:00 [INF] QUERY: what do you have for Slovakia?
+2025-09-16 13:27:50.078 +02:00 [DBG] MEMORY index=apex docId=esocc-69d26505 source=ESOCC.pdf country=["Netherlands"] rel=0.7661618 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-16 13:28:25.648 +02:00 [INF] ANSWER model=second_constantine/gpt-oss-u:20b index=apex limit=100 minRelevance=0.1 text=**Slovakia – Week 35 (25‑31 August 2025)**  
+
+| Date | Activity | Description | Partners | Notes |
+|------|----------|-------------|----------|-------|
+| 25‑31 Aug | **Team/AP OP /SIENA** | Operations…
+2025-09-16 13:28:25.650 +02:00 [INF] CITATIONS index=apex docId=esocc-69d26505 source=ESOCC.pdf parts=[#0(rel=0,766)]
+2025-09-16 13:28:44.067 +02:00 [DBG] MEMORY Deleted document: 'ESOCC.pdf' (docId=esocc-69d26505, index=apex)
+2025-09-16 13:29:10.001 +02:00 [DBG] MEMORY Ingesting stream fileName='Dubai Brochure.pdf'...
+2025-09-16 13:29:13.131 +02:00 [DBG] MEMORY Ingest success fileName='Dubai Brochure.pdf' docId='dubai_brochure-2d8cb8e5'
+2025-09-16 13:29:13.133 +02:00 [DBG] MEMORY Ingesting stream fileName='Las Vegas Brochure.pdf'...
+2025-09-16 13:29:14.170 +02:00 [DBG] MEMORY Ingest success fileName='Las Vegas Brochure.pdf' docId='las_vegas_brochu-9b6b44d1'
+2025-09-16 13:29:14.173 +02:00 [DBG] MEMORY Ingesting stream fileName='London Brochure.pdf'...
+2025-09-16 13:29:15.197 +02:00 [DBG] MEMORY Ingest success fileName='London Brochure.pdf' docId='london_brochure-cfc88c67'
+2025-09-16 13:29:15.199 +02:00 [DBG] MEMORY Ingesting stream fileName='Margies Travel Company Info.pdf'...
+2025-09-16 13:29:16.284 +02:00 [DBG] MEMORY Ingest success fileName='Margies Travel Company Info.pdf' docId='margies_travel_c-d4a5a853'
+2025-09-16 13:29:16.287 +02:00 [DBG] MEMORY Ingesting stream fileName='New York Brochure.pdf'...
+2025-09-16 13:29:17.282 +02:00 [DBG] MEMORY Ingest success fileName='New York Brochure.pdf' docId='new_york_brochur-6a7246c8'
+2025-09-16 13:29:17.284 +02:00 [DBG] MEMORY Ingesting stream fileName='San Francisco Brochure.pdf'...
+2025-09-16 13:29:18.316 +02:00 [DBG] MEMORY Ingest success fileName='San Francisco Brochure.pdf' docId='san_francisco_br-882ddd87'
+2025-09-16 13:29:29.272 +02:00 [INF] QUERY: give the list of hotels you have
+2025-09-16 13:29:29.326 +02:00 [DBG] MEMORY index=apex docId=las_vegas_brochu-9b6b44d1 source=Las Vegas Brochure.pdf country=["Netherlands"] rel=0.80066514 part#0 text=Margie’s Travel Presents…
+Las Vegas 
+Las Vegas, officially
+the City of Las Vegas
+and often known
+simply as Vegas, is the
+28th-most populated
+city in the United
+States, the most
+populated city in the
+s…
+2025-09-16 13:29:29.328 +02:00 [DBG] MEMORY index=apex docId=san_francisco_br-882ddd87 source=San Francisco Brochure.pdf country=["Netherlands"] rel=0.7932508 part#0 text=Margie’s Travel Presents…
+San Francisco
+San Francisco, officially the City and County of San
+Francisco, is the cultural, commercial, and financial
+center of Northern California. It is the birthplace o…
+2025-09-16 13:29:29.329 +02:00 [DBG] MEMORY index=apex docId=dubai_brochure-2d8cb8e5 source=Dubai Brochure.pdf country=["Netherlands"] rel=0.7855232 part#0 text=Margie’s Travel Presents…
+Dubai 
+Dubai is the largest and most populous city in the United
+Arab Emirates. It is located on the southeast coast of the
+Persian Gulf and is the capital of the Emirate of …
+2025-09-16 13:29:29.331 +02:00 [DBG] MEMORY index=apex docId=new_york_brochur-6a7246c8 source=New York Brochure.pdf country=["Netherlands"] rel=0.7783139 part#0 text=Margie’s Travel Presents…
+New York
+The City of New York, often called New York City or simply
+New York, is the most populous city in the United States.
+With an estimated 2015 population of 8,550,405 d…
+2025-09-16 13:29:29.332 +02:00 [DBG] MEMORY index=apex docId=london_brochure-cfc88c67 source=London Brochure.pdf country=["Netherlands"] rel=0.76467216 part#0 text=Margie’s Travel Presents…
+London
+London is the capital and
+most populous city of
+England and the United
+Kingdom. Standing on the
+River Thames in the south
+east of the island of Great
+Britain, London h…
+2025-09-16 13:29:29.333 +02:00 [DBG] MEMORY index=apex docId=margies_travel_c-d4a5a853 source=Margies Travel Company Info.pdf country=["Netherlands"] rel=0.74768525 part#0 text=Wherever you want to go, Margie’s Travel can get you there!
+Margie’s Travel is a world-leading travel agency, combining international reach with local
+expertise. Just tell us where you want to go, and…
+2025-09-16 13:30:18.191 +02:00 [INF] ANSWER model=second_constantine/gpt-oss-u:20b index=apex limit=100 minRelevance=0.1 text=Here’s a quick‑look list of every hotel that Margie’s Travel is offering, grouped by city:
+
+| City | Hotel | Key Feature |
+|------|-------|-------------|
+| **Las Vegas** | 1. The Volcano Hotel – casin…
+2025-09-16 13:30:18.193 +02:00 [INF] CITATIONS index=apex docId=las_vegas_brochu-9b6b44d1 source=Las Vegas Brochure.pdf parts=[#0(rel=0,801)]
+2025-09-16 13:30:18.195 +02:00 [INF] CITATIONS index=apex docId=san_francisco_br-882ddd87 source=San Francisco Brochure.pdf parts=[#0(rel=0,793)]
+2025-09-16 13:30:18.197 +02:00 [INF] CITATIONS index=apex docId=dubai_brochure-2d8cb8e5 source=Dubai Brochure.pdf parts=[#0(rel=0,786)]
+2025-09-16 13:30:18.198 +02:00 [INF] CITATIONS index=apex docId=new_york_brochur-6a7246c8 source=New York Brochure.pdf parts=[#0(rel=0,778)]
+2025-09-16 13:30:18.199 +02:00 [INF] CITATIONS index=apex docId=london_brochure-cfc88c67 source=London Brochure.pdf parts=[#0(rel=0,765)]
+2025-09-16 13:30:18.200 +02:00 [INF] CITATIONS index=apex docId=margies_travel_c-d4a5a853 source=Margies Travel Company Info.pdf parts=[#0(rel=0,748)]
+2025-09-16 13:30:49.307 +02:00 [INF] QUERY: give me a list with all hotels
+2025-09-16 13:30:52.165 +02:00 [DBG] MEMORY index=apex docId=las_vegas_brochu-9b6b44d1 source=Las Vegas Brochure.pdf country=["Netherlands"] rel=0.7803265 part#0 text=Margie’s Travel Presents…
+Las Vegas 
+Las Vegas, officially
+the City of Las Vegas
+and often known
+simply as Vegas, is the
+28th-most populated
+city in the United
+States, the most
+populated city in the
+s…
+2025-09-16 13:30:52.167 +02:00 [DBG] MEMORY index=apex docId=san_francisco_br-882ddd87 source=San Francisco Brochure.pdf country=["Netherlands"] rel=0.77604586 part#0 text=Margie’s Travel Presents…
+San Francisco
+San Francisco, officially the City and County of San
+Francisco, is the cultural, commercial, and financial
+center of Northern California. It is the birthplace o…
+2025-09-16 13:30:52.169 +02:00 [DBG] MEMORY index=apex docId=dubai_brochure-2d8cb8e5 source=Dubai Brochure.pdf country=["Netherlands"] rel=0.77383924 part#0 text=Margie’s Travel Presents…
+Dubai 
+Dubai is the largest and most populous city in the United
+Arab Emirates. It is located on the southeast coast of the
+Persian Gulf and is the capital of the Emirate of …
+2025-09-16 13:30:52.171 +02:00 [DBG] MEMORY index=apex docId=new_york_brochur-6a7246c8 source=New York Brochure.pdf country=["Netherlands"] rel=0.76401716 part#0 text=Margie’s Travel Presents…
+New York
+The City of New York, often called New York City or simply
+New York, is the most populous city in the United States.
+With an estimated 2015 population of 8,550,405 d…
+2025-09-16 13:30:52.172 +02:00 [DBG] MEMORY index=apex docId=london_brochure-cfc88c67 source=London Brochure.pdf country=["Netherlands"] rel=0.7494575 part#0 text=Margie’s Travel Presents…
+London
+London is the capital and
+most populous city of
+England and the United
+Kingdom. Standing on the
+River Thames in the south
+east of the island of Great
+Britain, London h…
+2025-09-16 13:30:52.174 +02:00 [DBG] MEMORY index=apex docId=margies_travel_c-d4a5a853 source=Margies Travel Company Info.pdf country=["Netherlands"] rel=0.7333745 part#0 text=Wherever you want to go, Margie’s Travel can get you there!
+Margie’s Travel is a world-leading travel agency, combining international reach with local
+expertise. Just tell us where you want to go, and…
+2025-09-16 13:31:17.964 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=Here is the list of all the hotels mentioned:
+
+### Las Vegas Hotels:
+1. The Volcano Hotel
+2. The Fountain Hotel
+3. The Canal Hotel
+
+### San Francisco Hotels:
+1. The Lombard Hotel
+2. The Wharf Hotel
+
+#…
+2025-09-16 13:31:17.966 +02:00 [INF] CITATIONS index=apex docId=las_vegas_brochu-9b6b44d1 source=Las Vegas Brochure.pdf parts=[#0(rel=0,780)]
+2025-09-16 13:31:17.967 +02:00 [INF] CITATIONS index=apex docId=san_francisco_br-882ddd87 source=San Francisco Brochure.pdf parts=[#0(rel=0,776)]
+2025-09-16 13:31:17.968 +02:00 [INF] CITATIONS index=apex docId=dubai_brochure-2d8cb8e5 source=Dubai Brochure.pdf parts=[#0(rel=0,774)]
+2025-09-16 13:31:17.969 +02:00 [INF] CITATIONS index=apex docId=new_york_brochur-6a7246c8 source=New York Brochure.pdf parts=[#0(rel=0,764)]
+2025-09-16 13:31:17.971 +02:00 [INF] CITATIONS index=apex docId=london_brochure-cfc88c67 source=London Brochure.pdf parts=[#0(rel=0,749)]
+2025-09-16 13:31:17.972 +02:00 [INF] CITATIONS index=apex docId=margies_travel_c-d4a5a853 source=Margies Travel Company Info.pdf parts=[#0(rel=0,733)]
+2025-09-16 13:33:18.015 +02:00 [INF] Ollama connection successful!
+2025-09-16 13:33:18.226 +02:00 [INF] Apex.Summarizer application started successfully

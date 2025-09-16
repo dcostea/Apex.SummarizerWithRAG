@@ -1,0 +1,131 @@
+{
+  "index": "apex",
+  "document_id": "london_brochure-cfc88c67",
+  "execution_id": "743b1e5ab8584e13b687176f5e7d7272",
+  "steps": [
+    "extract",
+    "partition",
+    "gen_embeddings",
+    "save_records"
+  ],
+  "remaining_steps": [],
+  "completed_steps": [
+    "extract",
+    "partition",
+    "gen_embeddings",
+    "save_records"
+  ],
+  "tags": {
+    "country": [
+      "Netherlands"
+    ]
+  },
+  "creation": "2025-09-16T11:29:14.1739013+00:00",
+  "last_update": "2025-09-16T11:29:15.1965849+00:00",
+  "files": [
+    {
+      "id": "e3587112ca0c4daf948d5eaae97a1912",
+      "name": "London Brochure.pdf",
+      "size": 450635,
+      "mime_type": "application/pdf",
+      "artifact_type": "Undefined",
+      "partition_number": 0,
+      "section_number": 0,
+      "tags": {
+        "country": [
+          "Netherlands"
+        ]
+      },
+      "processed_by": [
+        "extract"
+      ],
+      "generated_files": {
+        "London Brochure.pdf.extract.txt": {
+          "id": "36685e6a3a7741929a401b12458c3af9",
+          "name": "London Brochure.pdf.extract.txt",
+          "size": 1262,
+          "mime_type": "text/plain",
+          "artifact_type": "ExtractedText",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {
+            "country": [
+              "Netherlands"
+            ]
+          },
+          "parent_id": "e3587112ca0c4daf948d5eaae97a1912",
+          "source_partition_id": "",
+          "content_sha256": "",
+          "processed_by": [
+            "extract",
+            "partition"
+          ]
+        },
+        "London Brochure.pdf.extract.json": {
+          "id": "6b579917ee024496a4f39e831f6980a7",
+          "name": "London Brochure.pdf.extract.json",
+          "size": 1262,
+          "mime_type": "text/plain",
+          "artifact_type": "ExtractedContent",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {
+            "country": [
+              "Netherlands"
+            ]
+          },
+          "parent_id": "e3587112ca0c4daf948d5eaae97a1912",
+          "source_partition_id": "",
+          "content_sha256": "",
+          "processed_by": [
+            "extract"
+          ]
+        },
+        "London Brochure.pdf.partition.0.txt": {
+          "id": "6556eb4ef2d441ddb1ecf86cac772192",
+          "name": "London Brochure.pdf.partition.0.txt",
+          "size": 1262,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {
+            "country": [
+              "Netherlands"
+            ]
+          },
+          "parent_id": "e3587112ca0c4daf948d5eaae97a1912",
+          "source_partition_id": "",
+          "content_sha256": "6733518c63c9524a695d599cf758ff5a9df86fb2a57b5cc131ef0a052c50fa98",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/AI.Ollama.OllamaTextEmbeddingGenerator/__"
+          ]
+        },
+        "London Brochure.pdf.partition.0.txt.AI.Ollama.OllamaTextEmbeddingGenerator.__.text_embedding": {
+          "id": "12c99ab58bcc4d63afb0fe35cced8f39",
+          "name": "London Brochure.pdf.partition.0.txt.AI.Ollama.OllamaTextEmbeddingGenerator.__.text_embedding",
+          "size": 9738,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {
+            "country": [
+              "Netherlands"
+            ]
+          },
+          "parent_id": "e3587112ca0c4daf948d5eaae97a1912",
+          "source_partition_id": "6556eb4ef2d441ddb1ecf86cac772192",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        }
+      }
+    }
+  ],
+  "args": {},
+  "previous_executions_to_purge": []
+}

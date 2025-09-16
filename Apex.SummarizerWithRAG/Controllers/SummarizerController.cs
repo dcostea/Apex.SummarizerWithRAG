@@ -538,17 +538,16 @@ public class SummarizerController(IKernelMemory memory, Kernel kernel, IImportin
                 Timeout = TimeSpan.FromSeconds(10)
             };
 
-            // 1) List all local models
-            using var resp = await http.GetAsync("/api/tags");
-            resp.EnsureSuccessStatusCode();
+            using var response = await http.GetAsync("/api/tags");
+            response.EnsureSuccessStatusCode();
 
-            await using var stream = await resp.Content.ReadAsStreamAsync();
+            await using var stream = await response.Content.ReadAsStreamAsync();
             var data = await JsonSerializer.DeserializeAsync<OllamaTagsResponse>(stream,
                 new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
             var models = (data?.Models ?? [])
                 .Select(m => m.Name)
-                .Where(n => !string.IsNullOrWhiteSpace(n))
+                .Where(n => !string.IsNullOrWhiteSpace(n) && !n.Contains("embed"))
                 .OrderBy(n => n, StringComparer.OrdinalIgnoreCase)
                 .ToArray();
 

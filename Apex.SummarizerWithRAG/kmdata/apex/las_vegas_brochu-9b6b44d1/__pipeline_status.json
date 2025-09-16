@@ -1,0 +1,131 @@
+{
+  "index": "apex",
+  "document_id": "las_vegas_brochu-9b6b44d1",
+  "execution_id": "f4eb99030cbe4b72920db8c321353d17",
+  "steps": [
+    "extract",
+    "partition",
+    "gen_embeddings",
+    "save_records"
+  ],
+  "remaining_steps": [],
+  "completed_steps": [
+    "extract",
+    "partition",
+    "gen_embeddings",
+    "save_records"
+  ],
+  "tags": {
+    "country": [
+      "Netherlands"
+    ]
+  },
+  "creation": "2025-09-16T11:29:13.134765+00:00",
+  "last_update": "2025-09-16T11:29:14.1700604+00:00",
+  "files": [
+    {
+      "id": "dd95a2b1d9294fd7b13609201f4f96aa",
+      "name": "Las Vegas Brochure.pdf",
+      "size": 569917,
+      "mime_type": "application/pdf",
+      "artifact_type": "Undefined",
+      "partition_number": 0,
+      "section_number": 0,
+      "tags": {
+        "country": [
+          "Netherlands"
+        ]
+      },
+      "processed_by": [
+        "extract"
+      ],
+      "generated_files": {
+        "Las Vegas Brochure.pdf.extract.txt": {
+          "id": "b23feb824aef4d3481e6efa128064b60",
+          "name": "Las Vegas Brochure.pdf.extract.txt",
+          "size": 1060,
+          "mime_type": "text/plain",
+          "artifact_type": "ExtractedText",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {
+            "country": [
+              "Netherlands"
+            ]
+          },
+          "parent_id": "dd95a2b1d9294fd7b13609201f4f96aa",
+          "source_partition_id": "",
+          "content_sha256": "",
+          "processed_by": [
+            "extract",
+            "partition"
+          ]
+        },
+        "Las Vegas Brochure.pdf.extract.json": {
+          "id": "6ba09e44e4e34546af40263d4c485e7f",
+          "name": "Las Vegas Brochure.pdf.extract.json",
+          "size": 1060,
+          "mime_type": "text/plain",
+          "artifact_type": "ExtractedContent",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {
+            "country": [
+              "Netherlands"
+            ]
+          },
+          "parent_id": "dd95a2b1d9294fd7b13609201f4f96aa",
+          "source_partition_id": "",
+          "content_sha256": "",
+          "processed_by": [
+            "extract"
+          ]
+        },
+        "Las Vegas Brochure.pdf.partition.0.txt": {
+          "id": "745895d96767422baee058fab0a58903",
+          "name": "Las Vegas Brochure.pdf.partition.0.txt",
+          "size": 1060,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {
+            "country": [
+              "Netherlands"
+            ]
+          },
+          "parent_id": "dd95a2b1d9294fd7b13609201f4f96aa",
+          "source_partition_id": "",
+          "content_sha256": "05240c4c7e73843704dbefad08438acef699c6df2010353598a565bbc3c89d60",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/AI.Ollama.OllamaTextEmbeddingGenerator/__"
+          ]
+        },
+        "Las Vegas Brochure.pdf.partition.0.txt.AI.Ollama.OllamaTextEmbeddingGenerator.__.text_embedding": {
+          "id": "dd7f29dca7d6457f877eb90cb374c282",
+          "name": "Las Vegas Brochure.pdf.partition.0.txt.AI.Ollama.OllamaTextEmbeddingGenerator.__.text_embedding",
+          "size": 9718,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {
+            "country": [
+              "Netherlands"
+            ]
+          },
+          "parent_id": "dd95a2b1d9294fd7b13609201f4f96aa",
+          "source_partition_id": "745895d96767422baee058fab0a58903",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        }
+      }
+    }
+  ],
+  "args": {},
+  "previous_executions_to_purge": []
+}

@@ -1,0 +1,131 @@
+{
+  "index": "apex",
+  "document_id": "dubai_brochure-2d8cb8e5",
+  "execution_id": "619e4debaa294e2582cb6d78eec20a72",
+  "steps": [
+    "extract",
+    "partition",
+    "gen_embeddings",
+    "save_records"
+  ],
+  "remaining_steps": [],
+  "completed_steps": [
+    "extract",
+    "partition",
+    "gen_embeddings",
+    "save_records"
+  ],
+  "tags": {
+    "country": [
+      "Netherlands"
+    ]
+  },
+  "creation": "2025-09-16T11:29:10.0027925+00:00",
+  "last_update": "2025-09-16T11:29:13.127586+00:00",
+  "files": [
+    {
+      "id": "d6e7a66a5d3c4b44872884880a8ceea3",
+      "name": "Dubai Brochure.pdf",
+      "size": 388622,
+      "mime_type": "application/pdf",
+      "artifact_type": "Undefined",
+      "partition_number": 0,
+      "section_number": 0,
+      "tags": {
+        "country": [
+          "Netherlands"
+        ]
+      },
+      "processed_by": [
+        "extract"
+      ],
+      "generated_files": {
+        "Dubai Brochure.pdf.extract.txt": {
+          "id": "34007fe6d28346978ce4c13d38a15ec9",
+          "name": "Dubai Brochure.pdf.extract.txt",
+          "size": 924,
+          "mime_type": "text/plain",
+          "artifact_type": "ExtractedText",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {
+            "country": [
+              "Netherlands"
+            ]
+          },
+          "parent_id": "d6e7a66a5d3c4b44872884880a8ceea3",
+          "source_partition_id": "",
+          "content_sha256": "",
+          "processed_by": [
+            "extract",
+            "partition"
+          ]
+        },
+        "Dubai Brochure.pdf.extract.json": {
+          "id": "ccf1238b7cb8451fba47e2aed45c1a8e",
+          "name": "Dubai Brochure.pdf.extract.json",
+          "size": 924,
+          "mime_type": "text/plain",
+          "artifact_type": "ExtractedContent",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {
+            "country": [
+              "Netherlands"
+            ]
+          },
+          "parent_id": "d6e7a66a5d3c4b44872884880a8ceea3",
+          "source_partition_id": "",
+          "content_sha256": "",
+          "processed_by": [
+            "extract"
+          ]
+        },
+        "Dubai Brochure.pdf.partition.0.txt": {
+          "id": "05006f5d361343a683be1e9d97cdb962",
+          "name": "Dubai Brochure.pdf.partition.0.txt",
+          "size": 924,
+          "mime_type": "text/plain",
+          "artifact_type": "TextPartition",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {
+            "country": [
+              "Netherlands"
+            ]
+          },
+          "parent_id": "d6e7a66a5d3c4b44872884880a8ceea3",
+          "source_partition_id": "",
+          "content_sha256": "39b1064d0f34982e2168f157f325ce51cac37e03021250571858bd8bd189deef",
+          "processed_by": [
+            "partition",
+            "gen_embeddings/AI.Ollama.OllamaTextEmbeddingGenerator/__"
+          ]
+        },
+        "Dubai Brochure.pdf.partition.0.txt.AI.Ollama.OllamaTextEmbeddingGenerator.__.text_embedding": {
+          "id": "09a776dd38f647c7b687116eabc78ec4",
+          "name": "Dubai Brochure.pdf.partition.0.txt.AI.Ollama.OllamaTextEmbeddingGenerator.__.text_embedding",
+          "size": 9720,
+          "mime_type": "float[]",
+          "artifact_type": "TextEmbeddingVector",
+          "partition_number": 0,
+          "section_number": 0,
+          "tags": {
+            "country": [
+              "Netherlands"
+            ]
+          },
+          "parent_id": "d6e7a66a5d3c4b44872884880a8ceea3",
+          "source_partition_id": "05006f5d361343a683be1e9d97cdb962",
+          "content_sha256": "",
+          "processed_by": [
+            "gen_embeddings",
+            "save_records"
+          ]
+        }
+      }
+    }
+  ],
+  "args": {},
+  "previous_executions_to_purge": []
+}

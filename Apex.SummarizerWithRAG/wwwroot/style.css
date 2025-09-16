@@ -1,6 +1,6 @@
 :root {
   /* Colors */
-  --color-background: rgba(252, 252, 249, 1);
+  --color-background: rgba(252, 252, 239, 1);
   --color-surface: rgba(255, 255, 253, 1);
   --color-text: rgba(19, 52, 59, 1);
   --color-text-secondary: rgba(98, 108, 113, 1);
@@ -894,7 +894,7 @@ select.form-control {
   border-radius: var(--radius-lg);
   position: relative;
   word-wrap: break-word;
-  background: var(--color-secondary);
+  background: var(--color-surface);
 }
 
 /* Meta footer inside message bubble */
