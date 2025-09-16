@@ -365,8 +365,6 @@
                 </div>`;
         }).join('');
 
-// Inserted Code Block Start
-
         // Always show, even if empty (for smoother UX)
         if (this.indexedFilesContainer.classList.contains('hidden')) {
             this.indexedFilesContainer.classList.remove('hidden');
@@ -380,8 +378,6 @@
                 </div>
             </div>
         `;
-
-// Inserted Code Block End
     }
 
     // Click handler used by inline button HTML
@@ -794,31 +790,45 @@
                     item.appendChild(title);
                 }
 
+                // Normalize partitions first so we can show their numbers in meta
+                const parts = Array.isArray(r.Partitions) ? r.Partitions
+                            : Array.isArray(r.partitions) ? r.partitions
+                            : [];
+
+                // Meta line: index • docId (if no name) • TYPE • chunks #n,#m,...
                 const metaDiv = document.createElement('div');
                 metaDiv.className = 'message-citation__meta';
                 const metaBits = [];
                 const idx = r.Index || r.index;
                 if (idx) metaBits.push(idx);
-                if (!resolvedName && shortDocId) metaBits.push(shortDocId);
-                const sct = r.SourceContentType || r.sourceContentType;
-                if (sct) metaBits.push(String(sct).toUpperCase());
+                if (!resolvedName && docId) metaBits.push(docId);
+                if (docId) metaBits.push(docId);
+
+                const partNums = parts
+                    .map(p => p.PartitionNumber ?? p.partitionNumber)
+                    .filter(n => Number.isFinite(n))
+                    .map(n => `#${n}`)
+                    .join(', ');
+                //if (partNums) metaBits.push(`chunks ${partNums}`);
+
                 if (metaBits.length > 0) {
                     metaDiv.textContent = metaBits.join(' • ');
                     item.appendChild(metaDiv);
                 }
 
-                const parts = Array.isArray(r.Partitions) ? r.Partitions
-                            : Array.isArray(r.partitions) ? r.partitions
-                            : [];
+                // Each snippet: chunk #<partition> • p.<section> <text> (rel)
                 parts.forEach((p) => {
                     const pDiv = document.createElement('div');
                     pDiv.className = 'message-citation__snippet';
+                    const partitionNumber = p.PartitionNumber ?? p.partitionNumber;
                     const sectionNumber = p.SectionNumber ?? p.sectionNumber;
                     const relevance = p.Relevance ?? p.relevance;
+                    const chunk = Number.isFinite(partitionNumber) ? `chunk #${partitionNumber} • ` : '';
                     const page = Number.isFinite(sectionNumber) && sectionNumber > 0 ? `p.${sectionNumber} ` : '';
-                    const rel = (typeof relevance === 'number' && isFinite(relevance)) ? ` (${relevance.toFixed(3)})` : '';
+                    const rel = (typeof relevance === 'number' && isFinite(relevance)) ? ` • (${relevance.toFixed(3)})` : '';
                     const txt = p.Text ?? p.text ?? '';
-                    pDiv.textContent = `${page}${truncate(txt)}${rel}`;
+                    //pDiv.textContent = `${chunk}${page}${truncate(txt)}${rel}`;
+                    pDiv.textContent = `${chunk}${page}${txt}${rel}`;
                     item.appendChild(pDiv);
                 });
 
@@ -991,7 +1001,6 @@
     formatTimestamp(value) {
         try {
             const d = value instanceof Date ? value : new Date(value);
-        // e.g., 9/15/2025, 14:23:01
             return d.toLocaleString(undefined, { hour12: false });
         } catch {
             return new Date().toLocaleString(undefined, { hour12: false });

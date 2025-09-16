@@ -894,6 +894,7 @@ select.form-control {
   border-radius: var(--radius-lg);
   position: relative;
   word-wrap: break-word;
+  background: var(--color-secondary);
 }
 
 /* Meta footer inside message bubble */
@@ -1364,4 +1365,18 @@ select.form-control {
 .citations-popup .message-citations__list {
   display: grid;
   gap: var(--space-12);
+}
+
+.citations-popup .message-citation__title {
+  font-size: 18px;
+}
+
+.citations-popup .message-citation__meta {
+  font-size: 12px;
+}
+
+.citations-popup .message-citation__snippet {
+    font-style: italic;
+    font-size: 14px;
+    background: var(--color-secondary);
 }
