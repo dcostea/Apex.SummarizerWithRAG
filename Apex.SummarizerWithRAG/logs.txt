@@ -2619,3 +2619,328 @@ expertise. Just tell us where you want to go, and…
 2025-09-16 13:31:17.972 +02:00 [INF] CITATIONS index=apex docId=margies_travel_c-d4a5a853 source=Margies Travel Company Info.pdf parts=[#0(rel=0,733)]
 2025-09-16 13:33:18.015 +02:00 [INF] Ollama connection successful!
 2025-09-16 13:33:18.226 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-16 13:46:11.885 +02:00 [INF] Ollama connection successful!
+2025-09-16 13:46:13.653 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-16 13:46:33.139 +02:00 [INF] QUERY: what are the hotels?
+2025-09-16 13:46:33.180 +02:00 [DBG] MEMORY index=apex docId=las_vegas_brochu-9b6b44d1 source=Las Vegas Brochure.pdf country=["Netherlands"] rel=0.8232212 part#0 text=Margie’s Travel Presents…
+Las Vegas 
+Las Vegas, officially
+the City of Las Vegas
+and often known
+simply as Vegas, is the
+28th-most populated
+city in the United
+States, the most
+populated city in the
+s…
+2025-09-16 13:46:33.186 +02:00 [DBG] MEMORY index=apex docId=san_francisco_br-882ddd87 source=San Francisco Brochure.pdf country=["Netherlands"] rel=0.80727196 part#0 text=Margie’s Travel Presents…
+San Francisco
+San Francisco, officially the City and County of San
+Francisco, is the cultural, commercial, and financial
+center of Northern California. It is the birthplace o…
+2025-09-16 13:46:33.188 +02:00 [DBG] MEMORY index=apex docId=dubai_brochure-2d8cb8e5 source=Dubai Brochure.pdf country=["Netherlands"] rel=0.7999511 part#0 text=Margie’s Travel Presents…
+Dubai 
+Dubai is the largest and most populous city in the United
+Arab Emirates. It is located on the southeast coast of the
+Persian Gulf and is the capital of the Emirate of …
+2025-09-16 13:46:33.190 +02:00 [DBG] MEMORY index=apex docId=new_york_brochur-6a7246c8 source=New York Brochure.pdf country=["Netherlands"] rel=0.7973007 part#0 text=Margie’s Travel Presents…
+New York
+The City of New York, often called New York City or simply
+New York, is the most populous city in the United States.
+With an estimated 2015 population of 8,550,405 d…
+2025-09-16 13:46:33.192 +02:00 [DBG] MEMORY index=apex docId=london_brochure-cfc88c67 source=London Brochure.pdf country=["Netherlands"] rel=0.7900618 part#0 text=Margie’s Travel Presents…
+London
+London is the capital and
+most populous city of
+England and the United
+Kingdom. Standing on the
+River Thames in the south
+east of the island of Great
+Britain, London h…
+2025-09-16 13:46:33.194 +02:00 [DBG] MEMORY index=apex docId=margies_travel_c-d4a5a853 source=Margies Travel Company Info.pdf country=["Netherlands"] rel=0.77250755 part#0 text=Wherever you want to go, Margie’s Travel can get you there!
+Margie’s Travel is a world-leading travel agency, combining international reach with local
+expertise. Just tell us where you want to go, and…
+2025-09-16 13:47:09.492 +02:00 [INF] Ollama connection successful!
+2025-09-16 13:47:10.406 +02:00 [INF] Apex.Summarizer application started successfully
+2025-09-16 13:47:40.255 +02:00 [INF] QUERY: what are the list of hotels?
+2025-09-16 13:47:40.381 +02:00 [DBG] MEMORY index=apex docId=las_vegas_brochu-9b6b44d1 source=Las Vegas Brochure.pdf country=["Netherlands"] rel=0.8158073 part#0 text=Margie’s Travel Presents…
+Las Vegas 
+Las Vegas, officially
+the City of Las Vegas
+and often known
+simply as Vegas, is the
+28th-most populated
+city in the United
+States, the most
+populated city in the
+s…
+2025-09-16 13:47:40.388 +02:00 [DBG] MEMORY index=apex docId=san_francisco_br-882ddd87 source=San Francisco Brochure.pdf country=["Netherlands"] rel=0.80464005 part#0 text=Margie’s Travel Presents…
+San Francisco
+San Francisco, officially the City and County of San
+Francisco, is the cultural, commercial, and financial
+center of Northern California. It is the birthplace o…
+2025-09-16 13:47:40.391 +02:00 [DBG] MEMORY index=apex docId=new_york_brochur-6a7246c8 source=New York Brochure.pdf country=["Netherlands"] rel=0.7974947 part#0 text=Margie’s Travel Presents…
+New York
+The City of New York, often called New York City or simply
+New York, is the most populous city in the United States.
+With an estimated 2015 population of 8,550,405 d…
+2025-09-16 13:47:40.392 +02:00 [DBG] MEMORY index=apex docId=dubai_brochure-2d8cb8e5 source=Dubai Brochure.pdf country=["Netherlands"] rel=0.7963337 part#0 text=Margie’s Travel Presents…
+Dubai 
+Dubai is the largest and most populous city in the United
+Arab Emirates. It is located on the southeast coast of the
+Persian Gulf and is the capital of the Emirate of …
+2025-09-16 13:47:40.394 +02:00 [DBG] MEMORY index=apex docId=london_brochure-cfc88c67 source=London Brochure.pdf country=["Netherlands"] rel=0.7860942 part#0 text=Margie’s Travel Presents…
+London
+London is the capital and
+most populous city of
+England and the United
+Kingdom. Standing on the
+River Thames in the south
+east of the island of Great
+Britain, London h…
+2025-09-16 13:47:40.396 +02:00 [DBG] MEMORY index=apex docId=margies_travel_c-d4a5a853 source=Margies Travel Company Info.pdf country=["Netherlands"] rel=0.76853573 part#0 text=Wherever you want to go, Margie’s Travel can get you there!
+Margie’s Travel is a world-leading travel agency, combining international reach with local
+expertise. Just tell us where you want to go, and…
+2025-09-16 13:48:37.388 +02:00 [INF] ANSWER model=gemma3:12b index=apex limit=100 minRelevance=0.1 text=Here's a list of the hotels offered by Margie's Travel, based on the provided information:
+
+**Las Vegas:**
+
+*   The Volcano Hotel
+*   The Fountain Hotel
+*   The Canal Hotel
+
+**San Francisco:**
+
+*   Th…
+2025-09-16 13:48:37.392 +02:00 [INF] CITATIONS index=apex docId=las_vegas_brochu-9b6b44d1 source=Las Vegas Brochure.pdf parts=[#0(rel=0,816)]
+2025-09-16 13:48:37.394 +02:00 [INF] CITATIONS index=apex docId=san_francisco_br-882ddd87 source=San Francisco Brochure.pdf parts=[#0(rel=0,805)]
+2025-09-16 13:48:37.395 +02:00 [INF] CITATIONS index=apex docId=new_york_brochur-6a7246c8 source=New York Brochure.pdf parts=[#0(rel=0,797)]
+2025-09-16 13:48:37.397 +02:00 [INF] CITATIONS index=apex docId=dubai_brochure-2d8cb8e5 source=Dubai Brochure.pdf parts=[#0(rel=0,796)]
+2025-09-16 13:48:37.398 +02:00 [INF] CITATIONS index=apex docId=london_brochure-cfc88c67 source=London Brochure.pdf parts=[#0(rel=0,786)]
+2025-09-16 13:48:37.399 +02:00 [INF] CITATIONS index=apex docId=margies_travel_c-d4a5a853 source=Margies Travel Company Info.pdf parts=[#0(rel=0,769)]
+2025-09-16 13:48:50.972 +02:00 [INF] QUERY: give me one hotel from each location
+2025-09-16 13:48:51.017 +02:00 [DBG] MEMORY index=apex docId=las_vegas_brochu-9b6b44d1 source=Las Vegas Brochure.pdf country=["Netherlands"] rel=0.8033781 part#0 text=Margie’s Travel Presents…
+Las Vegas 
+Las Vegas, officially
+the City of Las Vegas
+and often known
+simply as Vegas, is the
+28th-most populated
+city in the United
+States, the most
+populated city in the
+s…
+2025-09-16 13:48:51.020 +02:00 [DBG] MEMORY index=apex docId=san_francisco_br-882ddd87 source=San Francisco Brochure.pdf country=["Netherlands"] rel=0.79534185 part#0 text=Margie’s Travel Presents…
+San Francisco
+San Francisco, officially the City and County of San
+Francisco, is the cultural, commercial, and financial
+center of Northern California. It is the birthplace o…
+2025-09-16 13:48:51.022 +02:00 [DBG] MEMORY index=apex docId=new_york_brochur-6a7246c8 source=New York Brochure.pdf country=["Netherlands"] rel=0.7852856 part#0 text=Margie’s Travel Presents…
+New York
+The City of New York, often called New York City or simply
+New York, is the most populous city in the United States.
+With an estimated 2015 population of 8,550,405 d…
+2025-09-16 13:48:51.025 +02:00 [DBG] MEMORY index=apex docId=dubai_brochure-2d8cb8e5 source=Dubai Brochure.pdf country=["Netherlands"] rel=0.78087837 part#0 text=Margie’s Travel Presents…
+Dubai 
+Dubai is the largest and most populous city in the United
+Arab Emirates. It is located on the southeast coast of the
+Persian Gulf and is the capital of the Emirate of …
+2025-09-16 13:48:51.027 +02:00 [DBG] MEMORY index=apex docId=london_brochure-cfc88c67 source=London Brochure.pdf country=["Netherlands"] rel=0.7708112 part#0 text=Margie’s Travel Presents…
+London
+London is the capital and
+most populous city of
+England and the United
+Kingdom. Standing on the
+River Thames in the south
+east of the island of Great
+Britain, London h…
+2025-09-16 13:48:51.029 +02:00 [DBG] MEMORY index=apex docId=margies_travel_c-d4a5a853 source=Margies Travel Company Info.pdf country=["Netherlands"] rel=0.7584709 part#0 text=Wherever you want to go, Margie’s Travel can get you there!
+Margie’s Travel is a world-leading travel agency, combining international reach with local
+expertise. Just tell us where you want to go, and…
+2025-09-16 13:49:23.698 +02:00 [INF] ANSWER model=gemma3:12b index=apex limit=100 minRelevance=0.1 text=Here's one hotel from each location, based on the provided information:
+
+*   **Las Vegas**: The Volcano Hotel
+*   **San Francisco**: The Lombard Hotel
+*   **New York**: The Manhattan Hotel
+*   **Dubai…
+2025-09-16 13:49:23.701 +02:00 [INF] CITATIONS index=apex docId=las_vegas_brochu-9b6b44d1 source=Las Vegas Brochure.pdf parts=[#0(rel=0,803)]
+2025-09-16 13:49:23.704 +02:00 [INF] CITATIONS index=apex docId=san_francisco_br-882ddd87 source=San Francisco Brochure.pdf parts=[#0(rel=0,795)]
+2025-09-16 13:49:23.706 +02:00 [INF] CITATIONS index=apex docId=new_york_brochur-6a7246c8 source=New York Brochure.pdf parts=[#0(rel=0,785)]
+2025-09-16 13:49:23.708 +02:00 [INF] CITATIONS index=apex docId=dubai_brochure-2d8cb8e5 source=Dubai Brochure.pdf parts=[#0(rel=0,781)]
+2025-09-16 13:49:23.710 +02:00 [INF] CITATIONS index=apex docId=london_brochure-cfc88c67 source=London Brochure.pdf parts=[#0(rel=0,771)]
+2025-09-16 13:49:23.711 +02:00 [INF] CITATIONS index=apex docId=margies_travel_c-d4a5a853 source=Margies Travel Company Info.pdf parts=[#0(rel=0,758)]
+2025-09-16 13:49:45.457 +02:00 [INF] QUERY: give the hotels from USA
+2025-09-16 13:49:45.499 +02:00 [DBG] MEMORY index=apex docId=las_vegas_brochu-9b6b44d1 source=Las Vegas Brochure.pdf country=["Netherlands"] rel=0.7916459 part#0 text=Margie’s Travel Presents…
+Las Vegas 
+Las Vegas, officially
+the City of Las Vegas
+and often known
+simply as Vegas, is the
+28th-most populated
+city in the United
+States, the most
+populated city in the
+s…
+2025-09-16 13:49:45.502 +02:00 [DBG] MEMORY index=apex docId=san_francisco_br-882ddd87 source=San Francisco Brochure.pdf country=["Netherlands"] rel=0.7892206 part#0 text=Margie’s Travel Presents…
+San Francisco
+San Francisco, officially the City and County of San
+Francisco, is the cultural, commercial, and financial
+center of Northern California. It is the birthplace o…
+2025-09-16 13:49:45.504 +02:00 [DBG] MEMORY index=apex docId=new_york_brochur-6a7246c8 source=New York Brochure.pdf country=["Netherlands"] rel=0.777931 part#0 text=Margie’s Travel Presents…
+New York
+The City of New York, often called New York City or simply
+New York, is the most populous city in the United States.
+With an estimated 2015 population of 8,550,405 d…
+2025-09-16 13:49:45.506 +02:00 [DBG] MEMORY index=apex docId=dubai_brochure-2d8cb8e5 source=Dubai Brochure.pdf country=["Netherlands"] rel=0.76265836 part#0 text=Margie’s Travel Presents…
+Dubai 
+Dubai is the largest and most populous city in the United
+Arab Emirates. It is located on the southeast coast of the
+Persian Gulf and is the capital of the Emirate of …
+2025-09-16 13:49:45.508 +02:00 [DBG] MEMORY index=apex docId=margies_travel_c-d4a5a853 source=Margies Travel Company Info.pdf country=["Netherlands"] rel=0.75903267 part#0 text=Wherever you want to go, Margie’s Travel can get you there!
+Margie’s Travel is a world-leading travel agency, combining international reach with local
+expertise. Just tell us where you want to go, and…
+2025-09-16 13:49:45.510 +02:00 [DBG] MEMORY index=apex docId=london_brochure-cfc88c67 source=London Brochure.pdf country=["Netherlands"] rel=0.75287086 part#0 text=Margie’s Travel Presents…
+London
+London is the capital and
+most populous city of
+England and the United
+Kingdom. Standing on the
+River Thames in the south
+east of the island of Great
+Britain, London h…
+2025-09-16 13:50:28.710 +02:00 [INF] ANSWER model=gemma3:12b index=apex limit=100 minRelevance=0.1 text=Here are the hotels listed as being in the USA, based on the provided information:
+
+**Las Vegas:**
+
+*   The Volcano Hotel
+*   The Fountain Hotel
+*   The Canal Hotel
+
+**San Francisco:**
+
+*   The Lombar…
+2025-09-16 13:50:28.712 +02:00 [INF] CITATIONS index=apex docId=las_vegas_brochu-9b6b44d1 source=Las Vegas Brochure.pdf parts=[#0(rel=0,792)]
+2025-09-16 13:50:28.712 +02:00 [INF] CITATIONS index=apex docId=san_francisco_br-882ddd87 source=San Francisco Brochure.pdf parts=[#0(rel=0,789)]
+2025-09-16 13:50:28.713 +02:00 [INF] CITATIONS index=apex docId=new_york_brochur-6a7246c8 source=New York Brochure.pdf parts=[#0(rel=0,778)]
+2025-09-16 13:50:28.714 +02:00 [INF] CITATIONS index=apex docId=dubai_brochure-2d8cb8e5 source=Dubai Brochure.pdf parts=[#0(rel=0,763)]
+2025-09-16 13:50:28.716 +02:00 [INF] CITATIONS index=apex docId=margies_travel_c-d4a5a853 source=Margies Travel Company Info.pdf parts=[#0(rel=0,759)]
+2025-09-16 13:50:28.716 +02:00 [INF] CITATIONS index=apex docId=london_brochure-cfc88c67 source=London Brochure.pdf parts=[#0(rel=0,753)]
+2025-09-16 13:55:14.655 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=san_francisco_br-882ddd87, index=apex)
+2025-09-16 13:55:16.680 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=new_york_brochur-6a7246c8, index=apex)
+2025-09-16 13:55:18.696 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=dubai_brochure-2d8cb8e5, index=apex)
+2025-09-16 13:55:20.714 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=margies_travel_c-d4a5a853, index=apex)
+2025-09-16 13:55:22.740 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=las_vegas_brochu-9b6b44d1, index=apex)
+2025-09-16 13:55:24.758 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=london_brochure-cfc88c67, index=apex)
+2025-09-16 14:15:07.397 +02:00 [DBG] MEMORY Ingesting stream fileName='Dubai Brochure.pdf'...
+2025-09-16 14:15:08.756 +02:00 [DBG] MEMORY Ingest success fileName='Dubai Brochure.pdf' docId='dubai_brochure-31636315'
+2025-09-16 14:15:08.758 +02:00 [DBG] MEMORY Ingesting stream fileName='Las Vegas Brochure.pdf'...
+2025-09-16 14:15:09.793 +02:00 [DBG] MEMORY Ingest success fileName='Las Vegas Brochure.pdf' docId='las_vegas_brochu-2cd584ca'
+2025-09-16 14:15:09.795 +02:00 [DBG] MEMORY Ingesting stream fileName='London Brochure.pdf'...
+2025-09-16 14:15:10.850 +02:00 [DBG] MEMORY Ingest success fileName='London Brochure.pdf' docId='london_brochure-f90369a8'
+2025-09-16 14:15:10.854 +02:00 [DBG] MEMORY Ingesting stream fileName='Margies Travel Company Info.pdf'...
+2025-09-16 14:15:11.873 +02:00 [DBG] MEMORY Ingest success fileName='Margies Travel Company Info.pdf' docId='margies_travel_c-15ca8a2a'
+2025-09-16 14:15:11.874 +02:00 [DBG] MEMORY Ingesting stream fileName='New York Brochure.pdf'...
+2025-09-16 14:15:12.907 +02:00 [DBG] MEMORY Ingest success fileName='New York Brochure.pdf' docId='new_york_brochur-3cb34dc6'
+2025-09-16 14:15:12.910 +02:00 [DBG] MEMORY Ingesting stream fileName='San Francisco Brochure.pdf'...
+2025-09-16 14:15:13.935 +02:00 [DBG] MEMORY Ingest success fileName='San Francisco Brochure.pdf' docId='san_francisco_br-2f5634be'
+2025-09-16 14:15:26.171 +02:00 [INF] QUERY: give all the hotels
+2025-09-16 14:15:26.201 +02:00 [DBG] MEMORY index=apex docId=margies_travel_c-15ca8a2a source=Margies Travel Company Info.pdf country=["Netherlands"] rel=0.7578726 part#0 text=Wherever you want to go, Margie’s Travel can get you there!
+Margie’s Travel is a world-leading travel agency, combining international reach with local
+expertise. Just tell us where you want to go, and…
+2025-09-16 14:15:26.204 +02:00 [DBG] MEMORY index=apex docId=dubai_brochure-31636315 source=Dubai Brochure.pdf country=["Netherlands"] rel=0.75522214 part#0 text=Margie’s Travel Presents…
+Dubai 
+Dubai is the largest and most populous city in the United
+Arab Emirates. It is located on the southeast coast of the
+Persian Gulf and is the capital of the Emirate of …
+2025-09-16 14:15:26.206 +02:00 [DBG] MEMORY index=apex docId=san_francisco_br-2f5634be source=San Francisco Brochure.pdf country=["Netherlands"] rel=0.74971867 part#0 text=Margie’s Travel Presents…
+San Francisco
+San Francisco, officially the City and County of San
+Francisco, is the cultural, commercial, and financial
+center of Northern California. It is the birthplace o…
+2025-09-16 14:15:26.208 +02:00 [DBG] MEMORY index=apex docId=las_vegas_brochu-2cd584ca source=Las Vegas Brochure.pdf country=["Netherlands"] rel=0.74451774 part#0 text=Margie’s Travel Presents…
+Las Vegas 
+Las Vegas, officially
+the City of Las Vegas
+and often known
+simply as Vegas, is the
+28th-most populated
+city in the United
+States, the most
+populated city in the
+s…
+2025-09-16 14:15:26.210 +02:00 [DBG] MEMORY index=apex docId=new_york_brochur-3cb34dc6 source=New York Brochure.pdf country=["Netherlands"] rel=0.7365048 part#0 text=Margie’s Travel Presents…
+New York
+The City of New York, often called New York City or simply
+New York, is the most populous city in the United States.
+With an estimated 2015 population of 8,550,405 d…
+2025-09-16 14:15:26.212 +02:00 [DBG] MEMORY index=apex docId=london_brochure-f90369a8 source=London Brochure.pdf country=["Netherlands"] rel=0.7291392 part#0 text=Margie’s Travel Presents…
+London
+London is the capital and
+most populous city of
+England and the United
+Kingdom. Standing on the
+River Thames in the south
+east of the island of Great
+Britain, London h…
+2025-09-16 14:16:22.934 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=Here is the list of all the hotels provided by Margie’s Travel for various destinations:
+
+### Dubai:
+1. **The Creek Hotel**
+2. **The Deira Hotel**
+3. **The Lost City Hotel**
+
+### San Francisco:
+1. **T…
+2025-09-16 14:16:22.937 +02:00 [INF] CITATIONS index=apex docId=margies_travel_c-15ca8a2a source=Margies Travel Company Info.pdf parts=[#0(rel=0,758)]
+2025-09-16 14:16:22.940 +02:00 [INF] CITATIONS index=apex docId=dubai_brochure-31636315 source=Dubai Brochure.pdf parts=[#0(rel=0,755)]
+2025-09-16 14:16:22.941 +02:00 [INF] CITATIONS index=apex docId=san_francisco_br-2f5634be source=San Francisco Brochure.pdf parts=[#0(rel=0,750)]
+2025-09-16 14:16:22.944 +02:00 [INF] CITATIONS index=apex docId=las_vegas_brochu-2cd584ca source=Las Vegas Brochure.pdf parts=[#0(rel=0,745)]
+2025-09-16 14:16:22.946 +02:00 [INF] CITATIONS index=apex docId=new_york_brochur-3cb34dc6 source=New York Brochure.pdf parts=[#0(rel=0,737)]
+2025-09-16 14:16:22.948 +02:00 [INF] CITATIONS index=apex docId=london_brochure-f90369a8 source=London Brochure.pdf parts=[#0(rel=0,729)]
+2025-09-16 14:18:11.088 +02:00 [DBG] MEMORY Deleted document: 'Margies Travel Company Info.pdf' (docId=margies_travel_c-15ca8a2a, index=apex)
+2025-09-16 14:18:13.101 +02:00 [DBG] MEMORY Deleted document: 'Las Vegas Brochure.pdf' (docId=las_vegas_brochu-2cd584ca, index=apex)
+2025-09-16 14:18:15.119 +02:00 [DBG] MEMORY Deleted document: 'Dubai Brochure.pdf' (docId=dubai_brochure-31636315, index=apex)
+2025-09-16 14:18:17.145 +02:00 [DBG] MEMORY Deleted document: 'New York Brochure.pdf' (docId=new_york_brochur-3cb34dc6, index=apex)
+2025-09-16 14:18:19.166 +02:00 [DBG] MEMORY Deleted document: 'London Brochure.pdf' (docId=london_brochure-f90369a8, index=apex)
+2025-09-16 14:18:21.186 +02:00 [DBG] MEMORY Deleted document: 'San Francisco Brochure.pdf' (docId=san_francisco_br-2f5634be, index=apex)
+2025-09-16 14:19:12.971 +02:00 [DBG] MEMORY Ingesting stream fileName='ESOCC.pdf'...
+2025-09-16 14:19:13.227 +02:00 [DBG] MEMORY Ingest success fileName='ESOCC.pdf' docId='esocc-14a49436'
+2025-09-16 14:22:10.398 +02:00 [INF] QUERY: Give the operations for Slovakia in 2024
+2025-09-16 14:22:10.442 +02:00 [DBG] MEMORY index=apex docId=esocc-14a49436 source=ESOCC.pdf country=["Netherlands"] rel=0.84013957 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-16 14:22:36.913 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=I don't have the information about operations for Slovakia in 2024. The information provided is about operations planned for 2025.
+2025-09-16 14:22:36.914 +02:00 [INF] CITATIONS index=apex docId=esocc-14a49436 source=ESOCC.pdf parts=[#0(rel=0,840)]
+2025-09-16 14:22:57.877 +02:00 [INF] QUERY: Give the operations for Slovakia in 2025
+2025-09-16 14:22:57.906 +02:00 [DBG] MEMORY index=apex docId=esocc-14a49436 source=ESOCC.pdf country=["Netherlands"] rel=0.8501173 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-16 14:23:19.908 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=In 2025, Slovakia is involved in the following operation:
+
+1. **Op EFFICIENCY/1111222**: On 16-17 August 2025, Slovakia is organizing an action day targeting cannabis and synthetics. Europol will be d…
+2025-09-16 14:23:19.910 +02:00 [INF] CITATIONS index=apex docId=esocc-14a49436 source=ESOCC.pdf parts=[#0(rel=0,850)]
+2025-09-16 14:27:32.656 +02:00 [INF] QUERY: Give the operations where Slovakia was involved in 2025
+2025-09-16 14:27:32.710 +02:00 [DBG] MEMORY index=apex docId=esocc-14a49436 source=ESOCC.pdf country=["Netherlands"] rel=0.8732867 part#0 text=RESTREINT UE / EU RESTRICTED
+(Europol)
+2025– O2 OPERATIONAL HIGHLIGHTS -FICTITIOUS EXAMPLES
+WEEK 32, 33 AND 34 (4-24 AUGUST 2025)
+IMPORTANT OPERATIONAL ACTIVITIES 
+WEEK 35 (25-31 AUGUST 2025)
+Planned …
+2025-09-16 14:28:10.310 +02:00 [INF] ANSWER model=mistral-small3.1:latest index=apex limit=100 minRelevance=0.1 text=In 2025, Slovakia was involved in the following operations:
+
+1. **Op EFFICIENCY/1111222**:
+   - Dates: 16-17/08/2025
+   - Type of activity: Participation in an action day organized by Slovakia. Europo…
+2025-09-16 14:28:10.311 +02:00 [INF] CITATIONS index=apex docId=esocc-14a49436 source=ESOCC.pdf parts=[#0(rel=0,873)]
+2025-09-16 14:29:54.271 +02:00 [DBG] MEMORY Ingesting stream fileName='ESOCC.pdf'...
+2025-09-16 14:29:54.800 +02:00 [DBG] MEMORY Ingest success fileName='ESOCC.pdf' docId='esocc-be17d9c7'
+2025-09-16 14:38:49.243 +02:00 [DBG] MEMORY Deleted document: '<unknown>' (docId=esocc-14a49436, index=apex)

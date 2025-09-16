@@ -1,7 +1,7 @@
 {
   "index": "apex",
-  "document_id": "dubai_brochure-2d8cb8e5",
-  "execution_id": "619e4debaa294e2582cb6d78eec20a72",
+  "document_id": "esocc-be17d9c7",
+  "execution_id": "9b3f2110a12841faa491a353c4df1d01",
   "steps": [
     "extract",
     "partition",
@@ -20,13 +20,13 @@
       "Netherlands"
     ]
   },
-  "creation": "2025-09-16T11:29:10.0027925+00:00",
-  "last_update": "2025-09-16T11:29:13.127586+00:00",
+  "creation": "2025-09-16T12:29:54.2728836+00:00",
+  "last_update": "2025-09-16T12:29:54.7993365+00:00",
   "files": [
     {
-      "id": "d6e7a66a5d3c4b44872884880a8ceea3",
-      "name": "Dubai Brochure.pdf",
-      "size": 388622,
+      "id": "ef9a7acc8f904fcebd550ef0a7528a0c",
+      "name": "ESOCC.pdf",
+      "size": 129813,
       "mime_type": "application/pdf",
       "artifact_type": "Undefined",
       "partition_number": 0,
@@ -40,10 +40,10 @@
         "extract"
       ],
       "generated_files": {
-        "Dubai Brochure.pdf.extract.txt": {
-          "id": "34007fe6d28346978ce4c13d38a15ec9",
-          "name": "Dubai Brochure.pdf.extract.txt",
-          "size": 924,
+        "ESOCC.pdf.extract.txt": {
+          "id": "c94b26c829d34645b01ac6fe1143f57f",
+          "name": "ESOCC.pdf.extract.txt",
+          "size": 1042,
           "mime_type": "text/plain",
           "artifact_type": "ExtractedText",
           "partition_number": 0,
@@ -53,7 +53,7 @@
               "Netherlands"
             ]
           },
-          "parent_id": "d6e7a66a5d3c4b44872884880a8ceea3",
+          "parent_id": "ef9a7acc8f904fcebd550ef0a7528a0c",
           "source_partition_id": "",
           "content_sha256": "",
           "processed_by": [
@@ -61,10 +61,10 @@
             "partition"
           ]
         },
-        "Dubai Brochure.pdf.extract.json": {
-          "id": "ccf1238b7cb8451fba47e2aed45c1a8e",
-          "name": "Dubai Brochure.pdf.extract.json",
-          "size": 924,
+        "ESOCC.pdf.extract.json": {
+          "id": "f5d95d5caa394a4091d8aac6cc79bfae",
+          "name": "ESOCC.pdf.extract.json",
+          "size": 1042,
           "mime_type": "text/plain",
           "artifact_type": "ExtractedContent",
           "partition_number": 0,
@@ -74,17 +74,17 @@
               "Netherlands"
             ]
           },
-          "parent_id": "d6e7a66a5d3c4b44872884880a8ceea3",
+          "parent_id": "ef9a7acc8f904fcebd550ef0a7528a0c",
           "source_partition_id": "",
           "content_sha256": "",
           "processed_by": [
             "extract"
           ]
         },
-        "Dubai Brochure.pdf.partition.0.txt": {
-          "id": "05006f5d361343a683be1e9d97cdb962",
-          "name": "Dubai Brochure.pdf.partition.0.txt",
-          "size": 924,
+        "ESOCC.pdf.partition.0.txt": {
+          "id": "440806b728af488b885ecf828107e0b5",
+          "name": "ESOCC.pdf.partition.0.txt",
+          "size": 1042,
           "mime_type": "text/plain",
           "artifact_type": "TextPartition",
           "partition_number": 0,
@@ -94,18 +94,18 @@
               "Netherlands"
             ]
           },
-          "parent_id": "d6e7a66a5d3c4b44872884880a8ceea3",
+          "parent_id": "ef9a7acc8f904fcebd550ef0a7528a0c",
           "source_partition_id": "",
-          "content_sha256": "39b1064d0f34982e2168f157f325ce51cac37e03021250571858bd8bd189deef",
+          "content_sha256": "7d93effd99659f80ff88806ab22774150b8ce217e6a199f8f76505f6c8b3ec75",
           "processed_by": [
             "partition",
-            "gen_embeddings/AI.Ollama.OllamaTextEmbeddingGenerator/__"
+            "gen_embeddings/AI.LlamaSharp.LlamaSharpTextEmbeddingGenerator/__"
           ]
         },
-        "Dubai Brochure.pdf.partition.0.txt.AI.Ollama.OllamaTextEmbeddingGenerator.__.text_embedding": {
-          "id": "09a776dd38f647c7b687116eabc78ec4",
-          "name": "Dubai Brochure.pdf.partition.0.txt.AI.Ollama.OllamaTextEmbeddingGenerator.__.text_embedding",
-          "size": 9720,
+        "ESOCC.pdf.partition.0.txt.AI.LlamaSharp.LlamaSharpTextEmbeddingGenerator.__.text_embedding": {
+          "id": "d9d6b77e44c248149bb480866bcf0ac7",
+          "name": "ESOCC.pdf.partition.0.txt.AI.LlamaSharp.LlamaSharpTextEmbeddingGenerator.__.text_embedding",
+          "size": 8635,
           "mime_type": "float[]",
           "artifact_type": "TextEmbeddingVector",
           "partition_number": 0,
@@ -115,8 +115,8 @@
               "Netherlands"
             ]
           },
-          "parent_id": "d6e7a66a5d3c4b44872884880a8ceea3",
-          "source_partition_id": "05006f5d361343a683be1e9d97cdb962",
+          "parent_id": "ef9a7acc8f904fcebd550ef0a7528a0c",
+          "source_partition_id": "440806b728af488b885ecf828107e0b5",
           "content_sha256": "",
           "processed_by": [
             "gen_embeddings",
