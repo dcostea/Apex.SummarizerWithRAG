@@ -818,6 +818,7 @@
                 // Each snippet
                 parts.forEach((p) => {
                     const pDiv = document.createElement('div');
+                    const hr = document.createElement('hr');
                     pDiv.className = 'message-citation__snippet';
                     const partitionNumber = p.PartitionNumber ?? p.partitionNumber;
                     const sectionNumber = p.SectionNumber ?? p.sectionNumber;
@@ -827,6 +828,7 @@
                     const rel = (typeof relevance === 'number' && isFinite(relevance)) ? ` | (${relevance.toFixed(3)})` : '';
                     const txt = p.Text ?? p.text ?? '';
                     pDiv.textContent = `${chunk}${page}${txt}${rel}`;
+                    item.appendChild(hr);
                     item.appendChild(pDiv);
                 });
 

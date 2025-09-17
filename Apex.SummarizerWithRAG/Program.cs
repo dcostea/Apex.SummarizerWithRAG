@@ -76,6 +76,8 @@ catch (Exception ex)
 builder.Services.AddKernel()
     .AddOllamaChatCompletion(configuration["Ollama:TextModel"]!, ollamaHttpClient);
 
+Directory.CreateDirectory(configuration["Rag:DataDirectory"]!);
+
 builder.Services.AddKernelMemory(km =>
 {
     km.WithElasticsearch(op =>
@@ -90,7 +92,7 @@ builder.Services.AddKernelMemory(km =>
     km.WithSimpleFileStorage(new SimpleFileStorageConfig
     {
         StorageType = FileSystemTypes.Disk,
-        Directory = Path.Combine(builder.Environment.ContentRootPath, "kmdata")
+        Directory = configuration["Rag:DataDirectory"]!
     });
 
     km.WithOllamaTextGeneration(new OllamaConfig
