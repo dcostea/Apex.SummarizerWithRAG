@@ -2,5 +2,5 @@
 
 public interface IImportingService
 {
-    Task<string> ImportAsync(Stream content, string fileName, string country);
+    Task<string> ImportAsync(Stream content, string fileName, string collection);
 }

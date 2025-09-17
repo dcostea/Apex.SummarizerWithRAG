@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Summarizer</title>
+    <title>AI Assistant</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
         <div id="settingsPanel" class="settings-panel">
             <div class="settings-content">
                 <div class="form-group">
-                    <label class="form-label" for="model">Model</label>
+                    <label class="form-label" for="model">Select a model</label>
                     <select id="model" class="form-control">
                     </select>
                 </div>
@@ -28,14 +28,14 @@
             <!-- Chat Container -->
             <div class="chat-container">
                 <div class="chat-header">
-                    <h1>Domain-Based AI Summarizer</h1>
+                    <h1>Domain-Based AI Assistant</h1>
 
                     <div class="connection-status">
                         <div id="connectionStatus" class="status status--success">
                             <div class="status-dot"></div>
                             Ready
                         </div>
-                        <button id="clearChat" class="btn btn--secondary btn--outline btn--sm">Clear Messages</button>
+                        <button id="clearChat" class="btn btn--primary btn--sm">Clear Chat</button>
                     </div>
                 </div>
 
@@ -48,7 +48,8 @@
                             </svg>
                         </div>
                         <ul>
-                            <li>Upload files (.pdf,.doc,.docx,.txt,.md,.csv,.xlsx,.json,.xml)</li>
+                            <li>Select a model (or use default)</li>
+                            <li>Upload files (.pdf, .docx, .xlsx, .txt, .md, .csv, .json, .xml)</li>
                             <li>Ask questions</li>
                         </ul>
                     </div>
@@ -83,9 +84,9 @@
                             </svg>
                         </div>
                         <p>Drag files here or <button type="button" class="upload-trigger">browse</button></p>
-                        <p class="file-upload-hint">Supports .pdf,.doc,.docx,.txt,.md,.csv,.xlsx,.json,.xml (max 10MB)</p>
+                        <p class="file-upload-hint">Supports .pdf, .docx, .xlsx, .txt, .md, .csv, .json, .xml (max 10MB each)</p>
                     </div>
-                    <input type="file" id="fileInput" multiple accept=".pdf,.doc,.docx,.txt,.md,.csv,.xlsx,.json,.xml" hidden>
+                    <input type="file" id="fileInput" multiple accept=".pdf,.docx,.txt,.md,.csv,.xlsx,.json,.xml" hidden>
                 </div>
 
                 <!-- Message Input -->

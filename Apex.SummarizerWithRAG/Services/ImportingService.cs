@@ -3,7 +3,7 @@ using Microsoft.KernelMemory;
 using Serilog;
 using Apex.SummarizerWithRAG.Models;
 using Microsoft.Extensions.Options;
-using Microsoft.KernelMemory.MemoryDb.Elasticsearch;
+using Elastic.Transport;
 
 namespace Apex.SummarizerWithRAG.Services;
 
@@ -11,7 +11,7 @@ public class ImportingService(IKernelMemory memory, IOptions<RagSettings> ragSet
 {
     private readonly RagSettings _ragSettings = ragSettings.Value;
 
-    public async Task<string> ImportAsync(Stream content, string fileName, string country)
+    public async Task<string> ImportAsync(Stream content, string fileName, string collection)
     {
         var documentId = ToValidDocumentId(fileName);
         var index = GetIngestionIndex();
@@ -20,7 +20,7 @@ public class ImportingService(IKernelMemory memory, IOptions<RagSettings> ragSet
         {
             var tags = new TagCollection
             {
-                { "country", country }
+                { "collection", collection }
             };
 
             Log.Debug("MEMORY Ingesting stream fileName='{FileName}'...", fileName);
@@ -35,23 +35,14 @@ public class ImportingService(IKernelMemory memory, IOptions<RagSettings> ragSet
             Log.Debug("MEMORY Ingest success fileName='{FileName}' docId='{DocId}'", fileName, returnedId);
             return returnedId;
         }
-        catch (InvalidIndexNameException iex)
+        catch (TransportException tex)
         {
-            var errors = iex.Errors.Any() ? string.Join(" | ", iex.Errors) : "<none>";
-            Log.Error("MEMORY failingIndex='{Failing}' passedIndex='{Passed}' errors={Errors}",
-                iex.IndexName,
-                index,
-                errors);
-            throw;
-        }
-        catch (ArgumentException aex) when (aex.Message.Contains("more tokens than configured batch size", StringComparison.OrdinalIgnoreCase))
-        {
-            Log.Error(aex, "MEMORY Ingest failed due to embedding batch size. Reduce TextPartitioning:MaxTokensPerParagraph or switch to Ollama embeddings.");
+            Log.Error("MEMORY Ingest failed due to failed connectivity to Elastic. Exception {message}", tex.Message);
             throw;
         }
         catch (Exception ex)
         {
-            Log.Error(ex, "MEMORY Ingest failure stream fileName='{FileName}' docId='{DocId}'", fileName, documentId);
+            Log.Error("MEMORY Ingest failure stream fileName='{FileName}' docId='{DocId}'. Exception {message}", fileName, documentId, ex.Message);
             throw;
         }
     }

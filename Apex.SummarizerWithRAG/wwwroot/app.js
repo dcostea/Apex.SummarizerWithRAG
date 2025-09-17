@@ -750,9 +750,9 @@
 
             if (km.docIds.length === 1) {
                 const only = km.docIds[0];
-                refsSpan.textContent = `Doc: ${shortId(only)} • ${km.chunkCount} chunk${km.chunkCount === 1 ? '' : 's'}`;
+                refsSpan.textContent = `Doc: ${shortId(only)} (${km.chunkCount} chunk${km.chunkCount === 1 ? '' : 's'})`;
             } else {
-                refsSpan.textContent = `Refs: ${km.docIds.length} doc${km.docIds.length === 1 ? '' : 's'} • ${km.chunkCount} chunk${km.chunkCount === 1 ? '' : 's'}`;
+                refsSpan.textContent = `Refs: ${km.docIds.length} doc${km.docIds.length === 1 ? '' : 's'} (${km.chunkCount} chunk${km.chunkCount === 1 ? '' : 's'})`;
             }
 
             footerDiv.appendChild(sep2);
@@ -795,7 +795,7 @@
                             : Array.isArray(r.partitions) ? r.partitions
                             : [];
 
-                // Meta line: index • docId (if no name) • TYPE • chunks #n,#m,...
+                // Meta line
                 const metaDiv = document.createElement('div');
                 metaDiv.className = 'message-citation__meta';
                 const metaBits = [];
@@ -809,25 +809,23 @@
                     .filter(n => Number.isFinite(n))
                     .map(n => `#${n}`)
                     .join(', ');
-                //if (partNums) metaBits.push(`chunks ${partNums}`);
 
                 if (metaBits.length > 0) {
                     metaDiv.textContent = metaBits.join(' • ');
                     item.appendChild(metaDiv);
                 }
 
-                // Each snippet: chunk #<partition> • p.<section> <text> (rel)
+                // Each snippet
                 parts.forEach((p) => {
                     const pDiv = document.createElement('div');
                     pDiv.className = 'message-citation__snippet';
                     const partitionNumber = p.PartitionNumber ?? p.partitionNumber;
                     const sectionNumber = p.SectionNumber ?? p.sectionNumber;
                     const relevance = p.Relevance ?? p.relevance;
-                    const chunk = Number.isFinite(partitionNumber) ? `chunk #${partitionNumber} • ` : '';
+                    const chunk = Number.isFinite(partitionNumber) ? `chunk #${partitionNumber} | ` : '';
                     const page = Number.isFinite(sectionNumber) && sectionNumber > 0 ? `p.${sectionNumber} ` : '';
-                    const rel = (typeof relevance === 'number' && isFinite(relevance)) ? ` • (${relevance.toFixed(3)})` : '';
+                    const rel = (typeof relevance === 'number' && isFinite(relevance)) ? ` | (${relevance.toFixed(3)})` : '';
                     const txt = p.Text ?? p.text ?? '';
-                    //pDiv.textContent = `${chunk}${page}${truncate(txt)}${rel}`;
                     pDiv.textContent = `${chunk}${page}${txt}${rel}`;
                     item.appendChild(pDiv);
                 });
